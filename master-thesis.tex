@@ -126,23 +126,19 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
 
 
 % Inhaltsverzeichnis:
-\cleardoublepage   % force output to a right page
-\tableofcontents
+\cleardoublepage\tableofcontents
 
 \clearpage
-\phantomsection
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\phantomsection\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
 
 \clearpage
-\phantomsection
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\phantomsection\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 \listoftables
 
 % evtl. Abkürzungsverzeichnis:
 \clearpage
-\phantomsection
-\addcontentsline{toc}{chapter}{[evtl. Abkürzungsverzeichnis]}  % evtl. ersetzen durch \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\phantomsection\addcontentsline{toc}{chapter}{[evtl. Abkürzungsverzeichnis]}  % evtl. ersetzen durch \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
 \chapter*{[evtl. Abkürzungsverzeichnis]} % evtl. ersetzen durch \chapter*{Abkürzungsverzeichnis}
 \begin{acronym}[SQL]
  \acro{ETW}{Energietechnik und Energiewirtschaft}
@@ -157,15 +153,13 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
 
 % Literaturverzeichnis:
 \clearpage
-\phantomsection
+\phantomsection{}
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\printbibliography
-
+\printbibliography{}
 
 \chapter*{[evtl. Anhang]}  % evtl. ersetzen mit \chapter*{Anhang}
 \addcontentsline{toc}{chapter}{[evtl. Anhang]}   % evtl. ersetzen mit \addcontentsline{toc}{chapter}{Anhang}
 Formatvorlage für den Fließtext.
-
 
 \chapter*{Eidesstattliche Erklärung}
 \addcontentsline{toc}{chapter}{Eidesstattliche Erklärung}
