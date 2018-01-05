@@ -14,19 +14,25 @@
 \usepackage[T1]{fontenc}    % Silbentrennung bei Sonderzeichen
 \usepackage{graphicx}       % Bilder einbinden
 \usepackage[ngerman]{babel} % Deutsche Sprachanpassungen
+\usepackage{footnote}       % footer citations
 \usepackage{csquotes}       % When using babel or polyglossia with biblatex, loading csquotes is recommended to ensure that quoted texts are typeset according to the rules of your main language.
 \usepackage{acronym}  % für optionales Abkürzungsverzeichnis
-\usepackage{eurosym}  % z. B. \EUR{12345,68}
 \usepackage[linktocpage=true]{hyperref} % Links z. B. \href{https://www.wikibooks.org}{Wikibooks home}
 \usepackage{caption} % Abbildungslegenden
 \captionsetup{format=hang, justification=raggedright}
-\usepackage[style=alphabetic,citestyle=alphabetic,backend=biber]{biblatex}   % Literaturverweise
+\usepackage[style=verbose,backend=biber]{biblatex}   % Literaturverweise
 % biblatex comes with a variety of built-in bibliography/citation style families (numeric, alphabetic, authoryear, authortitle, verbose), and there's a growing number of custom styles:
 % https://de.sharelatex.com/learn/Biblatex_citation_styles
 % https://de.sharelatex.com/learn/Biblatex_bibliography_styles
 \addbibresource{bibliography.bib}    % Zotero-Beispiele.bib ist die verwendete Bibtex-Datei 
 % Anstatt die Bibtex-Datei selber zu erstellen, kann sie z. B. aus einer Zotero-Sammlung zu BibTeX exportiert werden.
 
+% float package
+\usepackage{float}
+
+% fußnotennummerierung nicht neu beginnen in jedem kapitel
+\usepackage{chngcntr}
+\counterwithout*{footnote}{chapter}
 
 %% Einstellungen:
 \setcounter{secnumdepth}{4}
@@ -148,8 +154,8 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
 
 %% Die Kapitelstruktur ist mit der betreuungsperson abzustimmen!
 
-\input{chapters/examples.tex}
 \input{chapters/introduction.tex}
+\input{chapters/examples.tex}
 
 % Literaturverzeichnis:
 \clearpage
