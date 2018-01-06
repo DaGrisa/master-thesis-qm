@@ -1,6 +1,31 @@
 \chapter{Situationsanalyse}
 
-\section[Software-Qualität]{Software-Qualität~\footcite[vgl.][Kapitel 1.2]{hoffmann_software-qualitat_2013}}
+\section[Scrum in mehreren Teams]{Scrum in mehreren Teams~\footcite[vgl.][S.172ff]{scrum_kurz_gut_2013}}
+
+Das Scrum Framework beschreibt die agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
+In der Realität existieren aber oft mehrere Teams und/oder mehrere Produkte. 
+Dahingehend muss die Organisation der unterschiedlichen Scrum Teams individuell angepasst werden.
+Für die Trennung der Teams gibt es unterschiedlche Ansätze:
+\begin{description}
+  \item[Trennung nach Organisationseinheiten] \hfill \\ Die Teams werden entlang der Abteilungsstruktur einer Organisation getrennt. Aus Scrum-Sicht macht das nicht immer Sinn, da bei der Umsetzung eines Features Abhängigkeiten zu anderen Teams bestehen (keine cross-funktionalen Teams).
+  \item[Trennung nach Komponenten (Komponenten-Teams)] \hfill \\ Die technischen Komponenten werden den Teams zugeteilt, was ebenfalls zu Abhängigkeiten zu anderen Teams führt und eine gute Abstimmung zwischen den Teams voraussetzt.
+  \item[Trennung nach fachlichen Themen (Feature-Teams)] \hfill \\ Jedes Team entwickelt, unabhängig von den anderen Teams, eine fachliche Komponente. Diese Variante erfüllt die Forderung des Scrum Frameworks nach cross-funktionalen Teams, weshalb bei dieser Form die Abstimmung zwischen den Teams am geringsten ist.
+\end{description}
+
+\begin{savenotes}
+  \begin{figure}[H]
+    \centering
+    \subfigure[Feature-Teams]{\includegraphics[width=0.40\textwidth]{img/feature-teams.png}} 
+    \subfigure[Komponenten-Teams]{\includegraphics[width=0.48\textwidth]{img/component-teams.png}} 
+  \caption{Scrum Teams}
+  \label{fig:Scrum Teams}
+  \end{figure}
+\end{savenotes}
+
+In allen Varianten existieren aber pro Team unterschiedliche Software-Module und (agile) Prozesse, die unabhängig voneinander die Team-Qualität als gesamtes bestimmen.
+
+\clearpage
+\section[Software-Qualität]{Software-Qualität~\footcite[vgl.][Kapitel 1.2]{hoffmann_software_qualitat_2013}}
 
 Eine mögliche Definition von Software-Qualität findet sich in der DIN-ISO-Norm 9126:
 
@@ -34,7 +59,15 @@ Je nach Anwendungsgebiet und den Anforderungen der Software haben die Merkmale u
   \begin{figure}[H] 
     \centering
        \includegraphics[width=0.6\textwidth]{img/korrelationsmatrix-kriterien.png}
-    \caption[Korrelationsmatrix Qualitätskriterien]{Korrelationsmatrix Qualitätskriterien~\footcite[][S. 11, Abb. 1.3]{hoffmann_software-qualitat_2013}}
+    \caption[Korrelationsmatrix Qualitätskriterien]{Korrelationsmatrix Qualitätskriterien~\footcite[][S. 11, Abb. 1.3]{hoffmann_software_qualitat_2013}}
     \label{fig:Korrelationsmatrix Qualitätskriterien}
   \end{figure}
 \end{savenotes}
+
+\section{Qualitätsmetriken}
+
+\subsection{Testmetriken}
+
+\subsection{Softwaremetriken}
+
+\subsection{Agile-Metriken}

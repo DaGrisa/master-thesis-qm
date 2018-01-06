@@ -36,6 +36,10 @@
 
 % enumitem for enumarations
 \usepackage{enumitem}
+\setlist[1]{itemsep=0pt,parsep=0px}
+
+% use for side-by-side figures
+\usepackage{subfigure}
 
 %% Einstellungen:
 \setcounter{secnumdepth}{4}
@@ -76,7 +80,7 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
   \includegraphics[width=0.4\linewidth]{Logo-A3}
   \end{flushright}
   \begin{flushleft}
-  \section*{Qualitätsmanagement in Komponententeams}
+  \section*{Qualitätsmanagement in Scrum-Teams}
   \subsection*{Untertitel}
   \vspace{1.5cm}
   
@@ -103,36 +107,7 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
   \end{flushleft}
 \end{titlepage}
 
-
-% evtl. Widmung:
-\newpage
-\section*{[evtl. Widmung]}   % evtl. ersetzen durch \section*{Widmung}
-
-[Text der Widmung]
-
-% Kurzreferat:
-\newpage
-\section*{Kurzreferat}
-
-\subsection*{[Deutscher Titel Ihrer Arbeit]}
-
-[Text des Kurzreferats]
-
-
-% Abstract:
-\newpage
-\section*{Abstract}
-\subsection*{[English Title of your thesis]}
-
-[text of the abstract]
-
-
-% evtl. Vorwort:
-\newpage
-\section*{[evtl. Vorwort]}   % evtl. ersetzen durch \section*{Widmung}
-
-[Text des Vorworts]
-
+\input{chapters/0_Kurzreferat.tex}
 
 % Inhaltsverzeichnis:
 \cleardoublepage\tableofcontents
@@ -157,9 +132,13 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
 
 %% Die Kapitelstruktur ist mit der betreuungsperson abzustimmen!
 
-\input{chapters/Einleitung.tex}
-\input{chapters/Situationsanalyse.tex}
-\input{chapters/examples.tex}
+\input{chapters/1_Einleitung.tex}
+\input{chapters/2_Situationsanalyse.tex}
+\input{chapters/3_Zielsetzung.tex}
+\input{chapters/4_Methodik.tex}
+\input{chapters/5_Ergebnisse.tex}
+\input{chapters/6_Schlussfolgerungen.tex}
+\input{chapters/7_Zusammenfassung.tex}
 
 % Literaturverzeichnis:
 \clearpage
