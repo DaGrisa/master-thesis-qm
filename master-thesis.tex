@@ -73,7 +73,7 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
 % \newpage\mbox{}\newpage
 
 % force output to a right page
-\cleardoublepage
+\cleardoublepage{}
 \thispagestyle{empty}
 \begin{titlepage}
   \begin{flushright}
@@ -120,15 +120,8 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
 \phantomsection\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 \listoftables
 
-% evtl. Abkürzungsverzeichnis:
-\clearpage
-\phantomsection\addcontentsline{toc}{chapter}{[evtl. Abkürzungsverzeichnis]}  % evtl. ersetzen durch \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
-\chapter*{[evtl. Abkürzungsverzeichnis]} % evtl. ersetzen durch \chapter*{Abkürzungsverzeichnis}
-\begin{acronym}[SQL]
- \acro{ETW}{Energietechnik und Energiewirtschaft}
- \acro{SQL}{Structured Query Language}
- \acro{Bash}{Bourne-again shell}
-\end{acronym}
+% Abkürzungsverzeichnis:
+\input{acronyms.tex}
 
 %% Die Kapitelstruktur ist mit der betreuungsperson abzustimmen!
 

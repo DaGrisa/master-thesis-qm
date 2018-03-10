@@ -1,0 +1,70 @@
+AMA p.4: Feedback-Loop: Collect - Measure - React - Repeat
+AMA p.5: Was sind Metriken? Eine Methode etwas zu messen oder deren Ergebisse.
+  Start bei: welche Metriken haben wir bereits? Häufig sind Velocity oder CLOC (Changed Lines of Code)
+AMA p.6: Probleme:
+  - agile Definition von Messungen ist nicht direkt gegeben (Wie messe ich "working software"?)
+  - agile fokussiert sich auf ein Produkt, nicht ein Projekt
+  - Daten sind über den Entwicklungsprozess verstreut, ohne einheitliche Sicht
+AMA p.9: Data:
+  - Project Mnagement: Story Points per Sprint, fertiggestellte Tasks, neue Bugs
+  - Source Control: Anzahl Änderungen im Code, Reviews, Kommentare
+  - Build System: statische Code Analyse, Testabdeckung, fehlerhafte Builds
+  - System Überwachung
+AMA p.13 Analyzing Data:
+  - Herausfinden was relevant ist: z.B. über MindMap
+  - Visualisierung: oft Kombination von Daten notwendig, z.B. Anzahl Tasks + Story Points
+AMA p.16 Lessons learned
+  - wenn etwas verändert werden muss, auf das positive fokussieren
+  - gemessen zu werden kann hart sein, nicht mit dem Finger zeigen
+AMA p.18 Argumente für Nein-Sager!
+  Nicht jeder hat Verständnis dafür, dass seine Arbeit gemessen wird (Big Brother, Mangel an Kontrolle).
+  Der Punkt hierbei ist, dass ein Team sich selbst messen sollte und nicht gemessen werden sollte.
+  Niemand ist perfekt, es gibt immer etwas zu verbessen. Wer will das nicht?
+  - Menschen wollen nicht "gemessen" werden: wir werden bereits überall gemessen, die Frage ist, wer liefert die Messlatte?
+  - Metriken bedrohen meine Privatsphäre: die Daten entstehen sowieso im Prozess, dann sollten sie auch für Feedback genutzt werden
+  - Metriken machen den Prozess schwerlastig: wenn sie was machen, dann helfen Prozesse zu verbessern
+  - Metriken benötigen zu viel Zeit: es gibt bereits viele Technologien Metriken einfach zu erhalten
+
+Chapter 2: Case Study
+AMA p.22 Die richtige Lösung finden:
+  - Herausfinden was schief läuft / was will ich messen
+  - Was für Metriken brauche ich dafür / wo bekomme ich die Daten her?
+AMA p.24 Figure 2.4
+  Mögliche Architektur eines solchen Systems.
+AMA p.29
+  Metriken können helfen, dem Management Probleme visualisiert aufzuzeigen.
+  CodeFlower Diagramm kann die Komplexität eines Systems grafisch darstellen.
+AMA p.32
+  Feedback Loop
+
+AMA p.37
+Project-Tracking Systems:
+Hier werden Aufgaben definiert und zugewiesen, Bugs verwaltet und Zeit mit Aufgaben verknüpft.
+Fragen die hier heraus beantwortet werden können:
+  - Wie gut versteht das Team das Projekt?
+  - Wie schnell bewegt sich das Team?
+  - Wie konsistent ist das Team im Erledigen von Arbeit?
+Messwerte:
+  - Burn Down: Anzahl erledigte Arbeit über einen Zeitpunkt - liefert einen Richtwert wo man im Sprint gerade steht (verglichen zum Commitment)
+  - Velocity: ist eine relative Messung der Konsistenz erledigter Arbeit über die Zeit (Commitment/Erledigt), was folgende Dinge impliziert:
+    - Wie gut ist das team im Schätzen von Arbeit?
+    - Wie konsistent wird die Arbeit des Teams erledigt?
+    - Wir konsistent kann das Team Commitments machen und einhalten?
+  - Cumulative Flow: zeigt wie viel Arbeit nach Typ dem Team zugewiesen ist, um Bottlenecks im Prozess erkennen zu können
+  - Lead Time: Zeit zwischen Start und Abschluss einer Aufgabe, vor allem bei Kanban interessant (hoher Durchsatz)
+  - Bug Counts: zeigt Inkonsistenzen der Software, hängt aber von der Bug-Definition ab
+Bestmögliche Daten bereitstellen: AMA p.44
+  - jeder nutzt das PTS
+  - Aufgaben mit möglichst vielen Daten taggen
+  - Aufgaben schätzen
+  - gemeinsam eine DoD erstellen
+  - Aufgaben kategorisieren in "gut", "ok" und "schlecht" (wie sie erledigt wurden)
+Metriken: AMA p.52
+  Es werden 4 Metriken kombiniert: Schätzungen, Volumen, Bugs, Rückfälligkeit (Recidivism)
+  - Aufgaben-Volumen: ist die Anzahl an Aufgaben, wird der Schätzung gegenübergestellt
+    - kann aufzeigen, dass viel ungeplante Arbeit gemacht wird (Delta zwischen Schätzung und Volumen wird kleiner)
+    - zeigt die größe der Aufgaben
+  - Bugs: zeigen die Qualität der Software, kann ungeplante Arbeit zeigen (Volumen sinkt, aber Bugs und StoryPoints bleiben gleich)
+    - bug creation rate: Anzahl Bugs nach Erstellungsdatum
+    - bug completion rate: Anzahl Bugs nach Erledigungsdatum
+  
