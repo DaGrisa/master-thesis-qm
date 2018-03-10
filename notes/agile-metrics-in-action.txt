@@ -95,3 +95,22 @@ Metriken:
   - Abgelehnte vs Gemergte PRs (Zeichen, wie das Team zusammenarbeitet)
   - CLOC über die Zeit
   - Anzahl Merges / Pull Requests: Mögliche Aussage über Reviews => Wissensverteilung / Qualität (nicht aus dem Buch)
+
+CI / CD p.84
+Sind die Elemente im Workflow, die unter den Teams am meisten variieren können.
+  - Wie schnell können Änderungen ausgeliefert werden? Wie schnell werden sie ausgeliefert?
+  - Wie konsistent macht das Team seine Arbeit? Wird guter Code produziert?
+Kombiniert mit PTS und SCM Daten:
+  - Haben die Aufgaben angemessene Größen? Sind Schätzungen genau? Wie viel wird erledigt?
+Build Pipeline kann sehr viel nützliche Daten erzeugen, vor allem mit Tools wie SonarQ (statische Analysen).
+Daten aus CI/CD p.91: hängen stark vom jeweiligen Setup ab
+  - Dauer und geschätzte Dauer der Builds
+  - Status der Builds (erfolgreich vs fehlerhaft)
+  - Build-Frequenz
+  - Test Reports (über z.B. TestNG)
+  - Statische Code Analysen (z.B. mit SonarQube) - z.B. Code Coverage
+  - Stresstests / Benchmarking (z.B. Gatling, JMeter)
+  - BDD Tests - Tests in der Form von Behaviour-driven Development
+Metriken:
+  - erfolgreiche Builds / fehlerhafte Builds / Testabdeckung / ausgeführte Tests
+  - kombiniert: erfolgreiche Builds / fehlerhafte Builds / Commits / Kommentare / erledigte StoryPoints
