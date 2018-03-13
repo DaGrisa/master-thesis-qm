@@ -114,3 +114,16 @@ Daten aus CI/CD p.91: hängen stark vom jeweiligen Setup ab
 Metriken:
   - erfolgreiche Builds / fehlerhafte Builds / Testabdeckung / ausgeführte Tests
   - kombiniert: erfolgreiche Builds / fehlerhafte Builds / Commits / Kommentare / erledigte StoryPoints
+
+Produktionssysteme p. 107
+Hier können APM (appl perf monit) oder BI (busin intelli) Kennzahlen ausgelesen werden.
+Wichtig, da es aussagt, wie das System arbeitet und ob die Kunden zufrieden sind damit.
+BI nahe am Dev Team halten, da dadurch verstanden werden kann, wie der Kunde die App nutzt.
+Kann auch durch Software (Frameworks) unterstützt werden: StatsD oder Atlas (Netflix) und Graphite zur Speicherung und Darstellung.
+Daten aus APM / BI Systemen p.118:
+ - Server Health: CPU Nutzung, Heap-size, Fehlerraten, Antwortzeiten
+ - Nutzerverhalten: wie viele User? wie lange sind User wo? Conversion Rate (wie mache ich aus Usern Kunden)
+ - Semantisches Logging: spezielle Daten, wie z.B. was suchen User auf der Seite, aber natürlich auch Fehler
+ Summary p.124
+
+ 
