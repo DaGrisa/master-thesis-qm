@@ -126,4 +126,7 @@ Daten aus APM / BI Systemen p.118:
  - Semantisches Logging: spezielle Daten, wie z.B. was suchen User auf der Seite, aber natürlich auch Fehler
  Summary p.124
 
+ Metriken anwenden (Teams, Prozesse, Software)
+
+ Mit den gesammelten Daten arbeiten p.127
  
