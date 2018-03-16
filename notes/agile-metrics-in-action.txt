@@ -121,12 +121,35 @@ Wichtig, da es aussagt, wie das System arbeitet und ob die Kunden zufrieden sind
 BI nahe am Dev Team halten, da dadurch verstanden werden kann, wie der Kunde die App nutzt.
 Kann auch durch Software (Frameworks) unterstützt werden: StatsD oder Atlas (Netflix) und Graphite zur Speicherung und Darstellung.
 Daten aus APM / BI Systemen p.118:
- - Server Health: CPU Nutzung, Heap-size, Fehlerraten, Antwortzeiten
- - Nutzerverhalten: wie viele User? wie lange sind User wo? Conversion Rate (wie mache ich aus Usern Kunden)
- - Semantisches Logging: spezielle Daten, wie z.B. was suchen User auf der Seite, aber natürlich auch Fehler
- Summary p.124
+  - Server Health: CPU Nutzung, Heap-size, Fehlerraten, Antwortzeiten
+  - Nutzerverhalten: wie viele User? wie lange sind User wo? Conversion Rate (wie mache ich aus Usern Kunden)
+  - Semantisches Logging: spezielle Daten, wie z.B. was suchen User auf der Seite, aber natürlich auch Fehler
+Summary p.124
 
- Metriken anwenden (Teams, Prozesse, Software)
+Metriken anwenden (Teams, Prozesse, Software)
 
- Mit den gesammelten Daten arbeiten p.127
- 
+Mit den gesammelten Daten arbeiten p.127
+Metriken erstellen, 2 Dinge notwendig: Daten und eine Funktion, um die Metrik zu berechnen
+Schritte, um eine Metrik zu berechnen:
+  1. Erkunde deinen Daten
+  2. Daten aufgliedern, um zu bestimmen was man verfolgen will
+  3. Erstelle Funkionen um diese Daten
+Ein Beispiel für eine solche berechnete Metrik ist die Rückfälligkeit (Recidivism) = Aufgaben die im Workflow rückwärts gehen / (vorwärts + rückwärts)
+Oder Comment To Commit Ratio = Reviews / (Merged Pull Requests + Commits)
+Oder Mean Time To repair = Datum wenn Bug gefunden wurde - Datum wenn Bug gelöst wurde
+Die Daten nutzen um "Gut" zu definierten (es gibt 3 "Gut")
+  - Gute Software: macht sie, was sie soll und ist sie gut aufgebaut
+  - Gutes Team: da jedes Team individuell ist, sind auch oft die Metriken dazu individuell
+  - Gute Metriken: werden verwendet, um das Team zu messen und sollten daher vertrauensvoll und konsistent sein
+Subjektivität in Objektivität wandeln:
+Aufgaben können vom Team mit bestimmten Tags versehen werden, um subjektive Wahrnehmungen festzuhalten.
+Ein beispiel wäre "gut" oder "schlecht" für den Ablauf einer Aufgabe oder "geteilt" wenn eine Aufgaben im Team erledigt wurde.
+Diese subjektiven Daten können mit passenden objektive Daten dargestellt werden, um eine bessere sicht darauf zu bekommen.
+Zurückarbeiten von guten Releases:
+Ein anderer Ansatz ist es, gute Releases heranzuziehen und herauszufinden, was dort anders gemacht wurde.
+Wie man Metriken erstellt p.135: "A model is a formal representation of a theory."
+  - auf Metriken sollte reagiert werden können
+  - Metriken sollten sich nach Team-Grundsätzen und Kerngeschäften ausrichten
+  - Metriken sollten für sich alleine stehen können
+
+Technische Qualität der Software messen:
