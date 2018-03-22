@@ -152,4 +152,20 @@ Wie man Metriken erstellt p.135: "A model is a formal representation of a theory
   - Metriken sollten sich nach Team-Grundsätzen und Kerngeschäften ausrichten
   - Metriken sollten für sich alleine stehen können
 
-Technische Qualität der Software messen:
+Technische Qualität der Software messen p.154:
+Aus sicht der agilen Prinzipien: frühzeitige und wiederkehrede Auslieferung, Änderungen willkommen heißen
+Die sog. -ilities: maintainab- / extens- / reliab- / avalability / security / usability
+Maintainability p.158: wenn es um Wartbarkeit geht, sind MTTR und lead time die wichtigsten Größen (ab p.159)
+  - MTTR: mean time to repair
+  - lead Time: Definition eines neuen Features und wenn es ausgeliefert wird
+  - code Coverage: LOC die vin Tests abgedeckt sind
+  - coding standard rules
+  - wie viel code muss für features geändert werden: CLOC in Verbindung mit Aufgaben
+  - bug rates
+Usability p.168:
+Wichtige Eigenschaften: Securiy, Userinteraktion, Scalability, Reliability
+Reliability / Availability: wie viel Prozent verfügbar (Spring Health Endpoint / New Relic) / wie gut funktioniert sie (mean time betweeen failures - response time - error rate)
+Security: statische Analyen, zB mit SonarQube - dynamische Analysen, zB OWASP Zed Attack Proxy
+Summary p.176
+
+Publishing Metrics p.177
