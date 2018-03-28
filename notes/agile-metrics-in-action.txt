@@ -169,3 +169,59 @@ Security: statische Analyen, zB mit SonarQube - dynamische Analysen, zB OWASP Ze
 Summary p.176
 
 Publishing Metrics p.177
+Daten sollten jenen bereitgestellt werden, die diese auch positiv beeinflussen können.
+Daten zu sehen, die nicht beeinflusst werden können, verursachen nur stress oder demotivieren.
+Die richtigen Daten für die richtigen Personen p.178:
+  - Personen sollten nur Daten sehen, die sie auch betreffen
+  - der Zeitraum in dem die Daten aktualisiert werden, sollte klar sein
+  Figure 9.3 p.179 zeigt für wen welche Informationen Interessant sein können.
+  Development Team p.180:
+    - Key Metrics aus jedem System als Defaults
+    - Metriken, die aktuelle Probleme messbar machen
+    - Beispiele: Tags und Labels, PRs und Commits, Task Flow und Recisivismus, Built Verhältnis
+  Manager p.184:
+    - Entwicklersicht wäre Micromanagement
+      - eine Übersicht über die Team-Metrics sollte er aber haben
+      - auch ein Vergleich von Teams sollte möglich sein, um Tendenzen erkennen zu können
+    - Beispiele: Lead Time, Velocity / Volumen, Estimate Health, Commiter und PR (als Person), Tags und Labels, PR und Commits über die Zeit
+    - Bei Durchschnittswerten sollten auch immer gleich die Verteilungen mitangezeigt werden (um Ausreißer darzustellen)
+  Geschäftsführer p.188:
+    - Interesse am Big Picture, vor allem an Daten entlang der Strategie
+    - Business Metriken hier interessant (Kapitel 6)
+    - Beispiele: Anzahl Releases / Features pro Release, Entwicklungskosten
+  Metriken als Beweis für Änderungen verwenden:
+    - Metriken können so gedreht werden, dass sie zeigen, was man zeigen will
+    - immer hinterfragen, was man aussagen will und im Hinterkopf behalten, dass die Annahnem falsch sein kann
+    - weitere Metriken als Gegencheck verwenden
+Methoden zur Veröffentlichung p.191:
+  Hierbei sollte man sich in den Grenzen des Unternehmens bewegen.
+  Dashboards:
+    - Zugriff innerhalb der Firma nicht einschränken, aber intern halten
+    - make it customizable
+    - Bewusstsein: Daten sind dort als Tool, nicht als Waffe
+    - Page Tracking verwenden, um zu verstehen, wie Dashboards genutzt werden
+  Email:
+    - Email optional machen, aus dem Dashboard
+    - minimal erforderliche Daten im Email, aber mit Links zum Dashboard
+    - den richtigen Rhytmus finden, um Personen nicht zu nerven, aber oft genug zu informieren
+Summary p.199
+
+Team gegen die Agilen Prinzipien Messen
+
+
+Datenmodell VCS:
+Commit
+  ID
+  Author
+  Date
+  ChangedLines
+  Repository
+  Project
+PullRequest
+  ID
+  Author
+  Reviewer
+  CreateDate
+  MergeDate
+  CommentCount
+  Commits [ID]
