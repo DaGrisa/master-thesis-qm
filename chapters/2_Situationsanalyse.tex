@@ -42,7 +42,7 @@ Agile Prozesse fördern nachhaltige Entwicklung. Die Auftraggeber, Entwickler un
 
 Ständiges Augenmerk auf technische Exzellenz und gutes Design fördert Agilität.
 
-Einfachheit -- die Kunst, die Menge nicht getaner Arbeit zu maximieren -- ist essenziell.
+Einfachheit -\phantom{}- die Kunst, die Menge nicht getaner Arbeit zu maximieren -\phantom{}- ist essenziell.
 
 Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorganisierte Teams.
 
@@ -53,7 +53,7 @@ In regelmäßigen Abständen reflektiert das Team, wie es effektiver werden kann
 Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie und beschreibt die agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
 In der Realität existieren aber oft mehrere Teams und/oder mehrere Produkte. 
 Dahingehend muss die Organisation der unterschiedlichen Scrum Teams individuell angepasst werden.
-Für die Trennung der Teams gibt es unterschiedlche Ansätze:
+Für die Trennung der Teams gibt es unterschiedliche Ansätze:
 \begin{description}
   \item[Trennung nach Organisationseinheiten] \hfill \\ Die Teams werden entlang der Abteilungsstruktur einer Organisation getrennt. Aus Scrum-Sicht macht das nicht immer Sinn, da bei der Umsetzung eines Features Abhängigkeiten zu anderen Teams bestehen (keine cross-funktionalen Teams).
   \item[Trennung nach Komponenten (Komponenten-Teams)] \hfill \\ Die technischen Komponenten werden den Teams zugeteilt, was ebenfalls zu Abhängigkeiten zu anderen Teams führt und eine gute Abstimmung zwischen den Teams voraussetzt.
@@ -77,7 +77,7 @@ In allen Varianten existieren aber pro Team unterschiedliche Software-Module und
 Eine mögliche Definition von Software-Qualität findet sich in der DIN-ISO-Norm 9126:
 
 \begin{quote}
-  Software-Qualität ist die Gesamtheit der Merkmale und Merkmalswerte eines Software-Produkts, die sich auf dessen Eignung beziehen, festgelegte Erfordernisse zu erfüllen.
+  ``Software-Qualität ist die Gesamtheit der Merkmale und Merkmalswerte eines Software-Produkts, die sich auf dessen Eignung beziehen, festgelegte Erfordernisse zu erfüllen.''
 \end{quote}
 
 Wie aus dieser Definition schon erkennbar ist, gibt es viele unterschiedliche Kriterien, um die Qualität von Software zu bewerten.
@@ -89,13 +89,13 @@ Einige wesentliche Merkmale, um die Qualität von Software bewerten zu können, 
     \item[Funktionalität (Functionality, Capability)] \hfill \\ Beschreibt die Umsetzung der funktionalen Anforderungen. Fehler sind hier häufig Implementierungsfehler (sogenannte Bugs), welche durch Qualitätssicherung bereits in der Entwicklung entdeckt oder vermieden werden können. 
     \item[Laufzeit (Performance)] \hfill \\ Beschreibt die Umsetzung der Laufzeitanforderungen. Besonderes Augenmerk muss in Echtzeitsystemen auf dieses Merkmal gelegt werden.
     \item[Zuverlässigkeit (Reliability)] \hfill \\ Eine hohe Zuverlässigkeit ist in kritischen Bereichen, wie z.B. Medizintechnik oder Luftfahrt, unabdingbar. Erreicht werden kann diese aber nur durch die Optimierung einer Reihe anderer Kriterien.
-    \item[Benutzbarkeit (Usability)] \hfill \\ Betrifft alle Eigenschaften eines Systems, die mit der Benutzer-Interkation in Berührung kommen.
+    \item[Benutzbarkeit (Usability)] \hfill \\ Betrifft alle Eigenschaften eines Systems, die mit der Benutzer-Interaktion in Berührung kommen.
   \end{description}
   \item[Herstellerorientierte Merkmale] \hfill \\ Sind die inneren Merkmale, die sich auf den langfristigen Erfolg der Software auswirken und somit als Investition in die Zukunft gesehen werden sollten.
   \begin{description}
     \item[Wartbarkeit (Maintainability)] \hfill \\ Die Fähigkeit auch nach der Inbetriebnahme noch Änderungen an der Software vorzunehmen. Wird oft vernachlässigt, ist aber essentiell für langlebige Software und ein großer Vorteil gegenüber der Konkurrenz.
-    \item[Transparenz (Transparency)] \hfill \\ Beschreibt, wie die nach außen hin sichtbare Funktionalität intern umgesetzt wurde. Gerade bei alternder Software, kann es zu einer Unordung kommen, welche auch Software-Entropie (Grad der Unordnung) genannt wird.
-    \item[Übertragbarkeit] \hfill \\ Wird auch Portierbarkeit genannt und beschreibt die Eigenschaft einer Software, in andere Umgeungen übertragen werden zu können (z.B. 32-Bit zu 64-Bit oder Desktop zu Mobile).
+    \item[Transparenz (Transparency)] \hfill \\ Beschreibt, wie die nach außen hin sichtbare Funktionalität intern umgesetzt wurde. Gerade bei alternder Software, kann es zu einer Unordnung kommen, welche auch Software-Entropie (Grad der Unordnung) genannt wird.
+    \item[Übertragbarkeit] \hfill \\ Wird auch Portierbarkeit genannt und beschreibt die Eigenschaft einer Software, in andere Umgebungen übertragen werden zu können (z.B. 32-Bit zu 64-Bit oder Desktop zu Mobile).
     \item[Testbarkeit (Testability)] \hfill \\ Testen stellt eine große Herausforderung dar, da oft auf interne Zustände zugegriffen werden muss oder die Komplexität die möglichen Eingangskombinationen vervielfacht. Aber gerade durch Tests können Fehler frühzeitig entdeckt und behoben werden.
   \end{description}
 \end{description}
@@ -110,26 +110,335 @@ Je nach Anwendungsgebiet und den Anforderungen der Software haben die Merkmale u
   \end{figure}
 \end{savenotes}
 
-
-\section{Software-Metriken}
+\newpage
+\section{Kennzahlen}
 
 Software-Metriken helfen uns dabei, bestimmte (Qualitäts-) Merkmale beziehungsweise Kenngrößen eines Software-Systems systematisch und quantitativ zu erfassen.
 Ziel ist es dabei, diese oft versteckten Merkmale sichtbar und vergleichbar zu machen.
 Ein einfaches Beispiel ist die \ac{LOC}-Metrik, die die gesamte Anzahl an Zeilen Code darstellt und als grobes Maß für die Komplexität verwendet werden kann.
 
-\subsection{Testmetriken}
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+       \includegraphics[width=0.6\textwidth]{img/software-development-lifecycle.png}
+    \caption[Softwareentwicklungsprozess]{Softwareentwicklungsprozess~\label{fig:sdlc}}
+  \end{figure}
+\end{savenotes}
 
-\subsection{Softwaremetriken}
+Im Entwicklungsprozess werden in den unterschiedlichen Systemen und Prozessschritten Daten erzeugt, die als Kennzahlen oder direkt als Metriken genutzt werden können.
+Abbildung~\ref{fig:sdlc} zeigt die einzelnen Schritte und Systeme im Entwicklungsprozess.
 
-\subsection{Agile-Metriken}
+\newpage
+\subsection[Versionsverwaltung]{Versionsverwaltung~\footcite[vgl.][S.62ff]{davis_agile_2015}}
 
-\section{Kennzahlen aus dem Entwicklungsprozess}
-Einzelne Systeme und ihre Key Metrics / erweiterte Metriken.
+Das \ac{VCS} befindet sich nah an der Arbeit der Entwickler, da hier der Quellcode des Produkts verwaltet wird.
+Daher können hier Daten darüber gesammelt werden, wie viel gearbeitet und auch wie viel zusammengearbeitet wird.
+Um bestmögliche Daten zu bekommen, sollten verteilte Versionskontrollsysteme wie Git verwendet und mit Pull Requests gearbeitet werden.
 
-\subsection{Versionskontrolle}
+\begin{description}
+  \item[\ac{CLOC}] \hfill \\ Anzahl der geänderten Code Zeilen.
+  \item[\ac{CLOC} pro Entwickler] \hfill \\ Anzahl der geänderten Zeilen im Quellcode pro Entwickler.
+  \item[Commits] \hfill \\ Gesamtzahl an Commits in einem bestimmten Zeitraum.
+  \begin{description}
+    \item[Commits pro Entwickler] \hfill \\ Gesamtzahl an Commits in einem bestimmten Zeitraum pro Entwickler.
+    \item[Kommentare pro Commit] \hfill \\ Anzahl der Kommentare pro Commit.
+    \item[Merges] \hfill \\ Gesamtzahl an Merges in einem bestimmten Zeitraum.
+    \item[\ac{CLOC} pro Commit] \hfill \\ Anzahl der geänderten Zeilen im Quellcode pro Commit.
+  \end{description}
+  \item[Pull Requests] \hfill \\ Gesamtzahl an Pull Requests in einembestimmten Zeitraum.
+  \begin{description}
+    \item[Gemergte Pull Requests] \hfill \\ Anzahl erfolgreicher Pull Requests ineinem bestimmten Zeitraum.
+    \item[Abgelehnte Pull Requests] \hfill \\ Anzahl abgelehnter Pull Requests in einem bestimmten Zeitraum.
+    \item[Kommentare pro Pull Request] \hfill \\ Anzahl der Kommentare pro Pull Request.
+  \end{description}
+\end{description}
 
-\subsection{Continuous Integration}
+\newpage
+\subsection[Projektmanagement]{Projektmanagement~\footcite[vgl.][S.37ff]{davis_agile_2015}}
 
-\subsection{Projektmanagement}
+In einem \ac{PTS} werden Aufgaben definiert und zugewiesen, Bugs verwaltet und Arbeitszeit mit Aufgaben verknüpft.
+Hier können Daten über das Projektverständnis des Teams, die Geschwindigkeit und vor allem die Konsistenz der Arbeit gesammelt werden.
+Um bestmögliche Daten erhalten zu können, gibt es folgende Empfehlungen:
+\begin{itemize}[noitemsep]
+  \item \ac{PTS} wird von allen genutzt
+  \item Aufgaben mit möglichst vielen Tags versehen
+  \begin{itemize}
+    \item Aufgaben kategorisieren (nach ``gut'', ``ok'' und ``schlecht'')
+  \end{itemize}
+  \item Aufgaben schätzen
+  \item gemeinsam eine \ac{DoD} festlegen
+\end{itemize}
+Jede Arbeit, die am \ac{PTS} vorbei geht, fällt später bei der Auswertung der Daten durch das Raster.
+Durch das Taggen der Aufgaben können später Korrelationen ausgewertet werden, vor allem auch durch das Taggen, wie gut die Aufgabe abgelaufen ist.
+Nur wenn die Aufgabe geschätzt ist, kann festgestellt werden, ob richtig geschätzt wurde oder wie viele Ausreißer es gibt. Dazu muss auch die Arbeitszeit auf der Aufgabe gespeichert werden.
+Die \ac{DoD} hilft allgemein den Prozess zu verbessern und Rückläufe im Arbeitsablauf zu minimieren.
 
-\subsection{Applikationsmonitoring}
+Dadurch ergeben sich folgende Kennzahlen aus einem \ac{PTS}:
+\begin{description}
+  \item[Burn Down] \hfill \\ Die Anzahl erledigte Arbeit über die Zeit. Liefert einen Richtwert, wo man sich gerade im Sprint befindet, verglichen zum Commitment.
+  \item[Velocity] \hfill \\ Eine relative Messung der Konsistenz erledigter Arbeit über die Sprints.
+  \item[Cummulative Flow] \hfill \\ Zeigt wie viel Aufgaben nach Status dem Team zugewiesen sind über die Zeit.
+  \item[Lead Time] \hfill \\ Zeit zwischen Start und Abschluss einer Aufgabe, vor allem interessant bei Kanban.
+  \item[Bug Counts] \hfill \\ Die Anzahl an Bugs über die Zeit.
+  \begin{description}
+    \item[Bug-Erzeugungsrate] \hfill \\ Anzahl Bugs nach Erstellungsdatum.
+    \item[Bug-Fertigstellungsrate] \hfill \\ Anzahl Bugs nach Erledigungsdatum.
+  \end{description}
+  \item[Aufgaben-Volumen] \hfill \\ Die Anzahl der Aufgaben und kann der Schätzung gegenübergestellt werden, um die Größe der Aufgaben oder ungeplante Arbeit aufzuzeigen.
+  \item[Aufgaben-Rückfälligkeit] \hfill \\ Zeigt auf, wie oft Aufgaben im Arbeitsablauf rückwärts gehen.
+\end{description}
+
+\subsection[Kontinuierliche Integration und Auslieferung]{Kontinuierliche Integration und Auslieferung~\footcite[vgl.][S.84ff]{davis_agile_2015}}
+
+\ac{CI}- und \ac{CD}-Systeme stellen sicher, dass die erstellte Software zu jedem Zeitpunkt auslieferbar ist, in dem sie zu definierten Zeitpunkten automatisch neu gebaut und ausgeliefert wird.
+In einer solchen Build-Pipeline können sehr viel nützliche Daten erzeugt werden, vor allem mit Tools für statische Analysen (wie zum Beispiel SonarQube~\footcite[][]{sonarqube}).
+Diese Systeme sind aber auch jene Elemente im Softwareentwicklungsprozess, die von Team zu Team am meisten variieren können.
+Daher hängen die erzeugten Daten auch stark vom jeweiligen Setup ab.
+Grundsätzlich können aber folgende Kennzahlen aus diesen Systemen ermittelt werden:
+
+\begin{description}
+  \item[Build-Dauer] \hfill \\ Geschätzte und tatsächliche Dauer der Builds.
+  \item[Build-Status] \hfill \\ Es können die Anzahl der erfolgreichen und fehlerhaften Builds gegenüber gestellt werden.
+  \item[Build-Frequenz] \hfill \\ Wie oft wird ein Build ausgelöst.
+  \item[Test Reports] \hfill \\ Anzahl erfolgreicher und fehlerhafter Tests, Gesamtdauer der Tests.
+  \item[Code Coverage] \hfill \\ Wie viel Prozent des Quellcodes ist mit Tests abgedeckt.
+  \item[Stresstests oder Benchmarking] \hfill \\ Wird oft im Build Prozess mit getestet mit Tools wie JMeter~\footcite[][]{jmeter} oder Gatling~\footcite[][]{gatling}.
+\end{description}
+
+\newpage
+\subsection[Produktionssystem]{Produktionssystem~\footcite[vgl.][S.107ff]{davis_agile_2015}}
+
+Daten aus den Produktionssystemen können gesammelte \ac{APM}- oder auch \ac{BI}-Kennzahlen sein.
+Diese Kennzahlen ermöglichen Aussagen, ob die Kunden zufrieden sind und wie das System arbeitet.
+Die \ac{BI}-Kennzahlen sollten möglichst nahe am Entwicklungsteam gehalten werden, damit es verstehen kann, wie die Kunden die Applikation nutzen.
+Dazu können Frameworks wie StatsD~\footcite[][]{statsd} und Atlas~\footcite[][]{atlas} verwendet werden.
+Im Produktionssystem können folgende Kennzahlen ermittelt werden:
+
+\begin{description}
+  \item[CPU Nutzung] \hfill \\ Auslastung der Prozessoren über die Zeit.
+  \item[Heap Size] \hfill \\ Auslastung des Heap über die Zeit.
+  \item[Fehlerraten] \hfill \\ Anzahl Fehler über die Zeit (kann aus dem Logging kommen).
+  \item[Antwortzeiten] \hfill \\ Dauer der Verarbeitung bestimmter Anfragen.
+  \item[Benutzeranzahl] \hfill \\ Anzahl gleichzeitiger Benutzer in der Applikation über die Zeit.
+  \item[Aufenthaltsdauer] \hfill \\ Verweildauer der Benutzer auf bestimmten Seiten.
+  \item[Conversion Rate] \hfill \\ Anzahl Benutzer die zu Kunden wurden.
+  \item[Semantisches Logging] \hfill \\ Ermöglicht es, beim Logging strukturierte Daten auszugeben, zum Beispiel: was suchen Benutzer auf bestimmten Seiten.
+  \item[Verfügbarkeit] \hfill \\ Verfügbarkeit der Applikation über die Zeit.
+\end{description}
+
+\newpage
+\subsection{Übersicht Kennzahlen im Entwicklungsprozess}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{7cm}p{7.5cm}} \toprule
+  \textbf{\ac{CLOC}} & Anzahl der geänderten Zeilen im Quellcode. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viele Änderungen passieren in der Codebasis? \newline Wo finden die meisten Änderungen statt?}} \\ \midrule
+  \textbf{\ac{CLOC} pro Entwickler} & Anzahl der geänderten Zeilen im Quellcode pro Entwickler. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viel Code ändert jeder im Team? \newline  Wer ist wie oft in welchem Modul?}} \\ \midrule
+  \textbf{\ac{CLOC} pro Commit} & Anzahl der geänderten Zeilen im Quellcode pro Commit. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie groß sind die Commits?}} \\ \midrule
+  \textbf{Commits} & Gesamtzahl an Commits in einem bestimmten Zeitraum. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viel Änderungen wurden im Quellcode vorgenommen?}} \\ \midrule
+  \textbf{Commits pro Entwickler} & Gesamtzahl an Commits in einem bestimmten Zeitraum pro Entwickler. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viel Änderungen wurden im Quellcode von einem Entwickler vorgenommen?}} \\ \midrule
+  \textbf{Kommentare pro Commit} & Anzahl der Kommentare pro Commit. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wer arbeitet zusammen? \newline Wie viel wird zusammengearbeitet?}} \\ \midrule
+  \textbf{Merges} & Gesamtzahl an Merges in einem bestimmten Zeitraum. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie oft werden Änderungen in die Codebasis übernommen?}} \\ \midrule
+  \textbf{Pull Requests} & Gesamtzahl an Pull Requests in einem bestimmten Zeitraum. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wird mit Pull Requests gearbeitet? \newline Werden Reviews gemacht?}} \\ \midrule
+  \textbf{Gemergte Pull Requests} & Anzahl erfolgreicher Pull Requests in einem bestimmten Zeitraum. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie oft werden erfolgreiche Änderungen in die Codebasis übernommen?}} \\ \midrule
+  \textbf{Abgelehnte Pull Requests} & Anzahl abgelehnter Pull Requests in einem bestimmten Zeitraum. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie oft werden Änderungen an der Codebasis abgelehnt? \newline Wie klar sind die Erwartungen des Teams an eine abgeschlossene Änderung (\ac{DoD})?}} \\ \midrule
+  \textbf{Kommentare pro Pull Request} & Anzahl der Kommentare pro Pull Request. \\ 
+  \multicolumn{2}{p{14.5cm}}{\textit{Wer arbeitet zusammen? \newline Wie viel wird zusammengearbeitet?}} \\ \bottomrule
+  \end{tabular}
+  \caption{Kennzahlen aus dem \ac{VCS}}\label{metrics-table-vcs}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{5cm}p{9.5cm}} \toprule
+  \textbf{Burn Down} & Die Anzahl erledigte Arbeit über die Zeit. Liefert einen Richtwert, wo man sich gerade im Sprint befindet, verglichen zum Commitment. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Erfüllt das Team seine Commitments? \newline Plant das Team seine Arbeit realistisch?}} \\ \midrule
+  \textbf{Velocity} & Eine relative Messung der Konsistenz erledigter Arbeit über die Sprints. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie konsistent arbeitet das Team?}} \\ \midrule
+  \textbf{Cumulative Flow} & Zeigt wie viel Aufgaben nach Status dem Team zugewiesen sind über die Zeit. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Gibt es Engpässe oder Schwachstellen im Prozess? \newline Müssen gewisse Abläufe im Prozess optimiert werden?}} \\ \midrule
+  \textbf{Lead Time} & Zeit zwischen Start und Abschluss einer Aufgabe, vor allem interessant bei Kanban. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie schnell können Aufgaben vom Team erledigt werden? \newline Wie lange dauert die Umsetzung eines neuen Features?}} \\ \midrule
+  \textbf{Bug Counts} & Die Anzahl an Bugs über die Zeit. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viele Fehler werden vom Team im Entwicklungsprozess übersehen? \newline Wie viel ungeplante Arbeit kam zum Sprint dazu?}} \\ \midrule
+  \textbf{Bug-Erzeugungsrate} & Anzahl Bugs nach Erstellungsdatum. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viele Fehler wurden zu einem bestimmten Zeitpunkt erzeugt?}} \\ \midrule
+  \textbf{Bug-Fertigstellungsrate} & Anzahl Bugs nach Erledigungsdatum. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viele Fehler wurden zu einem bestimmten Zeitpunkt beseitgt?}} \\ \midrule
+  \textbf{Aufgaben-Volumen} & Ist die Anzahl der Aufgaben und kann der Schätzung gegenübergestellt werden, um die Größe der Aufgaben oder ungeplante Arbeit aufzuzeigen. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viel ungeplante Arbeit kam zum Sprint dazu? \newline Wie groß ist die durchschnittliche Aufgabe? Gibt es Ausreißer?}} \\ \midrule
+  \textbf{Aufgaben-Rückfälligkeit} & Zeigt auf, wie oft Aufgaben im Arbeitsablauf rückwärts gehen. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie viele Aufgaben werden wieder in einen vorhergehenden Status gesetzt? \newline Gibt es Probleme beim Verständnis der Aufgaben? \newline Wie klar sind die Erwartungen des Teams an eine abgeschlossene Änderung (DoD)?}} \\ \bottomrule
+  \end{tabular}
+  \caption{Kennzahlen aus dem \ac{PTS}}\label{metrics-table-pts}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{6.5cm}p{8cm}} \toprule
+  \textbf{Build-Dauer} & Geschätzte und tatsächliche Dauer der Builds. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie lange dauert es ein Softwareartefakt zu erstellen? \newline Wie verändert sich die Dauer der Erstellung eines Softwareartefakts über die Zeit?}} \\ \midrule
+  \textbf{Build-Status} & Es können die Anzahl der erfolgreichen und fehlerhaften Builds gegenüber gestellt werden. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Gibt es ein Problem im Freigabeprozess?}} \\ \midrule
+  \textbf{Build-Frequenz} & Wie oft wird ein Build ausgelöst. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wrid oft genug ein neues Softwareartefakt erstellt?}} \\ \midrule
+  \textbf{Test Reports} & Anzahl erfolgreicher und fehlerhafter Tests, Gesamtdauer der Tests. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie lange dauert ein kompletter Testdurchlauf? \newline Gibt es Tests, die optimiert werden müssen? \newline Wie oft werden fehlerhafte Tests in die Codebasis aufgenommen?}} \\ \midrule
+  \textbf{Code Coverage} & Wie viel Prozent des Quellcodes ist mit Tests abgedeckt. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Gibt es Module, die nicht oder schlecht getestet sind? \newline Wie sieht die Entwicklung der Testabdeckung über die Zeit aus?}} \\ \midrule
+  \textbf{Stresstests oder Benchmarking} & Hier kann das Ergebnisse die unterschiedliche Reports sein. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Ist das Produkt auch noch unter Last verwendbar? \newline Wie verändert sich die Leistung über die Zeit?}} \\ \bottomrule
+  \end{tabular}
+  \caption{Kennzahlen aus den \ac{CI}- und \ac{CD}}-Systemen\label{metrics-table-cicd}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{5cm}p{9.5cm}} \toprule
+  \textbf{CPU Nutzung} & Auslastung der Prozessoren über die Zeit. \\
+  \textbf{Heap Size} & Auslastung des Heap über die Zeit. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Arbeitet die Software technisch effizient? \newline Ist die Hardware ausreichend? \newline Gibt es eine erhöhte Auslastung nach einer Änderung?}} \\ \midrule
+  \textbf{Fehlerraten} & Anzahl Fehler über die Zeit (kann aus dem Logging kommen). \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Werden seit einer Änderung mehr Fehler produziert? \newline Wie entwickelt sich die Fehlerrate über die Zeit?}} \\ \midrule
+  \textbf{Antwortzeiten} & Dauer der Verarbeitung bestimmter Anfragen. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Reagiert und arbeitet das Produkt noch schnell genug? \newline Gibt es Geschwindigkeitsprobleme seit der letzen Änderung? \newline Wie entwickeln sich die Antwortzeiten über die Zeit?}} \\ \midrule
+  \textbf{Benutzeranzahl} & Anzahl gleichzeitiger Benutzer in der Applikation über die Zeit. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie entwickeln sich die Benutzerzahlen mit der Zeit? \newline Geht das Produkt in die richtige Richtung? \newline Ist mit höheren Lasten zu rechnen?}} \\ \midrule
+  \textbf{Aufenthaltsdauer} & Verweildauer der Benutzer auf bestimmten Seiten. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Welche Features werden besonders oft / selten genutzt? \newline Hat das neue Feature den gewünschten Effekt? Wird es genutzt?}} \\ \midrule
+  \textbf{Conversion Rate} & Anzahl Benutzer die zu Kunden wurden. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie entwicklt sich die Zahl der zahlenden Neukunden?}} \\ \midrule
+  \textbf{Semantisches Logging} & Strukturierte Daten aus dem Logging. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Hier können Daten zu anderen Fragen gesammelt werden, die für den Prozess wichtig sind.}} \\ \bottomrule
+  \textbf{Verfügbarkeit} & Verfügbarkeit der Applikation über die Zeit. \\
+  \multicolumn{2}{p{14.5cm}}{\textit{Wie hoch ist die Ausfallsicherheit? \newline Wie lange war die Applikation nicht verfügbar?}} \\ \bottomrule
+  \end{tabular}
+  \caption{Kennzahlen aus den \ac{APM}- und \ac{BI}}-Systemen\label{metrics-table-apm}
+\end{table}
+
+\newpage
+\section{Metriken}
+
+Eine Softwaremetrik wird vom \ac{IEEE} Standard 1061 von 1998 folgendermaßen definiert:
+\begin{quote}
+  ``Eine Softwarequalitätsmetrik ist eine Funktion, die eine Software-Einheit in einen Zahlenwert abbildet, welcher als Erfüllungsgrad einer Qualitätseigenschaft der Software-Einheit interpretierbar ist.''\footcite[vgl.][S.3]{ieee-1061}
+\end{quote}
+
+Vereinfacht gesagt, ist eine Metrik eine oder mehrere Kennzahlen, die mithilfe einer Funktion ein Qualitätsmerkmal in einen Zahlenwert abbilden.
+Eine Kennzahl kann daher auch schon direkt eine Metrik sein, wenn sie in der Lage ist, ein gewünschtes Qualitätsmerkmal abzubilden.
+
+\subsection[Veröffentlichung von Metriken]{Veröffentlichung von Metriken~\footcite[vgl.][S.177ff]{davis_agile_2015}}
+
+Metriken können auf verschiedene Art und Weise veröffentlicht werden. Zwei mögliche Beispiele sind Dashboards oder Emails.
+Grundsätzlich sollte beachtet werden, dass man sich bei der Veröffentlichung von Metriken innerhalb der Grenzen und Gewohnheiten des Unternehmens bewegen sollte.
+Außerdem sollte auf folgende Punkte geachtet werden:
+
+\begin{description}
+  \item[Dashboards] \hfill
+  \begin{itemize}[noitemsep]
+    \item den Zugriff innerhalb der Firma nicht einschränken
+    \begin{itemize}[noitemsep]
+      \item aber als intern ansehen
+    \end{itemize}
+    \item muss nach den Bedürfnissen der Teams anpassbar sein
+    \item Metriken werden als Werkzeug gesehen, nicht als Waffe (gegen andere Teams oder Personen)
+    \item Page Tracking verwenden, um das Nutzungsverhalten zu verstehen
+  \end{itemize}
+  \item[Emails] \hfill
+  \begin{itemize}[noitemsep]
+    \item aus dem Dashboard optional machen (sonst landen sie schnell automatisch im Spam-Ordner)
+    \item minimal erforderliche Daten, den Rest verlinken zum Dashboard
+    \item den Richtigen Rhytmus finden (zwischen oft genug informieren und nerven)
+  \end{itemize}
+\end{description}
+
+Arbeitet ein Unternehmen beispielsweise viel mit Reports via Email, dann kann ein reines Dashboard weniger Anerkennung finden. Hier könnte beispielsweise eine Übersicht per Mail versendet und mit Links zum Dashboard versehen werden.
+
+\subsection{Allgemeine Metriken}
+
+Es gibt einige allgemeine Metriken, die für jedes Scrum Team von Bedeutung sind.
+Wie stark, kann jedes Team selbst entscheiden, aber sie sollten nicht aus den Augen verloren werden.
+
+\begin{itemize}[noitemsep]
+  \item Metrik 1
+\end{itemize}
+
+\subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
+
+Um eigene Metriken erstellen zu können sind 2 Dinge notwendig:
+\begin{itemize}[noitemsep]
+  \item Daten
+  \item eine Funktion, um die Metrik zu berechnen
+\end{itemize}
+
+Dabei sollte darauf geachtet werden,
+\begin{itemize}[noitemsep]
+  \item dass man auf die Metrik reagieren kann (Dinge, die einen stören und die man nicht ändern kann, frustrieren oder demotivieren)
+  \item dass sich die Metrik nach den Team-Grundsätzen und Kerngeschäften ausrichtet
+  \item dass die Metrik für sich alleine stehen kann
+\end{itemize}
+
+\subsection[Agile Prinzipien messen]{Agile Prinzipien messen~\footcite[vgl.][S.201ff]{davis_agile_2015}}
+
+Um die agilen Prinzipien messen zu können, muss zuerst herausgefunden werden, was die Kernpunkte dieser Prinzipien sind.
+Dies kann zum Beispiel grafisch, durch die Erstellung einer Wortwolke, wie in Abbildung~\ref{fig:wordcloud_principles} ersichtlich, erreicht werden.
+
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/principles-wordcloud.png}
+    \caption{Agile Prinzipien als Wortwolke}\label{fig:wordcloud_principles}
+  \end{figure}
+\end{savenotes}
+
+Aus dieser Wortwolke heben sich neben den Begriffen ``development'' und ``software'' vor allem auch die Begriffe ``team'', ``processes'', ``effective'' und ``requirements'' hervor.
+Mithilfe dieser Begriffe lassen sich folgende vier Punkte ableiten:
+
+\begin{itemize}[noitemsep]
+  \item Effektive Software
+  \item Effektiver Prozess
+  \item Effektives Team 
+  \item Effektive Anforderungen 
+\end{itemize}
+
+Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen anwendbar:
+
+\begin{description}
+  \item[Effektive Software] \hfill
+  \begin{itemize}[noitemsep]
+    \item Status der Applikation
+    \begin{itemize}[noitemsep]
+      \item Fehlerraten
+      \item CPU/Speicher Auslastung
+      \item Antwort- / Transaktionszeiten
+      \item Heapgröße / Garbage Collection / Anzahl Threads
+    \end{itemize}
+    \item Semantisches Logging
+    \item Verfügbarkeit
+    \item \ac{MTTF}
+    \item Lead Time
+    \item \ac{MTTR}
+  \end{itemize}
+  \item[Effektiver Prozess] \hfill
+  \begin{itemize}[noitemsep]
+    \item Metrik
+  \end{itemize}
+  \item[Effektives Team] \hfill
+  \begin{itemize}[noitemsep]
+    \item Metrik
+  \end{itemize}
+  \item[Effektive Anforderungen] \hfill
+  \begin{itemize}[noitemsep]
+    \item Metrik
+  \end{itemize}
+\end{description}

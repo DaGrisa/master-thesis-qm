@@ -158,7 +158,7 @@ Die sog. -ilities: maintainab- / extens- / reliab- / avalability / security / us
 Maintainability p.158: wenn es um Wartbarkeit geht, sind MTTR und lead time die wichtigsten Größen (ab p.159)
   - MTTR: mean time to repair
   - lead Time: Definition eines neuen Features und wenn es ausgeliefert wird
-  - code Coverage: LOC die vin Tests abgedeckt sind
+  - code Coverage: LOC die von Tests abgedeckt sind
   - coding standard rules
   - wie viel code muss für features geändert werden: CLOC in Verbindung mit Aufgaben
   - bug rates
@@ -207,6 +207,45 @@ Methoden zur Veröffentlichung p.191:
 Summary p.199
 
 Team gegen die Agilen Prinzipien Messen
+Aus den Prinzipien ergeben sich folgende Kernfragen:
+  - Sind die Teams effektiv?
+  - Sind die Prozesse effektiv?
+  - Sind die Requirements effektiv?
+  - Ist die Software effektiv?
+Daraus kann folgende Gleichung abgeleitet werden: Teams + Prozesse + Requirements = Software
+Ebenso können die unterschiedlichen Prinzipien an unterschiedlichen Stellen gemessen werden Table 10.0 p.204
+Effektive Software:
+  - Business/spezielle Metrics
+  - Gesundheitsstatistiken: Fehleranzahl, CPU/Speicher, Antwortzeiten, Transaktionen, Speicherplatz, Garbage Collection, Thread Anzahl
+  - Semantisches Logging
+  - Usability
+  - Uptime
+  - MTTF
+  - Maintainability
+  - MTTR
+  - Lead Time
+Effektiver Prozess:
+  - CLOC
+  - Task Volume and Estimates
+  - Konsistenz der Schätzungen
+  - Lead Time + Dev Time + Volume = how fast / frequently you can deliver
+  - Velocity
+  - erfolgreiche Builds
+  - MTTR
+  - Bug Counts
+  - Code Coverage und mehr statische Analysen
+  - PTS und SCM Kommentar Counts
+Effektives Team:
+  - Lead Time
+  - Entwicklungszeit
+  - Deploy Frequency
+  - erfolgreiche / fehlerhafte Builds
+  - Personen die an einem Task arbeiten, bevor er "In Progress" genommen wird / Personen die danach daran arbeiten
+Effektive Requirements:
+  - Task Volumen / Durchschnittliche Schätzungen
+  - Recidivismus / Lead time
+Summary p.219
+
 
 
 Datenmodell VCS:

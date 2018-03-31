@@ -1,9 +1,27 @@
 \chapter{Zielsetzung}
 
+Agile Methoden, im speziellen Scrum, sind heutzutage in der Softwareentwicklung sehr weit verbreitet.
+Ein wichtiges Werkzeug dieser Methoden ist der evolutionäre Ansatz, der in Form von Retrospektiven (bei Scrum) zur kontinuierlichen Verbesserung des agilen Prozesses beitragen soll.
+In diesen Retrospektiven werden dann auch Maßnahmen getroffen, um solche Verbesserungen umzusetzen.
+In dieser Arbeit soll ein Vorgehensmodell entwickelt werden, wie solche Verbesserungen oder auch Defizite messbar und somit sichtbar gemacht werden können.
+Weiters soll eine Software entwickelt werden, um die notwendigen Daten zu sammeln und darstellen zu können.
+
 \section{Vorgehensmodell}
 
-Entwicklung eines Vorgehensmodells zur Bestimmung von relevanten Qualitätsmetriken von Teams.
+Entwicklung eines Vorgehensmodells zur Bestimmung von relevanten Qualitätsmetriken von agilen Teams.
+Dabei müssen folgende Punkte beachtet werden:
+\begin{itemize}[noitemsep]
+    \item Ebene für die die Metriken bestimmt sind (agiles Team, mittleres Management, Geschäftsleitung)
+    \item allgemeine Metriken für diese Ebene
+    \item spezielle Probleme erkennen und Metriken dazu erstellen
+\end{itemize}
 
 \section{Software}
 
-Entwicklung einer Software zur Darstellung von Qualitätsmetriken von Teams.
+Entwicklung einer Software zum Sammeln von Kennzahlen zur Erstellung von Qualitätsmetriken. 
+Dabei müssen folgende Kriterien beachtet werden:
+\begin{itemize}[noitemsep]
+    \item Umsetzung in Java
+    \item einzubindende Systeme: BitBucket Server~\footcite{bitbucket_server}, JIRA~\footcite{jira}, Jenkins~\footcite{jenkins}, SonarQube~\footcite{sonarqube}, Icinga~\footcite{icinga}
+    \item Speicherung und Darstellung der Metriken erfolgt in einem Elastic Stack~\footcite{elastic_stack}
+\end{itemize}

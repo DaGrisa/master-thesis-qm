@@ -13,14 +13,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}    % Silbentrennung bei Sonderzeichen
 \usepackage{graphicx}       % Bilder einbinden
+\usepackage{lscape}         % Querformat
 \usepackage[ngerman]{babel} % Deutsche Sprachanpassungen
 \usepackage{footnote}       % footer citations
 \usepackage{csquotes}       % When using babel or polyglossia with biblatex, loading csquotes is recommended to ensure that quoted texts are typeset according to the rules of your main language.
 \usepackage{acronym}  % für optionales Abkürzungsverzeichnis
 \usepackage[linktocpage=true]{hyperref} % Links z. B. \href{https://www.wikibooks.org}{Wikibooks home}
 \usepackage{caption} % Abbildungslegenden
+\usepackage{booktabs} % schönere horizontale Trennlinien für Tabellen 
 \captionsetup{format=hang, justification=raggedright}
-\usepackage[style=verbose,backend=biber]{biblatex}   % Literaturverweise
+\usepackage[style=verbose,backend=bibtex]{biblatex}   % Literaturverweise
 % biblatex comes with a variety of built-in bibliography/citation style families (numeric, alphabetic, authoryear, authortitle, verbose), and there's a growing number of custom styles:
 % https://de.sharelatex.com/learn/Biblatex_citation_styles
 % https://de.sharelatex.com/learn/Biblatex_bibliography_styles
@@ -123,8 +125,7 @@ Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche 
 % Abkürzungsverzeichnis:
 \input{acronyms.tex}
 
-%% Die Kapitelstruktur ist mit der betreuungsperson abzustimmen!
-
+%% Die Kapitelstruktur ist mit der Betreuungsperson abzustimmen!
 \input{chapters/1_Einleitung.tex}
 \input{chapters/2_Situationsanalyse.tex}
 \input{chapters/3_Zielsetzung.tex}
