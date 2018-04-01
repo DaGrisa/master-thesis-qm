@@ -8,23 +8,25 @@ Ziel war es, eine Alternative zu den bisherigen, schwergewichtigen und von Dokum
 
 \subsection{Agiles Manifest}
 
+Das agile Manifest ist er Grundbaustein aller agilen Vorgehensmodelle:
+
 \begin{quote}Wir erschließen bessere Wege, Software zu entwickeln,
 indem wir es selbst tun und anderen dabei helfen.
-Durch diese Tätigkeit haben wir diese Werte zu schätzen gelernt:
-
-Individuen und Interaktionen mehr als Prozesse und Werkzeuge
-Funktionierende Software mehr als umfassende Dokumentation
-Zusammenarbeit mit dem Kunden mehr als Vertragsverhandlung
-Reagieren auf Veränderung mehr als das Befolgen eines Plans
-
+Durch diese Tätigkeit haben wir diese Werte zu schätzen gelernt: \newline
+\begin{center}
+Individuen und Interaktionen mehr als Prozesse und Werkzeuge \newline
+Funktionierende Software mehr als umfassende Dokumentation \newline
+Zusammenarbeit mit dem Kunden mehr als Vertragsverhandlungen \newline
+Reagieren auf Veränderung mehr als das Befolgen eines Plans \newline
+\end{center}
 Das heißt, obwohl wir die Werte auf der rechten Seite wichtig finden,
 schätzen wir die Werte auf der linken Seite höher ein.\end{quote}\cite{agile_manifest}
 
 \subsection{Agile Prinzipien}
 
-\begin{quote}Wir folgen diesen Prinzipien:
+Die agile Softwareentwicklung folgt diesen zwölf Prinzipien:
 
-Unsere höchste Priorität ist es, den Kunden durch frühe und kontinuierliche Auslieferung wertvoller Software zufrieden zu stellen.
+\begin{quote}Unsere höchste Priorität ist es, den Kunden durch frühe und kontinuierliche Auslieferung wertvoller Software zufrieden zu stellen.
 
 Heisse Anforderungsänderungen selbst spät in der Entwicklung willkommen. Agile Prozesse nutzen Veränderungen zum Wettbewerbsvorteil des Kunden.
 
@@ -48,9 +50,59 @@ Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorga
 
 In regelmäßigen Abständen reflektiert das Team, wie es effektiver werden kann und passt sein Verhalten entsprechend an.\end{quote}\cite{agile_principles}
 
-\section[Scrum in mehreren Teams]{Scrum in mehreren Teams~\footcite[vgl.][S.172ff]{scrum_kurz_gut_2013}}
+\section{Scrum (Quellenangabe!)}
 
-Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie und beschreibt die agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
+Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie. 
+Scrum basiert auf Empirismus, also der Theorie, dass Wissen aus Erfahrung erlangt wird und Entscheidungen auf Basis dieses Wissens getroffen werden. 
+Die drei Grundsäulen einer solchen empirischen Prozesskontrolle sind:
+
+\begin{description}
+  \item[Transparenz] \hfill \\ Signifikante Aspekte des Prozesses müssen für alle sichtbar sein.
+  \item[Inspektion] \hfill \\ Artefakte müssen regelmäßig inspiziert werden, aber dieser Vorgang darf der Arbeit selbst nicht im Weg stehen.
+  \item[Adaption] \hfill \\ Weicht ein oder mehrere Aspekte eines Prozesses von seinen akzeptablen Limits ab, muss dieser so früh wie möglich angepasst werden.
+\end{description}
+
+Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rollen, fünf Ereignissen und drei Artefakten.
+
+\begin{itemize}
+  \item \textbf{Rollen}
+  \begin{itemize}
+    \item \textbf{Development Team}: Selbstorganisiertes Team, das am Produkt arbeitet.
+    \item \textbf{Scrum Mater}: Verantwortlich dafür, sicherzustellen, dass Scrum verstanden und gelebt wird.
+    \item \textbf{Product Owner}: Verantwortlich den Wert des Produktes und die Arbeit des Development Teams zu maximieren.
+  \end{itemize}
+  \item \textbf{Ereignisse}
+  \begin{itemize}
+    \item \textbf{Sprint}: Ist das Herz von Scrum: eine Timebox von 2 bis 4 Wochen, in dem ein fertiges, verwendbares und potentiell releasebares Produkt-Inkrement entwickelt wird.
+    \item \textbf{Sprint Planning}: Planung eines Sprints. Hier commited sich das Scrum Team, eine gewisse Anzahl an Aufgaben im kommenden Sprint abzuarbeiten.
+    \item \textbf{Daily Scrum}: Tägliches, zeitlich begrenztes Meeting, bei dem von jedem Teammitglied folgende drei Fragen beantwortet werden:
+    \begin{enumerate}
+      \item Was habe ich gemacht?
+      \item Was werde ich machen?
+      \item Was behindert mich bei meiner Arbeit?
+    \end{enumerate}
+    \item \textbf{Sprint Review}: Abschluss eines Sprints. Hier präsentiert das Team dem Product Owner die Ergebnisse des letzten Sprints.
+    \item \textbf{Sprint Retrospective}: Das Team reflektiert den Sprint-Ablauf und ergreift Maßnahmen, um den Prozess weiter zu verbessern.
+  \end{itemize}
+  \item \textbf{Artefakte}
+  \begin{itemize}
+    \item \textbf{Product Backlog}: Ist eine Sammlung von möglichen Aufgaben für das Team am Produkt. Sollte einen Ausblick auf die zukünftige Entwicklung des Produktes geben. Oben im Product Backlog befinden sich die bereits fein geplanten Aufgaben, weiter unten die groben.
+    \item \textbf{Sprint Backlog}: Entspricht den Aufgaben, die vom Team in den Sprint genommen und dem Product Owner zugesagt wurden.
+    \item \textbf{Increment}: Entsteht am Ende eines jeden Sprints und ist eine lauffähige Version des Produkts, die releasefähig ist.
+  \end{itemize}
+\end{itemize}
+
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+       \includegraphics[width=0.9\textwidth]{img/scrum-framework.png}
+    \caption[Scrum Framework]{Scrum Framework~\footcite{scrum_framework}}\label{fig:scrum_framework}
+  \end{figure}
+\end{savenotes}
+
+\subsection[Scrum in mehreren Teams]{Scrum in mehreren Teams~\footcite[vgl.][S.172ff]{scrum_kurz_gut_2013}}
+
+Scrum beschreibt eine agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
 In der Realität existieren aber oft mehrere Teams und/oder mehrere Produkte. 
 Dahingehend muss die Organisation der unterschiedlichen Scrum Teams individuell angepasst werden.
 Für die Trennung der Teams gibt es unterschiedliche Ansätze:
@@ -100,7 +152,8 @@ Einige wesentliche Merkmale, um die Qualität von Software bewerten zu können, 
   \end{description}
 \end{description}
 
-Je nach Anwendungsgebiet und den Anforderungen der Software haben die Merkmale unterschiedliche Relevanz und einige können sich auch gegenseitig beeinflussen, wie aus der Korrelationsmatrix ersichtlich.
+Je nach Anwendungsgebiet und den Anforderungen der Software haben die Merkmale unterschiedliche Relevanz und einige können sich auch gegenseitig beeinflussen, wie aus der Korrelationsmatrix in Abbildung~\ref{fig:scrum_framework} ersichtlich.
+Dabei sind die positiv korrelierenden Merkmale mit ``+'' und die negativ korrelierenden mit ``-'' gekennzeichnet.
 
 \begin{savenotes}
   \begin{figure}[H] 
@@ -226,12 +279,11 @@ Im Produktionssystem können folgende Kennzahlen ermittelt werden:
   \item[Verfügbarkeit] \hfill \\ Verfügbarkeit der Applikation über die Zeit.
 \end{description}
 
-\newpage
 \subsection{Übersicht Kennzahlen im Entwicklungsprozess}
 
 \begin{table}[H]
   \centering
-  \begin{tabular}{p{7cm}p{7.5cm}} \toprule
+  \begin{tabular}{p{6.5cm}p{8cm}} \toprule
   \textbf{\ac{CLOC}} & Anzahl der geänderten Zeilen im Quellcode. \\
   \multicolumn{2}{p{14.5cm}}{\textit{Wie viele Änderungen passieren in der Codebasis? \newline Wo finden die meisten Änderungen statt?}} \\ \midrule
   \textbf{\ac{CLOC} pro Entwickler} & Anzahl der geänderten Zeilen im Quellcode pro Entwickler. \\ 
@@ -369,20 +421,20 @@ Arbeitet ein Unternehmen beispielsweise viel mit Reports via Email, dann kann ei
 Es gibt einige allgemeine Metriken, die für jedes Scrum Team von Bedeutung sind.
 Wie stark, kann jedes Team selbst entscheiden, aber sie sollten nicht aus den Augen verloren werden.
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
   \item Metrik 1
 \end{itemize}
 
 \subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
 
 Um eigene Metriken erstellen zu können sind 2 Dinge notwendig:
-\begin{itemize}[noitemsep]
+\begin{itemize}
   \item Daten
   \item eine Funktion, um die Metrik zu berechnen
 \end{itemize}
 
 Dabei sollte darauf geachtet werden,
-\begin{itemize}[noitemsep]
+\begin{itemize}
   \item dass man auf die Metrik reagieren kann (Dinge, die einen stören und die man nicht ändern kann, frustrieren oder demotivieren)
   \item dass sich die Metrik nach den Team-Grundsätzen und Kerngeschäften ausrichtet
   \item dass die Metrik für sich alleine stehen kann
@@ -390,7 +442,7 @@ Dabei sollte darauf geachtet werden,
 
 \subsection[Agile Prinzipien messen]{Agile Prinzipien messen~\footcite[vgl.][S.201ff]{davis_agile_2015}}
 
-Um die agilen Prinzipien messen zu können, muss zuerst herausgefunden werden, was die Kernpunkte dieser Prinzipien sind.
+Um die agilen Prinzipien messen zu können, muss zuerst herausgefunden werden, was die Kernaussagen dieser Prinzipien sind.
 Dies kann zum Beispiel grafisch, durch die Erstellung einer Wortwolke, wie in Abbildung~\ref{fig:wordcloud_principles} ersichtlich, erreicht werden.
 
 \begin{savenotes}
@@ -411,11 +463,13 @@ Mithilfe dieser Begriffe lassen sich folgende vier Punkte ableiten:
   \item Effektive Anforderungen 
 \end{itemize}
 
-Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen anwendbar:
+Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen anwendbar~\footcite[vgl.][S.219ff]{davis_agile_2015}:
 
 \begin{description}
   \item[Effektive Software] \hfill
   \begin{itemize}[noitemsep]
+    \item erfolgreiche / fehlerhafte Builds
+    \item Business-Metriken
     \item Status der Applikation
     \begin{itemize}[noitemsep]
       \item Fehlerraten
@@ -423,22 +477,25 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
       \item Antwort- / Transaktionszeiten
       \item Heapgröße / Garbage Collection / Anzahl Threads
     \end{itemize}
-    \item Semantisches Logging
-    \item Verfügbarkeit
-    \item \ac{MTTF}
-    \item Lead Time
-    \item \ac{MTTR}
   \end{itemize}
   \item[Effektiver Prozess] \hfill
   \begin{itemize}[noitemsep]
-    \item Metrik
+    \item Velocity
+    \item \ac{PTS} und \ac{VCS} Kommentare
+    \item erfolgeiche Releases
   \end{itemize}
   \item[Effektives Team] \hfill
   \begin{itemize}[noitemsep]
-    \item Metrik
+    \item Lead Time
+    \item \ac{MTTR}
+    \item Deploy-Frequenz
+    \item fehlerhafte Builds
   \end{itemize}
   \item[Effektive Anforderungen] \hfill
   \begin{itemize}[noitemsep]
-    \item Metrik
+    \item Rückläufigkeit
+    \item Lead Time
+    \item \ac{MTTR}
+    \item Velocity
   \end{itemize}
 \end{description}
