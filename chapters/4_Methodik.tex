@@ -2,7 +2,24 @@
 
 \section{Vorgehensmodell}
 
-Kriterien, auf was muss geachtet werden, etc.
+\subsection{\ac{GQM}}
+
+Befragung Team blabla
+
+\subsubsection{Vorauswahl}
+
+Um eine Vorauswahl an Metriken treffen zu können, wurden alle bisherigen Retrospektiven (es waren genau 15) analysiert und eine Topliste von Schlagwörtern der folgenden Fragestellungen aus den Retrospektiven erstellt:
+\begin{enumerate}
+    \item Welche guten Entscheidungen haben wir getroffen?
+    \item Was haben wir gelernt?
+    \item Was können wir besser machen?
+    \item Was nervt uns noch immer?
+\end{enumerate}
+
+Dazu wurden die Ergebnisse in eine ElasticSearch Datenbank gespeichert und über eine sogenannte Terms Aggregation die wichtigsten Schlagwörter analysiert.
+Bei der Indizierung werden die Wörter normalisiert, deshalb die teilweise andere Schreibweise (zum Beispiel wird aus Issue der Term issu).
+\newline
+Aus den Ergebnissen in Anhang~\ref{appendix:retros} ist ersichtlich, dass
 
 \section{Software}
 
