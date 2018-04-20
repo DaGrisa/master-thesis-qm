@@ -1,4 +1,4 @@
-\chapter{Situationsanalyse}
+\chapter{Stand der Technik}
 
 \section{Agile Softwareentwicklung}
 
@@ -95,7 +95,7 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
 \begin{savenotes}
   \begin{figure}[H] 
     \centering
-       \includegraphics[width=0.9\textwidth]{img/scrum-framework.png}
+    \includegraphics[width=0.9\textwidth]{img/scrum-framework.png}
     \caption[Scrum Framework]{Scrum Framework~\footcite{scrum_framework}}\label{fig:scrum_framework}
   \end{figure}
 \end{savenotes}
@@ -236,7 +236,7 @@ Dadurch ergeben sich folgende Kennzahlen aus einem \ac{PTS}:
     \item[Bug-Erzeugungsrate] \hfill \\ Anzahl Bugs nach Erstellungsdatum.
     \item[Bug-Fertigstellungsrate] \hfill \\ Anzahl Bugs nach Erledigungsdatum.
   \end{description}
-  \item[Aufgaben-Volumen] \hfill \\ Die Anzahl der Aufgaben und kann der Schätzung gegenübergestellt werden, um die Größe der Aufgaben oder ungeplante Arbeit aufzuzeigen.
+  \item[Aufgaben-Volumen] \hfill \\ Die Anzahl der Aufgaben. Kann der Schätzung gegenübergestellt werden, um die Größe der Aufgaben oder ungeplante Arbeit aufzuzeigen.
   \item[Aufgaben-Rückfälligkeit] \hfill \\ Zeigt auf, wie oft Aufgaben im Arbeitsablauf rückwärts gehen.
 \end{description}
 
@@ -403,3 +403,49 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
     \item Velocity
   \end{itemize}
 \end{description}
+
+\subsection{\ac{GQM}~\footcite[][]{basili_goal_nodate}}
+
+\ac{GQM} ist ein Modell, um geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmen Projekten zu erkennen.
+Der grundlegende Gedanke dahinter ist, dass Metriken ``top\mbox{-}down'' (von oben nach unten) definiert werden müssen.
+Dieser Ansatz wird dadurch begründet, dass Metriken sehr viele Charakteristiken abbilden können, aber erst durch Modelle beziehungsweise Ziele richtig genutzt und interpretiert werden können.
+
+Das Ergebnis dieses Modells hat drei Level:
+\begin{description}
+  \item[GOAL \mbox{-} konzeptuelles Level] \hfill \\ Es werden Ziele für besimmte Objekte definiert. Objekte können Produkte, Prozesse oder Ressourcen sein.
+  \item[QUESTION \mbox{-} operatives Level] \hfill \\ Für jedes Ziel werden Fragen formuliert, die zur Beurteilung oder Erreichung beitragen. Sie versuchen den Grund für die Messung zu charakterisieren.
+  \item[METRIC \mbox{-} quantitatives Level] \hfill \\ Jeder Frage werden Metriken zugeordnet, die dabei helfen sollen, sie quantitativ zu beantworten.
+\end{description}
+
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/gqm.png}
+    \caption{hierarchische Struktur des GQM Modells}\label{fig:gqm}
+  \end{figure}
+\end{savenotes}
+
+Abbildung~\ref{fig:gqm} zeigt die hierarchische Struktur des GQM-Modells.
+
+\subsubsection{Beispiel~\footcite[][]{basili_goal_nodate}}
+
+Anhand des Beispiels in Tabelle~\ref{tab:gqm-example} soll veranschaulicht werden, wie so ein GQM-Modell in der Praxis aussehen kann.
+Angenommen wird, das Team will seine Zusammenarbeit verbessern. 
+Dazu muss das Ziel folgende Punkte spezifizieren: Absicht, Prozess / Produkt / Ressource, Sichtweise und Problem.
+Dieses Ziel kann anschließend durch Fragen verfeinert werden.
+Aussagen über Zusammenarbeit geben zum Beispiel Pull Requests.
+Diese Fragen wiederum können mit Metriken beantwortet werden.
+Im Falle der Pull Requests zum Beispiel der Durchschnitt und die Standardabweichung der Kommentare pro Pull Request in jedem Sprint.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{llr}
+  GOAL     & \begin{tabular}[c]{@{}l@{}}Absicht\\ Problem\\ Prozess\\ Sichtweise\end{tabular} & \begin{tabular}[c]{@{}l@{}}Verbessern\\ der Zusammenarbeit innerhalb des Teams\\ im Entwicklungsprozess\\ aus Sicht der Entwickler.\end{tabular} \\ \midrule
+  QUESTION & \multicolumn{2}{l}{Wie arbeitet das Team mit Pull Requests?} \\
+  METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Anzahl Pull Requests\\ Anzahl Kommentare pro Pull Request *\\ Anzahl Entwickler pro Pull Request *\end{tabular}} \\ \midrule
+  QUESTION & \multicolumn{2}{l}{Wie viele Entwickler arbeiten an den einzelnen Modulen?} \\
+  METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Anzahl Commits pro Entwickler pro Modul\\ Anzahl Entwickler pro Pull Request pro Modul *\end{tabular}} \\
+  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}} \\ \small{* Durchschnitt und Standardabweichung pro Sprint}\end{tabular}} 
+  \end{tabular}
+  \caption{Beispiel GQM Modell}\label{tab:gqm-example}
+\end{table}
