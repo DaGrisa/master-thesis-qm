@@ -1,5 +1,12 @@
 \chapter{Umsetzung}
 
+\section{Gegebenheiten}
+
+Die Umsetzung findet in einem Unternehmen mit weltweit rund 150 Standorten und 6700 Mitarbeitern (Stand Mai 2018) statt.
+Es gibt eine zentrale Informatik mit einer eigenen Softwareentwicklungs-Abteilung, in der 4 Scrum-Teams angesiedelt sind.
+Es wurde ein Scrum Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors Scrum bereits am weitesten entwicklet hat und dadurch Werkzeuge zur Prozessüberwachung dort am meisten Sinn machen.
+Aus sicherheitstechnischen Gründen wird auf das Unternehmen in dieser Arbeit nicht weiter eingegangen.
+
 \section{Vorgehensmodell}
 
 \subsection{Metriken Identifizieren}
@@ -115,12 +122,14 @@ Dies kann zum einen durch die oben genannte Aufgaben-Rückfälligkeit und andere
 
 \section{Software}
 
-Technologien, Plattform, etc.
+Das für die Umsetzung gewählte Unternehmen setzt bereits auf Java als bevorzugte Programmiersprache und hat die in Kapitel~\ref{vorgehen:software} genannten Systeme im Einsatz.
 
 \subsection{Architektur}
 
 Abbildung~\ref{fig:position_architecture} zeigt die Position und Abbildung~\ref{fig:overview_architecture} die grobe Architektur der Software (Agile Metrics).
-Die Software bildet eine Schnittstelle zwischen den einzelnen Systemen des Entwicklungsprozesses und dem System zur Darstellung der Metriken (in diesem Fall ElasticSearch und Kibana).
+Diese bildet eine Schnittstelle zwischen den einzelnen Systemen des Entwicklungsprozesses und dem System zur Darstellung der Metriken (in diesem Fall der sogenannte Elastic Stack~\footcite{elastic_stack} mit ElasticSearch und Kibana).
+ElasticSearch ist dabei die Datenbank für die Metriken, genau genommen eine volltext-indizierte \ac{NoSQL}-Datenbank.
+Kibana dient zur Darstellung der in der ElasticSearch-Datenbank gespeicherten Metriken.
 
 \begin{savenotes}
     \begin{figure}[H] 
@@ -139,9 +148,53 @@ Die Software bildet eine Schnittstelle zwischen den einzelnen Systemen des Entwi
 \end{savenotes}
 
 \begin{description}
-    \item[UI] \hfill \\ Bietet eine grafische Benutzeroberfläche zur Konfiguration.
+    \item[API] \hfill \\ Bietet eine RESTful Schnittstelle zum Abfragen des aktuellen Status.
     \item[Producer] \hfill \\ Sind Schnittstellen zu allen Systemen, die Messdaten erzeugen.
-    \item[Crons] \hfill \\ Zeitsteuerung der Messdaten-Abfrage (z.B. täglich oder pro Sprint).
-    \item[Metrics] \hfill \\ Hier können aus Messdaten direkt Metriken erstellt werden.
+    \item[Cron] \hfill \\ Zeitsteuerung der Messdaten-Abfrage und Koordination der Erzeugung und Konsumierung von Metriken.
+    \item[Metric] \hfill \\ Metriken, welche aus den Messdaten erzeugt und konsumiert werden.
     \item[Consumer] \hfill \\ Sind Schnittstellen zu allen Systemen, die Messdaten und Metriken konsumieren.
 \end{description}
+
+\subsection{Lizenz}
+
+Bei der Recherche wurde keine Software gefunden, welche die oben genannten Funktionalitäten anbietet.
+Daher wird die im Zuge dieser Arbeit erstellte Software quelloffen (OpenSource) angeboten.
+Als Lizenz wurde dabei die MIT-Lizenz~\footcite{mit_license} gewählt, da sie eine einfache und großzügige Lizenz ist, die lediglich die Erhaltung des Urheberrechts und Lizenzangaben erfordert.
+
+\subsection{\ac{VCS}, \ac{CI} und \ac{QS}}
+
+Da es sich um eine quelloffene Software handelt, wird als \ac{VCS} ein öffentliches Repository~\footcite{agile_metrics_repo} in GitHub verwendet.
+In diesem sind der Quellcode und die Veröffentlichungen der Software zugänglich.
+Zusätzlich wird über GitHub Pages eine statische Seite~\footcite{agile_metrics_page} für das Projekt bereitgestellt, wie in Abbildung~\ref{fig:github_pages} ersichtlich.
+
+\begin{savenotes}
+    \begin{figure}[H] 
+        \centering
+            \includegraphics[width=0.8\textwidth]{img/github-pages.png}
+        \caption{GitHub Pages - Agile Metrics}\label{fig:github_pages}
+    \end{figure}
+\end{savenotes}
+
+Travis~\footcite{travis_agile_metrics} bietet einen kostenlosen \ac{CI}-Service und SonarCloud~\footcite{sonarcloud_agile_metrics} einen kostenlosen \ac{QS}-Service für quelloffene Projekte.
+
+\begin{savenotes}
+    \begin{figure}[H] 
+        \centering
+            \includegraphics[width=0.8\textwidth]{img/travisci.png}
+        \caption{Travis CI - Agile Metrics}\label{fig:travisci}
+    \end{figure}
+\end{savenotes}
+
+Nach jedem Commit in das GitHub Repository wird ein Build gestartet, um kontinuierliche Integration zu gewährleisten.
+Abbildung~\ref{fig:travisci} zeigt die Liste der zu diesem Zeitpunkt zuletzt durchgeführten Builds mit einigen Informationen.
+
+\begin{savenotes}
+    \begin{figure}[H] 
+        \centering
+            \includegraphics[width=0.8\textwidth]{img/sonarcloud.png}
+        \caption{SonarCloud - Agile Metrics}\label{fig:sonarcloud}
+    \end{figure}
+\end{savenotes}
+
+Jeder Build in Travis CI sendet mit Hilfe eines Addons Informationen über die Qualität des Quellcodes an SonarCloud.
+Abbildung~\ref{fig:sonarcloud} zeigt die Übersichtsseite von SonarCloud mit den wichtigsten Qualitätsmetriken für das Projekt.
