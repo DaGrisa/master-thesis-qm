@@ -51,7 +51,7 @@ Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorga
 In regelmäßigen Abständen reflektiert das Team, wie es effektiver werden kann und passt sein Verhalten entsprechend an.\end{quote}\cite{agile_principles}
 
 \newpage
-\section{Scrum (Quellenangabe!)}
+\section{Scrum~\footcite[vgl.][S.13ff]{scrum_kurz_gut_2013}}
 
 Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie. 
 Scrum basiert auf Empirismus, also der Theorie, dass Wissen aus Erfahrung erlangt wird und Entscheidungen auf Basis dieses Wissens getroffen werden. 
@@ -62,6 +62,14 @@ Die drei Grundsäulen einer solchen empirischen Prozesskontrolle sind:
   \item[Inspektion] \hfill \\ Artefakte müssen regelmäßig inspiziert werden, aber dieser Vorgang darf der Arbeit selbst nicht im Weg stehen.
   \item[Adaption] \hfill \\ Weicht ein oder mehrere Aspekte eines Prozesses von seinen akzeptablen Limits ab, muss dieser so früh wie möglich angepasst werden.
 \end{description}
+
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/scrum-framework.png}
+    \caption[Scrum Framework]{Scrum Framework~\footcite{scrum_framework}}\label{fig:scrum_framework}
+  \end{figure}
+\end{savenotes}
 
 Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rollen, fünf Ereignissen und drei Artefakten.
 
@@ -93,14 +101,6 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
   \end{itemize}
 \end{itemize}
 
-\begin{savenotes}
-  \begin{figure}[H] 
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/scrum-framework.png}
-    \caption[Scrum Framework]{Scrum Framework~\footcite{scrum_framework}}\label{fig:scrum_framework}
-  \end{figure}
-\end{savenotes}
-
 \subsection[Scrum in mehreren Teams]{Scrum in mehreren Teams~\footcite[vgl.][S.172ff]{scrum_kurz_gut_2013}}
 
 Scrum beschreibt eine agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
@@ -123,6 +123,10 @@ Für die Trennung der Teams gibt es unterschiedliche Ansätze:
 \end{savenotes}
 
 In allen Varianten existieren aber pro Team unterschiedliche Software-Module und (agile) Prozesse, die unabhängig voneinander die Team-Qualität als Gesamtes bestimmen.
+\\
+\\
+Um Scrum auf mehrere Teams skalieren zu können, existieren bereits unterschiedlichste Frameworks.
+Drei davon sind \ac{SoS}, \ac{LeSS} und Scrum at Scale, die im Folgenden kurz vorgestellt werden.
 
 \newpage
 \subsubsection[\ac{SoS}]{\ac{SoS}~\footcite[vgl.][]{sos}}
@@ -137,25 +141,63 @@ Das \ac{SoS} hat sein eigenes Backlog, bei dem es Fertigstellungen, nächste Sch
   \begin{figure}[H] 
     \centering
        \includegraphics[width=1.0\textwidth]{img/sos.png}
-    \caption{\ac{SoS}}\label{fig:sos}
+    \caption{\ac{SoS} auf 3 Ebenen}\label{fig:sos}
   \end{figure}
 \end{savenotes}
 
-\ac{SoS} ist beliebig skalierbar, das ermöglicht auch mehrere Scrum of Scrum Teams, wie in Abbildung~\ref{fig:sos} abgebildet.
+\ac{SoS} ist beliebig skalierbar, das ermöglicht auch mehrere Scrum of Scrums Ebenen, wie Abbildung~\ref{fig:sos} zeigt.
 
 \subsubsection[\ac{LeSS}]{\ac{LeSS}~\footcite[vgl.][]{less}}
+
+\ac{LeSS} adaptiert die Grundsätze von Scrum in einen größeren Rahmen.
+Daher muss auch zuerst Scrum für ein Team verstanden werden, bevor mit \ac{LeSS} begonnen werden kann.
+Es unterscheidet dabei zwei Varianten:
+\begin{description}
+  \item[LeSS] für bis zu 8 Teams mit jeweils acht Mitgliedern
+  \item[LeSS Huge] bis zu mehrere tausend Personen an einem Produkt
+\end{description}
 
 \begin{savenotes}
   \begin{figure}[H] 
     \centering
        \includegraphics[width=1.0\textwidth]{img/less.png}
-    \caption[\ac{LeSS} Framework]{\ac{LeSS} Framework~\footcite[][]{less}}\label{fig:less}
+    \caption[\ac{LeSS} Framework]{\ac{LeSS} Framework~\footcite{less_framework}}\label{fig:less}
   \end{figure}
 \end{savenotes}
 
+Es gibt viele Dinge, die gleich bleiben, wie bei einem Team: Produkt Backlog, \ac{DoD}, nach jedem Sprint ein lauffähiges Inkrement, Product Owner, cross-funktionale Teams und ein Sprint.
+Darüber hinaus gibt es aber auch einige Unterschiede:
+
+\begin{description}
+  \item[Sprint Planning 1] kann Personen von allen Teams beinhalten, die sich ihre Arbeit selbstständig aufteilen.
+  \item[Sprint Planning 2] wird von jedem Team selbst abgehalten, es können aber mehrere Teams in einem Raum sein.
+  \item[Daily Scrum] wird auch unabhängig in jedem Team abgehalten, aber eine Person aus Team A kann bei Team B dabei sein, um den Informationsfluss zu erhöhen.
+  \item[Overall \ac{PBR}] ist kurz und informativ, um abzuklären, welches Team vermutlich welche Aufgabe übernimmt, für das spätere \ac{PBR}.
+  \item[\ac{PBR}] können auch mehrere Teams gemeinsam machen, um voneinander zu lernen und besser koordinieren zu können.
+  \item[Sprint Review] kann zusätzlich Personen aus anderen Teams oder andere Steakholder beinhalten.
+  \item[Overall Retrospective] ist ein ganz neues Meeting mit Scrum Mastern, Product Ownern und rotierenden Personen der Teams, um den Gesamtprozess zu verbessern.
+\end{description}
+
 \subsubsection[Scrum at Scale]{Scrum at Scale~\footcite[vgl.][]{scale}}
 
-Scrum at Scale ist ein
+Scrum at Scale versucht Scrum skalierbar zu machen, durch ein Minimum an Bürokratie und einer frei skalierbaren Architektur.
+Es besteht aus Scrum Teams, die durch \ac{SoS} und MetaScrums koordiniert werden. 
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+       \includegraphics[width=1.0\textwidth]{img/scrumatscale.png}
+    \caption[Scrum at Scale Framework - SMPO Zyklus]{Scrum at Scale Framework - SMPO Zyklus~\footcite{scrumatscale_framework}}\label{fig:sas}
+  \end{figure}
+\end{savenotes}
+
+Das Was und das Wie werden bei Scrum at Scale durch zwei Zyklen getrennt, die sich nur an zwei Punkten schneiden (Abbildung~\ref{fig:sas}).
+\begin{description}
+  \item[Scrum Master Zyklus] \hfill \\ Wird über \ac{SoS} gesteuert und hat an der Spitze ein \ac{EAT}, welches die einzelnen \ac{SoS} koordiniert.
+  \item[Product Owner Zyklus] \hfill \\ Ein Team von Product Ownern, die ein \ac{SoS} Backlog verantworten, nennt man MetaScrum. MetaScrums haben einen Chief Product Owner, der als Scrum Master agiert und verantwortlich für die Koordination der Product Backlogs ist. An der Spitze steht ein \ac{EMS}, der Visionen und strategische Ziele verfolgt.
+\end{description}
+
+Metriken und Transparenz im Allgemeinen werden bei Scrum at Scale groß geschrieben, da Scrum nur so optimal funktionieren kann.
+Ein Minimum an Metriken, die empfohlen werden, sind: Produktivität, Wertschöpfung, Qualität und Nachhaltigkeit.
 
 \clearpage
 \section[Software-Qualität]{Software-Qualität~\footcite[vgl.][Kapitel 1.2]{hoffmann_software_qualitat_2013}}
