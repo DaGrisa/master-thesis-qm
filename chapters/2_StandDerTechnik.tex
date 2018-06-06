@@ -50,6 +50,7 @@ Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorga
 
 In regelmäßigen Abständen reflektiert das Team, wie es effektiver werden kann und passt sein Verhalten entsprechend an.\end{quote}\cite{agile_principles}
 
+\newpage
 \section{Scrum (Quellenangabe!)}
 
 Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie. 
@@ -123,6 +124,10 @@ Für die Trennung der Teams gibt es unterschiedliche Ansätze:
 
 In allen Varianten existieren aber pro Team unterschiedliche Software-Module und (agile) Prozesse, die unabhängig voneinander die Team-Qualität als gesamtes bestimmen.
 
+\subsubsection{Scrum of Scrums}
+\subsubsection{Less}
+\subsubsection{Scale}
+
 \clearpage
 \section[Software-Qualität]{Software-Qualität~\footcite[vgl.][Kapitel 1.2]{hoffmann_software_qualitat_2013}}
 
@@ -164,17 +169,21 @@ Dabei sind die positiv korrelierenden Merkmale mit ``+'' und die negativ korreli
 \end{savenotes}
 
 \newpage
-\section{Kennzahlen}
+\section{Metriken}
 
-Software-Metriken helfen uns dabei, bestimmte (Qualitäts-) Merkmale beziehungsweise Kenngrößen eines Software-Systems systematisch und quantitativ zu erfassen.
-Ziel ist es dabei, diese oft versteckten Merkmale sichtbar und vergleichbar zu machen.
-Ein einfaches Beispiel ist die \ac{LOC}-Metrik, die die gesamte Anzahl an Zeilen Code darstellt und als grobes Maß für die Komplexität verwendet werden kann.
+Eine Softwaremetrik wird vom \ac{IEEE} Standard 1061 von 1998 folgendermaßen definiert:
+\begin{quote}
+  ``Eine Softwarequalitätsmetrik ist eine Funktion, die eine Software-Einheit in einen Zahlenwert abbildet, welcher als Erfüllungsgrad einer Qualitätseigenschaft der Software-Einheit interpretierbar ist.''\footcite[vgl.][S.3]{ieee-1061}
+\end{quote}
+
+Vereinfacht gesagt, ist eine Metrik eine oder mehrere Kennzahlen, die mithilfe einer Funktion ein Qualitätsmerkmal in einen Zahlenwert abbilden.
+Eine Kennzahl kann daher auch schon direkt eine Metrik sein, wenn sie in der Lage ist, ein gewünschtes Qualitätsmerkmal abzubilden.
 
 \begin{savenotes}
   \begin{figure}[H] 
     \centering
        \includegraphics[width=0.6\textwidth]{img/software-development-lifecycle.png}
-    \caption[Softwareentwicklungsprozess]{Softwareentwicklungsprozess~\label{fig:sdlc}}
+    \caption[Systeme im Softwareentwicklungsprozess]{Systeme im Softwareentwicklungsprozess~\label{fig:sdlc}}
   \end{figure}
 \end{savenotes}
 
@@ -281,17 +290,6 @@ Im Produktionssystem können folgende Kennzahlen ermittelt werden:
 \subsection{Übersicht Kennzahlen im Entwicklungsprozess}
 
 Die Metriken finden sich nochmal als Tabelle dargestellt und mit den dazugehötigen Fragen, die sie jeweils beantworten, im Anhang~\ref{appendix:metrics}.
-
-\newpage
-\section{Metriken}
-
-Eine Softwaremetrik wird vom \ac{IEEE} Standard 1061 von 1998 folgendermaßen definiert:
-\begin{quote}
-  ``Eine Softwarequalitätsmetrik ist eine Funktion, die eine Software-Einheit in einen Zahlenwert abbildet, welcher als Erfüllungsgrad einer Qualitätseigenschaft der Software-Einheit interpretierbar ist.''\footcite[vgl.][S.3]{ieee-1061}
-\end{quote}
-
-Vereinfacht gesagt, ist eine Metrik eine oder mehrere Kennzahlen, die mithilfe einer Funktion ein Qualitätsmerkmal in einen Zahlenwert abbilden.
-Eine Kennzahl kann daher auch schon direkt eine Metrik sein, wenn sie in der Lage ist, ein gewünschtes Qualitätsmerkmal abzubilden.
 
 \subsection[Veröffentlichung von Metriken]{Veröffentlichung von Metriken~\footcite[vgl.][S.177ff]{davis_agile_2015}}
 
@@ -404,7 +402,7 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
   \end{itemize}
 \end{description}
 
-\subsection{\ac{GQM}~\footcite[][]{basili_goal_nodate}}
+\subsection[\ac{GQM}]{\ac{GQM}~\footcite[][]{basili_goal_nodate}}
 
 \ac{GQM} ist ein Modell, um geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmen Projekten zu erkennen.
 Der grundlegende Gedanke dahinter ist, dass Metriken ``top\mbox{-}down'' (von oben nach unten) definiert werden müssen.
@@ -427,7 +425,7 @@ Das Ergebnis dieses Modells hat drei Level:
 
 Abbildung~\ref{fig:gqm} zeigt die hierarchische Struktur des GQM-Modells.
 
-\subsubsection{Beispiel~\footcite[][]{basili_goal_nodate}}
+\subsubsection[Beispiel]{Beispiel~\footcite[][]{basili_goal_nodate}}
 
 Anhand des Beispiels in Tabelle~\ref{tab:gqm-example} soll veranschaulicht werden, wie so ein GQM-Modell in der Praxis aussehen kann.
 Angenommen wird, das Team will seine Zusammenarbeit verbessern. 
@@ -449,3 +447,11 @@ Im Falle der Pull Requests zum Beispiel der Durchschnitt und die Standardabweich
   \end{tabular}
   \caption{Beispiel GQM Modell}\label{tab:gqm-example}
 \end{table}
+
+\subsection{Umfrage (Quelle fehlt)}
+
+Quellen zu wissenschaftlichen Umfragen finden, passende einfügen.
+Grundsätzlich: Team wurden die gängigsten Metriken vorgestellt und die Fragen, die sie beantworten können.
+Jene Metriken, die in einer Skala von 1-10 eine x und größer hatten, wurden in dieser Arbeit umgesetzt.
+Am Ende wurden offene Fragen gestellt, falls ein Teilnehmer noch eine Metrik vermisste.
+Zusätzlich wurden qualitative Fragen zur Umfrage gestellt, um ein Feedback zur Methode zu bekommen.
