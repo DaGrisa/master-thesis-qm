@@ -1,0 +1,20 @@
+S.29ff
+Qualitätsmodelle sind das Fundament für Softwar-Produkt-Qualitätskontrolle und werden genutzt, um Qualität zu beschreiben, zu schätzen und/oder vorherzusagen.
+Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt, diese lassen sich in drei Kategorien einteilen: hierarchische, Meta-Modell basierte und implizierte Modelle.
+
+Hierarchische Qualitätsmodelle
+Entstanden bereits in den 1970er Jahren.
+Qualität wird hierarchisch in Qualitätsfaktoren zerlegt, wie Wartbarkeit oder Zuverlässigkeit. 
+Die Idee dahinter ist, Qualität hierarchisch henrunterzubrechen, dass sie messbar wird.
+Verschiedenste Kritiken heben hervor, dass die Prinzipien zur Dekomposition von Qualitätscharakteristiken oft mehrdeutig sind.
+Außerdem sind die resultierenden Qualitätscharakteristiken nicht spezifisch genug, um direkt gemessen werden zu können.
+
+Meta-Modell basierte Qualitätsmodelle
+Entstanden in den 1990er Jahren, als Forscher mehr ausgereiftere Wege aufzeigten, um Qualitätscharakteristiken zu zerlegen.
+Dadurch entstanden auch ausführlichere Meta-Modelle. Ein Meta-Modell beschreibt, wie gültig Qualitätsmodelle strukturiert sind.
+Diese vielen Meta-Modelle zeigen, dass Qualität mehr Struktur in Qualitätsmodellen, als in abstrakten Qualitätscharakteristiken und Metriken braucht.
+Es wurde kein generelles Basis-Qualitätsmodell eingeführt, das man herunterladen und anwenden kann.
+
+Statistische und implizite Qualitätsmodelle
+Für unterschiedlichste Qualitätsfaktoren wurden statistische Modelle vorgestellt, die Eigenschaften erfassen und Qualitätsfaktoren schätzen oder voraussagen.
+Auch Qualitäts-Analysetools nutzen eine Art Qualitätsmodell und auch Checklisten in der Entwicklung oder in Reviews sind eine Art Qualitätsmodell.
