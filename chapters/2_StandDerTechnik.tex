@@ -239,7 +239,12 @@ Dabei sind die positiv korrelierenden Merkmale mit ``+'' und die negativ korreli
   \end{figure}
 \end{savenotes}
 
-\newpage
+\clearpage
+\section{Prozess-Qualität}
+
+-- Theorie zu Prozessqualität, da viele Metriken aus dem Prozess relevant sind --
+
+\clearpage
 \section{Metriken}
 
 Eine Softwaremetrik wird vom \ac{IEEE} Standard 1061 von 1998 folgendermaßen definiert:
@@ -261,7 +266,7 @@ Eine Kennzahl kann daher auch schon direkt eine Metrik sein, wenn sie in der Lag
 Im Entwicklungsprozess werden in den unterschiedlichen Systemen und Prozessschritten Daten erzeugt, die als Kennzahlen oder direkt als Metriken genutzt werden können.
 Abbildung~\ref{fig:sdlc} zeigt die einzelnen Schritte und Systeme im Entwicklungsprozess.
 
-\newpage
+\clearpage
 \subsection[Versionsverwaltung]{Versionsverwaltung~\footcite[vgl.][S.62ff]{davis_agile_2015}}
 
 Das \ac{VCS} befindet sich nah an der Arbeit der Entwickler, da hier der Quellcode des Produkts verwaltet wird.
@@ -285,7 +290,7 @@ Um bestmögliche Daten zu bekommen, sollten verteilte Versionskontrollsysteme wi
   \end{description}
 \end{description}
 
-\newpage
+\clearpage
 \subsection[Projektmanagement]{Projektmanagement~\footcite[vgl.][S.37ff]{davis_agile_2015}}
 
 In einem \ac{PTS} werden Aufgaben definiert und zugewiesen, Bugs verwaltet und Arbeitszeit mit Aufgaben verknüpft.
@@ -337,7 +342,7 @@ Grundsätzlich können aber folgende Kennzahlen aus diesen Systemen ermittelt we
   \item[Stresstests oder Benchmarking] \hfill \\ Wird oft im Build Prozess mit getestet mit Tools wie JMeter~\footcite[][]{jmeter} oder Gatling~\footcite[][]{gatling}.
 \end{description}
 
-\newpage
+\clearpage
 \subsection[Produktionssystem]{Produktionssystem~\footcite[vgl.][S.107ff]{davis_agile_2015}}
 
 Daten aus den Produktionssystemen können gesammelte \ac{APM}- oder auch \ac{BI}-Kennzahlen sein.
@@ -361,6 +366,21 @@ Im Produktionssystem können folgende Kennzahlen ermittelt werden:
 \subsection{Übersicht Kennzahlen im Entwicklungsprozess}
 
 Die Metriken finden sich nochmal als Tabelle dargestellt und mit den dazugehötigen Fragen, die sie jeweils beantworten, im Anhang~\ref{appendix:metrics}.
+
+\subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
+
+Um eigene Metriken erstellen zu können sind 2 Dinge notwendig:
+\begin{itemize}
+  \item Daten
+  \item eine Funktion, um die Metrik zu berechnen
+\end{itemize}
+
+Dabei sollte darauf geachtet werden,
+\begin{itemize}
+  \item dass man auf die Metrik reagieren kann (Dinge, die einen stören und die man nicht ändern kann, frustrieren oder demotivieren)
+  \item dass sich die Metrik nach den Team-Grundsätzen und Kerngeschäften ausrichtet
+  \item dass die Metrik für sich alleine stehen kann
+\end{itemize}
 
 \subsection[Veröffentlichung von Metriken]{Veröffentlichung von Metriken~\footcite[vgl.][S.177ff]{davis_agile_2015}}
 
@@ -388,21 +408,6 @@ Außerdem sollte auf folgende Punkte geachtet werden:
 \end{description}
 
 Arbeitet ein Unternehmen beispielsweise viel mit Reports via Email, dann kann ein reines Dashboard weniger Anerkennung finden. Hier könnte beispielsweise eine Übersicht per Mail versendet und mit Links zum Dashboard versehen werden.
-
-\subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
-
-Um eigene Metriken erstellen zu können sind 2 Dinge notwendig:
-\begin{itemize}
-  \item Daten
-  \item eine Funktion, um die Metrik zu berechnen
-\end{itemize}
-
-Dabei sollte darauf geachtet werden,
-\begin{itemize}
-  \item dass man auf die Metrik reagieren kann (Dinge, die einen stören und die man nicht ändern kann, frustrieren oder demotivieren)
-  \item dass sich die Metrik nach den Team-Grundsätzen und Kerngeschäften ausrichtet
-  \item dass die Metrik für sich alleine stehen kann
-\end{itemize}
 
 \subsection[Agile Prinzipien messen]{Agile Prinzipien messen~\footcite[vgl.][S.201ff]{davis_agile_2015}}
 
@@ -464,7 +469,7 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
   \end{itemize}
 \end{description}
 
-\newpage
+\clearpage
 \subsection{Qualitätsmodelle}
 
 Qualitätsmodelle sind das Fundament für Software-Produkt-Qualitätskontrolle und werden genutzt, um Qualität zu beschreiben, zu schätzen und/oder vorherzusagen.
@@ -476,7 +481,7 @@ Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt, diese lasse
   \item[Statistische und implizite Qualitätsmodelle] \hfill \\ Für unterschiedlichste Qualitätsfaktoren wurden statistische Modelle vorgestellt, die Eigenschaften erfassen und Qualitätsfaktoren schätzen oder voraussagen. Auch Qualitäts-Analysetools nutzen eine Art Qualitätsmodell und auch Checklisten in der Entwicklung oder in Reviews sind eine Art Qualitätsmodell.
 \end{description}
 
-\newpage
+\clearpage
 \subsection[\ac{GQM}]{\ac{GQM}~\footcite[][]{basili_goal_nodate}}
 
 \ac{GQM} ist ein Qualitätsmodell, um geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmen Projekten zu erkennen.

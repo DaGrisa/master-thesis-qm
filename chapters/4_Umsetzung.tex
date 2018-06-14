@@ -226,30 +226,52 @@ Folgende Schritte sind notwendig, um Agile-Metrics in Betrieb zu nehmen:
 Wird die Uhrzeit für den täglichen Durchlauf nicht anders eingestellt, werden ab dann täglich alle Metriken um 00:15 generiert und abgelegt.
 Diese Metriken können dann visualisiert werden, wie in diesem Fall in Kibana.
 
+\clearpage
 \subsection{Visualisierte Ergebnisse}
+
+Die Ergebnisse wurden in einem Kibana Dashboard visualisiert.
+Kibana ermöglicht es Daten, die in einer ElasticSearch Datenbank gespeichert sind, auf unterschiedlichste Weise zu visualisieren.
+Aufgrund der fehlenden Authentifizierunng kann das Dashboard von jedem aufgerufen und angepasst werden.
+Es ist dadurch für alle Teammitglieder leicht zugänglich und anpassbar.
+Die Metriken werden im Dashboard in kurzfristige Metriken und langfristige Metriken unterteilt.
+Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, von dem die Metriken angezeigt werden sollen.
 
 \begin{savenotes}
     \begin{figure}[H] 
         \centering
-            \includegraphics[width=0.7\textwidth]{img/dashboard.png}
-        \caption{Dashboard mit den Metriken}\label{fig:dashboard}
+            \includegraphics[width=1.0\textwidth]{img/dashboard-short-term.png}
+        \caption{Teil des Dashboards mit den kurzfristigen Metriken}\label{fig:dashboard-short-term}
     \end{figure}
 \end{savenotes}
 
+\clearpage
 \begin{description}
     \item[Coverage] \hfill \\ Das Team hat die Verantwortung über mehrere Produkte, deshalb wurde die Testabdeckung von zwei Produkten in Form einer Messuhr dargestellt. In einem weiteren Liniendiagramm wird der Verlauf der Testabdeckung aller Produkte über die Zeit dargestellt.
     \item[Burndown] \hfill \\ Die Anzahl erledigte und noch offene Story Points im aktuellen Sprint bilden das Burndown-Chart. Es wird klassisch als Liniendiagramm dargestellt.
     \item[Cumulative Flow] \hfill \\ Beim Cumulative Flow werden nicht nur die einzelnen Statis dargestellt, sondern in einem separaten Diagramm auch noch die Status-Kategorien. Diese können bei sehr vielen unterschiedlichen Statis einen besseren Überblick bieten. Dargestellt werden beide als gestapelte Blockdiagramme, da sie einen Anteil an einem Gesamtvolumen darstellen sollen.
+    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl Bugs wird als Messuhr mit bestmmten Grenzwerten dargestellt, die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
+    \item[Issue Volume] \hfill \\ Das Aufgabenvolumen des aktiven Sprints wird als Flächendiagramm dargestellt.
+\end{description}
+
+\begin{savenotes}
+    \begin{figure}[H] 
+        \centering
+            \includegraphics[width=1.0\textwidth]{img/dashboard-long-term.png}
+        \caption{Teil des Dashboards mit den langfristigen Metriken}\label{fig:dashboard-long-term}
+    \end{figure}
+\end{savenotes}
+
+\clearpage
+\begin{description}
     \item[Lead Time] \hfill \\ Die Lead Time wird zum einen als Metrik dargestellt, zum anderen auch als Histogramm. Das hat den Grund, da hier einzelne Ausreißer nach oben oder unte die Metrik stark beeinflussen können. Das Histogramm stellt diese Ausreißer und die Verteilung noch besser dar.
     \item[Acceptance Criteria Volatility] \hfill \\ Auch bei der Flüchtigkeit der Akzeptanzkriterien wird die Metrik durch ein Histogramm ergänzt, da hier ebenfalls Ausreißer großen Einfluss haben können.
     \item[Recisivism] \hfill \\ Die Rückfälligkeit wird auch als Metrik und Histogramm dargestellt.
-    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl Bugs wird als Messuhr mit bestmmten Grenzwerten dargestellt, die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
-    \item[Issue Volume] \hfill \\ Das Aufgabenvolumen des aktiven Sprints wird als Flächendiagramm dargestellt. Um die Entwicklung darzustellen, wird es durch ein Blockdiagramm der Aufgabenvolumen vergangener Sprints ergänzt.
     \item[Velocity] \hfill \\ Wird als Blockdiagramm dargestellt. Sichtbar sind die geschätzen und die tatsächlich fertiggestellten Story Points pro Sprint.
+    \item[Issue Volume] \hfill \\ Ein Blockdiagramm der Aufgabenvolumen vergangener Sprints, um die Entwicklung darzustellen.
 \end{description}
 
 \newpage
-\subsection{Statusabfrage}
+\subsection{Statusschnittstelle}
 
 Über die RESTful Schnittstelle der Software kann der aktuelle Status abgefragt werden.
 
@@ -261,4 +283,5 @@ Diese Metriken können dann visualisiert werden, wie in diesem Fall in Kibana.
     \end{figure}
 \end{savenotes}
 
-Abbildung~\ref{fig:status-api} zeigt eine solche Antwort der Schnittstelle. Ersichtlich ist eine Liste von Consumern und Producern, sowie Informationen zum letzten Lauf (Anzahl Metriken und Datum).
+Abbildung~\ref{fig:status-api} zeigt eine solche Antwort der Schnittstelle. 
+Ersichtlich ist eine Liste von registrierten Consumern und Producern, sowie Informationen zur letzten zeitgesteuerten Generierung der Metriken (Anzahl generierter Metriken und Zeitstempel).
