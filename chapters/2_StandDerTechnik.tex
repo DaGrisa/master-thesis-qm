@@ -228,21 +228,77 @@ Einige wesentliche Merkmale, um die Qualität von Software bewerten zu können, 
   \end{description}
 \end{description}
 
-Je nach Anwendungsgebiet und den Anforderungen der Software haben die Merkmale unterschiedliche Relevanz und einige können sich auch gegenseitig beeinflussen, wie aus der Korrelationsmatrix in Abbildung~\ref{fig:scrum_framework} ersichtlich.
+Je nach Anwendungsgebiet und den Anforderungen der Software haben die Merkmale unterschiedliche Relevanz und einige können sich auch gegenseitig beeinflussen, wie aus der Korrelationsmatrix in Abbildung~\ref{fig:korrelationsmatrix} ersichtlich.
 Dabei sind die positiv korrelierenden Merkmale mit ``+'' und die negativ korrelierenden mit ``-'' gekennzeichnet.
 
 \begin{savenotes}
   \begin{figure}[H] 
     \centering
        \includegraphics[width=0.6\textwidth]{img/korrelationsmatrix-kriterien.png}
-    \caption[Korrelationsmatrix Qualitätskriterien]{Korrelationsmatrix Qualitätskriterien~\footcite[][S. 11, Abb. 1.3]{hoffmann_software_qualitat_2013}}\label{fig:Korrelationsmatrix Qualitätskriterien}
+    \caption[Korrelationsmatrix Qualitätskriterien]{Korrelationsmatrix Qualitätskriterien~\footcite[][S. 11, Abb. 1.3]{hoffmann_software_qualitat_2013}}\label{fig:korrelationsmatrix}
   \end{figure}
 \end{savenotes}
 
-\clearpage
-\section{Prozess-Qualität}
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+       \includegraphics[width=1.0\textwidth]{img/software-quality.png}
+    \caption[Software-Qualität]{Software-Qualität}\label{fig:software-quality}
+  \end{figure}
+\end{savenotes}
 
--- Theorie zu Prozessqualität, da viele Metriken aus dem Prozess relevant sind --
+Um die oben genannten Merkmale verbessern zu können, lassen sich die Techniken und Methoden zur Qualitätssicherung, wie in Abbildung~\ref{fig:software-quality} ersichtlich, in die Bereiche Produkt- und Prozess-Qualität einteilen, welche im Folgenden noch genauer beschrieben werden.
+
+\subsection[Produkt-Qualität]{Produkt-Qualität~\footcite[vgl.][Kapitel 1.4.1]{hoffmann_software_qualitat_2013}}
+
+Die Produkt-Qualität lässt sich in die zwei Bereiche konstruktive und analytische Qualitätssicherung unterteilen.
+Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt, die ein Software-Produkt im Vorhinein erfüllen muss, dient die analytische Qualitätssicherung dem Analysieren und Bewerten im Nachhinein.
+
+\begin{description}
+  \item[Konstruktive Qualitätssicherung] \hfill
+  \begin{description}
+    \item[Software-Richtlinien] \hfill \\ Eine solche Richtlinie gibt Regeln vor, wie Konstrukte einer Sprache zu verwenden sind. Können unternehmensspezifisch sein, aber auch allgemeinen Standards folgen.
+    \item[Typisierung] \hfill \\ Typisierte Sprachen können Inkonsistenzen bereits frühzeitig erkennbar machen.
+    \item[Vertragsbasierte Programmierung] \hfill \\ Basiert auf einer gezielten Angabe von Bedingungen (Vor-, Nachbedingungen, Invarianten, Zusicherungen) für Funktionen und Prozeduren, sogenannten Verträgen.
+    \item[Fehlertolerante Programmierung] \hfill \\ Fehler in der Software können nie ganz vermieden werden, aber es kann intelligent auf mögliche Fehler reagiert werden.
+    \item[Portabilität] \hfill \\ Portabler Programmcode ist oft allgemeiner gehalten und kann auch die Transparenz (und somit die Fehlerdichte) positiv beeinflussen.
+    \item[Dokumentation] \hfill \\ Enthält die Erstellung von Standards und das Dokumentieren selbst.
+  \end{description}
+  \item[Analytische Qualitätssicherung] \hfill
+  \begin{description}
+    \item[Software-Test] \hfill \\ Testen des Software-Produkt mit vordefinierten Tests, welche aus Eingabewerten und erwarteten Ausgabewerten bestehen. Die Auswahl dieser Tests beeinflusst dabei direkt die Qualität. Es wird zwischen Black-Box- und White-Box-Tests unterschieden und Testmetriken verwendet, um die Qualität der Tests zu bestimmen.
+    \item[Statische Analyse] \hfill \\ Hier wird im Gegensatz zu den Software-Tests das Programm nicht ausgeführt, sondern es wird direkt der Quelltext analysiert. Es gibt folgende Möglichkeiten der statischen Analyse:
+    \begin{description}
+      \item[Software-Metriken] \hfill 
+      \item[Konformitätsanalyse] \hfill 
+      \item[Exploit-Analyse] \hfill 
+      \item[Anomalienanalyse] \hfill 
+      \item[Manuelle Software-Prüfung] \hfill 
+    \end{description}
+    \item[Software-Verifikation] \hfill \\ Es wird versucht, gewisse Eigenschaften des Programms formal auf mathematischem Wege zu beweisen.
+  \end{description}
+\end{description}
+
+\clearpage
+\subsection[Prozess-Qualität]{Prozess-Qualität~\footcite[vgl.][Kapitel 1.4.2]{hoffmann_software_qualitat_2013}}
+
+Die Prozess-Qualität beschäftigt sich im Gegensatz zur Produkt-Qualität mit der Entstehung des Software-Produktes, genauer genommen mit dem Prozess dahinter.
+Dieser Prozess kann in eine Entwicklersicht, mit der Software-Infrastruktur, und eine Managementsicht, mit den Managementprozessen, aufgeteilt werden.
+
+\begin{description}
+  \item[Software Infrastruktur] \hfill \\ Unterstützt den Entwickler bei der täglichen Arbeit.
+  \begin{description}
+    \item[Konfigurationsmanagement] \hfill \\ Hilft bei der Verwaltung der entstehenden Artefakte, zum Beispiel durch den Einsatz von \ac{VCS}.
+    \item[Build-Automatisierung] \hfill \\ Erzeugt die Artefakte voll automatisch.
+    \item[Test-Automatisierung] \hfill \\ Genause wie das Erstellen der Artefakte, wird auch das Testen voll automatisch durchgeführt.
+    \item[Defektmanagement] \hfill \\ Um Defekte zentral erfassen und verwalten zu können.
+  \end{description}
+  \item[Managementprozesse] \hfill \\ Steuern den Projektablauf und werden in Vorgehensmodelle und Reifegradmodelle unterteilt.
+  \begin{description}
+    \item[Vorgehensmodelle] \hfill \\ Regeln die grundlegenden Arbeitsabläufe in einem Projekt, zum Beispiel über das V-Modell oder Scrum.
+    \item[Reifegradmodelle] \hfill \\ Haben das Ziel Prozesse zu analysieren und zu optimieren.
+  \end{description}
+\end{description}
 
 \clearpage
 \section{Metriken}
