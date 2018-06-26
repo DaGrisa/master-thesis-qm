@@ -178,6 +178,7 @@ Darüber hinaus gibt es aber auch einige Unterschiede:
   \item[Overall Retrospective] ist ein ganz neues Meeting mit Scrum Mastern, Product Ownern und rotierenden Personen der Teams, um den Gesamtprozess zu verbessern.
 \end{description}
 
+\clearpage
 \subsubsection[Scrum at Scale]{Scrum at Scale~\footcite[vgl.][]{scale}}
 
 Scrum at Scale versucht Scrum skalierbar zu machen, durch ein Minimum an Bürokratie und einer frei skalierbaren Architektur.
@@ -197,7 +198,6 @@ Das Was und das Wie werden bei Scrum at Scale durch zwei Zyklen getrennt, die si
 \end{description}
 
 Metriken und Transparenz im Allgemeinen werden bei Scrum at Scale groß geschrieben, da Scrum nur so optimal funktionieren kann.
-Ein Minimum an Metriken, die empfohlen werden, sind: Produktivität, Wertschöpfung, Qualität und Nachhaltigkeit.
 
 \clearpage
 \section[Software-Qualität]{Software-Qualität~\footcite[vgl.][Kapitel 1.2]{hoffmann_software_qualitat_2013}}
@@ -221,14 +221,14 @@ Einige wesentliche Merkmale, um die Qualität von Software bewerten zu können, 
   \end{description}
   \item[Herstellerorientierte Merkmale] \hfill \\ Sind die inneren Merkmale, die sich auf den langfristigen Erfolg der Software auswirken und somit als Investition in die Zukunft gesehen werden sollten.
   \begin{description}
-    \item[Wartbarkeit (Maintainability)] \hfill \\ Die Fähigkeit auch nach der Inbetriebnahme noch Änderungen an der Software vorzunehmen. Wird oft vernachlässigt, ist aber essentiell für langlebige Software und ein großer Vorteil gegenüber der Konkurrenz.
-    \item[Transparenz (Transparency)] \hfill \\ Beschreibt, wie die nach außen hin sichtbare Funktionalität intern umgesetzt wurde. Gerade bei alternder Software, kann es zu einer Unordnung kommen, welche auch Software-Entropie (Grad der Unordnung) genannt wird.
-    \item[Übertragbarkeit] \hfill \\ Wird auch Portierbarkeit genannt und beschreibt die Eigenschaft einer Software, in andere Umgebungen übertragen werden zu können (z.B. 32-Bit zu 64-Bit oder Desktop zu Mobile).
+    \item[Wartbarkeit (Maintainability)] \hfill \\ Die Fähigkeit auch nach der Inbetriebnahme noch Änderungen an der Software vornehmen zu können. Wird oft vernachlässigt, ist aber essentiell für langlebige Software und ein großer Vorteil gegenüber der Konkurrenz.
+    \item[Transparenz (Transparency)] \hfill \\ Beschreibt, wie die nach außen hin sichtbare Funktionalität intern umgesetzt wurde. Gerade bei alternder Software kann es zu einer Unordnung kommen, welche auch Software-Entropie (Grad der Unordnung) genannt wird.
+    \item[Übertragbarkeit] \hfill \\ Wird auch Portierbarkeit genannt und beschreibt die Eigenschaft einer Software, in andere Umgebungen übertragen werden zu können (zum Beispiel 32-Bit zu 64-Bit oder Desktop zu Mobile).
     \item[Testbarkeit (Testability)] \hfill \\ Testen stellt eine große Herausforderung dar, da oft auf interne Zustände zugegriffen werden muss oder die Komplexität die möglichen Eingangskombinationen vervielfacht. Aber gerade durch Tests können Fehler frühzeitig entdeckt und behoben werden.
   \end{description}
 \end{description}
 
-Je nach Anwendungsgebiet und den Anforderungen der Software haben die Merkmale unterschiedliche Relevanz und einige können sich auch gegenseitig beeinflussen, wie aus der Korrelationsmatrix in Abbildung~\ref{fig:korrelationsmatrix} ersichtlich.
+Je nach Anwendungsgebiet und Anforderungen an die Software haben die Merkmale unterschiedliche Relevanz und einige können sich auch gegenseitig beeinflussen, wie aus der Korrelationsmatrix in Abbildung~\ref{fig:korrelationsmatrix} ersichtlich.
 Dabei sind die positiv korrelierenden Merkmale mit ``+'' und die negativ korrelierenden mit ``-'' gekennzeichnet.
 
 \begin{savenotes}
@@ -252,7 +252,7 @@ Um die oben genannten Merkmale verbessern zu können, lassen sich die Techniken 
 \subsection[Produktqualität]{Produktqualität~\footcite[vgl.][Kapitel 1.4.1]{hoffmann_software_qualitat_2013}}
 
 Die Produktqualität lässt sich in die zwei Bereiche konstruktive und analytische Qualitätssicherung unterteilen.
-Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt, die ein Softwareprodukt im Vorhinein erfüllen muss, dient die analytische Qualitätssicherung dem Analysieren und Bewerten im Nachhinein.
+Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt, die ein Softwareprodukt im Vorhinein (während der Entwicklung) erfüllen muss, dient die analytische Qualitätssicherung dem Analysieren und Bewerten im Nachhinein (des fertigen Produkts).
 
 \begin{description}
   \item[Konstruktive Qualitätssicherung] \hfill
@@ -266,7 +266,7 @@ Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt
   \end{description}
   \item[Analytische Qualitätssicherung] \hfill
   \begin{description}
-    \item[Software-Test] \hfill \\ Testen des Software-Produkt mit vordefinierten Tests, welche aus Eingabewerten und erwarteten Ausgabewerten bestehen. Die Auswahl dieser Tests beeinflusst dabei direkt die Qualität. Es wird zwischen Black-Box- und White-Box-Tests unterschieden und Testmetriken verwendet, um die Qualität der Tests zu bestimmen.
+    \item[Software-Test] \hfill \\ Testen des Software-Produkts mit vordefinierten Tests. Die Auswahl dieser Tests beeinflusst dabei direkt die Qualität. Es wird zwischen Black-Box- und White-Box-Tests unterschieden und es können Testmetriken verwendet werden, um die Qualität der Tests zu bestimmen.
     \item[Statische Analyse] \hfill \\ Hier wird im Gegensatz zu den Software-Tests das Programm nicht ausgeführt, sondern es wird direkt der Quelltext analysiert. Es gibt folgende Möglichkeiten der statischen Analyse:
     \begin{description}
       \item[Software-Metriken] \hfill 
@@ -282,7 +282,7 @@ Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt
 \clearpage
 \subsection[Prozessqualität]{Prozessqualität~\footcite[vgl.][Kapitel 1.4.2]{hoffmann_software_qualitat_2013}}
 
-Die Prozessqualität beschäftigt sich im Gegensatz zur Produktqualität mit der Entstehung des Software-Produktes, genauer genommen mit dem Prozess dahinter.
+Die Prozessqualität beschäftigt sich im Gegensatz zur Produktqualität mit der Entstehung des Software-Produkts, genauer genommen mit dem Prozess dahinter.
 Dieser Prozess kann in eine Entwicklersicht, mit der Software-Infrastruktur, und eine Managementsicht, mit den Managementprozessen, aufgeteilt werden.
 
 \begin{description}
@@ -362,7 +362,7 @@ Um bestmögliche Daten erhalten zu können, gibt es folgende Empfehlungen:
   \item gemeinsam eine \ac{DoD} festlegen
 \end{itemize}
 Jede Arbeit, die am \ac{PTS} vorbei geht, fällt später bei der Auswertung der Daten durch das Raster.
-Durch das Taggen der Aufgaben können später Korrelationen ausgewertet werden, vor allem auch durch das Taggen, wie gut die Aufgabe abgelaufen ist.
+Durch das Kategorisieren der Aufgaben können später Korrelationen ausgewertet werden, vor allem auch durch das Zuweisen von Tags, wie gut die Aufgabe abgelaufen ist.
 Nur wenn die Aufgabe geschätzt ist, kann festgestellt werden, ob richtig geschätzt wurde oder wie viele Ausreißer es gibt. Dazu muss auch die Arbeitszeit auf der Aufgabe gespeichert werden.
 Die \ac{DoD} hilft allgemein den Prozess zu verbessern und Rückläufe im Arbeitsablauf zu minimieren.
 
@@ -395,7 +395,7 @@ Grundsätzlich können aber folgende Kennzahlen aus diesen Systemen ermittelt we
   \item[Build-Frequenz] \hfill \\ Wie oft wird ein Build ausgelöst.
   \item[Test Reports] \hfill \\ Anzahl erfolgreicher und fehlerhafter Tests, Gesamtdauer der Tests.
   \item[Code Coverage] \hfill \\ Wie viel Prozent des Quellcodes ist mit Tests abgedeckt.
-  \item[Stresstests oder Benchmarking] \hfill \\ Wird oft im Build Prozess mit getestet mit Tools wie JMeter~\footcite[][]{jmeter} oder Gatling~\footcite[][]{gatling}.
+  \item[Stresstests oder Benchmarking] \hfill \\ Wird oft im Build-Prozess getestet mit Tools wie JMeter~\footcite[][]{jmeter} oder Gatling~\footcite[][]{gatling}.
 \end{description}
 
 \clearpage
@@ -423,9 +423,10 @@ Im Produktionssystem können folgende Kennzahlen ermittelt werden:
 
 Die Metriken finden sich nochmal als Tabelle dargestellt und mit den dazugehörigen Fragen, die sie jeweils beantworten, im Anhang~\ref{appendix:metrics}.
 
+\clearpage
 \subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
 
-Um eigene Metriken erstellen zu können sind 2 Dinge notwendig:
+Um eigene Metriken erstellen zu können sind zwei Dinge notwendig:
 \begin{itemize}
   \item Daten
   \item eine Funktion, um die Metrik zu berechnen
@@ -440,7 +441,7 @@ Dabei sollte darauf geachtet werden,
 
 \subsection[Veröffentlichung von Metriken]{Veröffentlichung von Metriken~\footcite[vgl.][S.177ff]{davis_agile_2015}}
 
-Metriken können auf verschiedene Art und Weise veröffentlicht werden. Zwei mögliche Beispiele sind Dashboards oder Emails.
+Metriken können auf verschiedene Art und Weise veröffentlicht werden. Zwei mögliche Beispiele sind Dashboards oder E-Mails.
 Grundsätzlich sollte beachtet werden, dass man sich bei der Veröffentlichung von Metriken innerhalb der Grenzen und Gewohnheiten des Unternehmens bewegen sollte.
 Außerdem sollte auf folgende Punkte geachtet werden:
 
@@ -455,7 +456,7 @@ Außerdem sollte auf folgende Punkte geachtet werden:
     \item Metriken werden als Werkzeug gesehen, nicht als Waffe (gegen andere Teams oder Personen)
     \item Page Tracking verwenden, um das Nutzungsverhalten zu verstehen
   \end{itemize}
-  \item[Emails] \hfill
+  \item[E-Mails] \hfill
   \begin{itemize}[noitemsep]
     \item aus dem Dashboard optional machen (sonst landen sie schnell automatisch im Spam-Ordner)
     \item minimal erforderliche Daten, den Rest verlinken zum Dashboard
@@ -490,6 +491,7 @@ Mithilfe dieser Begriffe lassen sich folgende vier Punkte ableiten:
 
 Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen anwendbar~\footcite[vgl.][S.219ff]{davis_agile_2015}:
 
+\clearpage
 \begin{description}
   \item[Effektive Software] \hfill
   \begin{itemize}[noitemsep]
@@ -578,7 +580,8 @@ Das Ergebnis dieses Modells hat drei Level:
 
 Abbildung~\ref{fig:gqm} zeigt die hierarchische Struktur des \ac{GQM}-Modells.
 
-\subsubsection[Beispiel]{Beispiel~\footcite[][]{basili_goal_nodate}}
+\clearpage
+\subsubsection*{Beispiel~\footcite[][]{basili_goal_nodate}}
 
 Anhand des Beispiels in Tabelle~\ref{tab:gqm-example} soll veranschaulicht werden, wie so ein GQM-Modell in der Praxis aussehen kann.
 Angenommen wird, das Team will seine Zusammenarbeit verbessern. 

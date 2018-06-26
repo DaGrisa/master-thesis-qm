@@ -1,0 +1,5 @@
+Scrum Rollen? Gendern? Oder besser abkürzen? Developer lässt sich nicht abkürzen.
+
+Entwickler (2.4.1, 2.5.2, 4.2.1, 5.2)
+Kunde (2.4.4)
+Benutzer (2.4.4)

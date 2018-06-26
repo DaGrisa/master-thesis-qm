@@ -4,15 +4,15 @@
 
 Die Umsetzung findet in einem Unternehmen mit weltweit rund 150 Standorten und 6700 Mitarbeitern (Stand Mai 2018) statt.
 Es gibt eine zentrale Informatik mit einer eigenen Softwareentwicklungsabteilung, in der 4 Scrum-Teams angesiedelt sind.
-Es wurde gezielt ein bestimmtes Scrum Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors den Scrum Prozess bereits am weitesten entwickelt hat und dadurch Werkzeuge zur Prozessüberwachung dort am meisten Sinn machen.
+Es wurde gezielt ein bestimmtes Scrum Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors den Scrum Prozess bereits am weitesten entwickelt hat und dadurch Werkzeuge zur Qualitätssicherung dort am meisten Sinn machen.
 Aus sicherheitstechnischen Gründen wird auf das Unternehmen in dieser Arbeit nicht weiter eingegangen.
 
-\newpage
+\clearpage
 \section{Metriken Identifizieren}
 
 \subsection{\ac{GQM}}
 
-Um eine Vorauswahl an Metriken treffen zu können, wurden alle bisherigen Retrospektiven (es waren genau 15) analysiert und eine Topliste von Schlagwörtern der folgenden Fragestellungen aus den Retrospektiven erstellt:
+Um eine Vorauswahl an Metriken treffen zu können, wurden alle bisherigen Retrospektiven analysiert und eine Topliste von Schlagwörtern der folgenden Fragestellungen aus den Retrospektiven erstellt:
 \begin{enumerate}
     \item Welche guten Entscheidungen haben wir getroffen?
     \item Was haben wir gelernt?
@@ -116,7 +116,7 @@ Außerdem wurde in den offenen Fragen am Ende zweimal gefordert, dass die Flüch
 Dies kann zum einen durch die oben genannte Aufgaben-Rückfälligkeit und andererseits durch folgende Metrik abgebildet werden:
 
 \begin{itemize}[noitemsep]
-    \item \textbf{Anforderungen-Flüchtigkeit} \mbox{-} Wie oft wurde die Anforderung der Aufgabe angepasst?
+    \item \textbf{Anforderungs-Flüchtigkeit} \mbox{-} Wie oft wurde die Anforderung der Aufgabe angepasst?
 \end{itemize}
 
 \newpage
@@ -209,7 +209,7 @@ Wichtig dabei ist, dass alle benötigten Systeme erreichbar sind.
 Es wird auch ein Web-Proxy unterstützt, dieser kann in den Einstellungen konfiguriert werden.
 Folgende Schritte sind notwendig, um Agile-Metrics in Betrieb zu nehmen:
 \begin{description}
-    \item[Neuestes Release] aus dem Repository auf GitHub herunterladen (zu diesem Zeitpunkt aktuellster Stand ist v1.0) und im gewünschten Verzeichnis ablegen, in dem es später laufen soll.
+    \item[Neuestes Release] aus dem Repository auf GitHub herunterladen (zu diesem Zeitpunkt aktuellster Stand ist v1.0) und im gewünschten Verzeichnis ablegen, in dem es später gestartet soll.
     \item[Einstellungen] in der Konfigurationsdatei (application.properties) vornehmen, wie in der Beschreibung der Software (README.md) näher erklärt. Benötigt werden hier vor allem die Zugangsdaten zu den einzelnen Systemen und einige Einstellungen für die Systeme selbst.
     \item[Service] einrichten, wenn benötigt. Das unterscheidet sich je nach Betriebssystem und muss daher individuell recherchiert werden.
     \item[Logdatei] auf etwaige Fehler oder Probleme überprüfen (/logs/rollingfile.log). Beim Start werden die Zugangsdaten der Systeme getestet und das Ergebnis in die Logdatei geschrieben, wie in Abbildung~\ref{fig:successful-start} ersichtlich.
@@ -235,7 +235,7 @@ Aufgrund der fehlenden Authentifizierung kann das Dashboard von jedem aufgerufen
 Es ist dadurch für alle Teammitglieder leicht zugänglich und anpassbar.
 Wird eine Authentifizierung in Kibana gewünscht, muss der Elastic-Stack über das Produkt X-Pack ergänzt werden.
 Die Metriken werden im Dashboard in kurzfristige Metriken und langfristige Metriken unterteilt.
-Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, von dem die Metriken angezeigt werden sollen.
+Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, in dem die Metriken angezeigt werden sollen.
 
 \begin{savenotes}
     \begin{figure}[H] 
