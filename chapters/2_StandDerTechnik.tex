@@ -320,7 +320,7 @@ Eine Kennzahl kann daher auch schon direkt eine Metrik sein, wenn sie in der Lag
 \end{savenotes}
 
 Im Entwicklungsprozess werden in den unterschiedlichen Systemen und Prozessschritten Daten erzeugt, die als Kennzahlen oder direkt als Metriken genutzt werden können.
-Abbildung~\ref{fig:sdlc} zeigt die einzelnen Schritte und Systeme im Entwicklungsprozess.
+Abbildung~\ref{fig:sdlc} zeigt die einzelnen Schritte und Systeme im Entwicklungsprozess.~\footcite[vgl.][S.8]{davis_agile_2015}
 
 \clearpage
 \subsection[Versionsverwaltung]{Versionsverwaltung~\footcite[vgl.][S.62ff]{davis_agile_2015}}
@@ -526,7 +526,7 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
 \end{description}
 
 \clearpage
-\subsection{Qualitätsmodelle}
+\section{Qualitätsmodelle}
 
 Qualitätsmodelle sind das Fundament für Software-Produkt-Qualitätskontrolle und werden genutzt, um Qualität zu beschreiben, zu schätzen und/oder vorherzusagen.
 Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt, diese lassen sich in drei Kategorien einteilen: hierarchische, Meta-Modell basierte und implizite Modelle.
@@ -538,7 +538,24 @@ Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt, diese lasse
 \end{description}
 
 \clearpage
-\subsection[\ac{GQM}]{\ac{GQM}~\footcite[][]{basili_goal_nodate}}
+\subsection[\ac{FCM}-Modell]{\acf{FCM}-Modell~\footcite[vgl.][S.668ff]{abts_masterkurs_2009}}
+
+Beim \ac{FCM}-Qualitätsmodell werden zunächst die erforderlichen Qualitätsmerkmale über die Anforderungen an die Software ermittelt.
+In einem weiteren Schritt werden die Qualitätsmerkmale in kleinere Teilmerkmale aufgeteilt.
+Dieser Schritt kann über mehrere Ebenen weitergeführt werden, bis es möglich ist, das Teilmerkmal direkt über eine oder mehrere Metriken abzubilden.
+
+\begin{savenotes}
+  \begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/fcm.png}
+    \caption{Struktur des \ac{FCM} Modells}\label{fig:fcm}
+  \end{figure}
+\end{savenotes}
+
+Abbildung~\ref{fig:fcm} zeigt einen solchen Aufbau eines \ac{FCM}-Modells.
+
+\clearpage
+\subsection[\ac{GQM}-Modell]{\acf{GQM}-Modell~\footcite[][]{basili_goal_nodate}}
 
 \ac{GQM} ist ein Qualitätsmodell, um geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmen Projekten zu erkennen.
 Der grundlegende Gedanke dahinter ist, dass Metriken ``top\mbox{-}down'' (von oben nach unten) definiert werden müssen.
@@ -555,11 +572,11 @@ Das Ergebnis dieses Modells hat drei Level:
   \begin{figure}[H] 
     \centering
     \includegraphics[width=0.9\textwidth]{img/gqm.png}
-    \caption{hierarchische Struktur des GQM Modells}\label{fig:gqm}
+    \caption{Struktur des \ac{GQM} Modells}\label{fig:gqm}
   \end{figure}
 \end{savenotes}
 
-Abbildung~\ref{fig:gqm} zeigt die hierarchische Struktur des GQM-Modells.
+Abbildung~\ref{fig:gqm} zeigt die hierarchische Struktur des \ac{GQM}-Modells.
 
 \subsubsection[Beispiel]{Beispiel~\footcite[][]{basili_goal_nodate}}
 
@@ -583,11 +600,3 @@ Im Falle der Pull Requests zum Beispiel der Durchschnitt und die Standardabweich
   \end{tabular}
   \caption{Beispiel GQM Modell}\label{tab:gqm-example}
 \end{table}
-
-\subsection{Umfrage (Quelle fehlt)}
-
-Quellen zu wissenschaftlichen Umfragen finden, passende einfügen.
-Grundsätzlich: Team wurden die gängigsten Metriken vorgestellt und die Fragen, die sie beantworten können.
-Jene Metriken, die in einer Skala von 1-10 eine x und größer hatten, wurden in dieser Arbeit umgesetzt.
-Am Ende wurden offene Fragen gestellt, falls ein Teilnehmer noch eine Metrik vermisste.
-Zusätzlich wurden qualitative Fragen zur Umfrage gestellt, um ein Feedback zur Methode zu bekommen.
