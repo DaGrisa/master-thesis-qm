@@ -77,13 +77,13 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
   \item \textbf{Rollen}
   \begin{itemize}
     \item \textbf{Development Team}: Selbstorganisiertes Team, das am Produkt arbeitet.
-    \item \textbf{Scrum Mater}: Verantwortlich dafür, sicherzustellen, dass Scrum verstanden und gelebt wird.
+    \item \textbf{Scrum Master}: Verantwortlich dafür, sicherzustellen, dass Scrum verstanden und gelebt wird.
     \item \textbf{Product Owner}: Verantwortlich den Wert des Produktes und die Arbeit des Development Teams zu maximieren.
   \end{itemize}
   \item \textbf{Ereignisse}
   \begin{itemize}
-    \item \textbf{Sprint}: Ist das Herz von Scrum: eine Timebox von 2 bis 4 Wochen, in dem ein fertiges, verwendbares und potentiell releasebares Produkt-Inkrement entwickelt wird.
-    \item \textbf{Sprint Planning}: Planung eines Sprints. Hier commited sich das Scrum Team, eine gewisse Anzahl an Aufgaben im kommenden Sprint abzuarbeiten.
+    \item \textbf{Sprint}: Ist das Herz von Scrum: eine Timebox von 2 bis 4 Wochen, in dem ein fertiges, verwendbares und potentiell auslieferbares Produkt-Inkrement entwickelt wird.
+    \item \textbf{Sprint Planning}: Planung eines Sprints. Hier verpflichtet sich das Scrum Team, eine gewisse Anzahl an Aufgaben im kommenden Sprint abzuarbeiten.
     \item \textbf{Daily Scrum}: Tägliches, zeitlich begrenztes Meeting, bei dem von jedem Teammitglied folgende drei Fragen beantwortet werden:
     \begin{enumerate}
       \item Was habe ich gemacht?
@@ -165,7 +165,7 @@ Es unterscheidet dabei zwei Varianten:
   \end{figure}
 \end{savenotes}
 
-Es gibt viele Dinge, die gleich bleiben, wie bei einem Team: Produkt Backlog, \ac{DoD}, nach jedem Sprint ein lauffähiges Inkrement, Product Owner, cross-funktionale Teams und ein Sprint.
+Es gibt viele Dinge, die gleich bleiben, wie bei einem Team: Product Backlog, \ac{DoD}, nach jedem Sprint ein lauffähiges Inkrement, Product Owner, cross-funktionale Teams und ein Sprint.
 Darüber hinaus gibt es aber auch einige Unterschiede:
 
 \begin{description}
@@ -174,7 +174,7 @@ Darüber hinaus gibt es aber auch einige Unterschiede:
   \item[Daily Scrum] wird auch unabhängig in jedem Team abgehalten, aber eine Person aus Team A kann bei Team B dabei sein, um den Informationsfluss zu erhöhen.
   \item[Overall \ac{PBR}] ist kurz und informativ, um abzuklären, welches Team vermutlich welche Aufgabe übernimmt, für das spätere \ac{PBR}.
   \item[\ac{PBR}] können auch mehrere Teams gemeinsam machen, um voneinander zu lernen und besser koordinieren zu können.
-  \item[Sprint Review] kann zusätzlich Personen aus anderen Teams oder andere Steakholder beinhalten.
+  \item[Sprint Review] kann zusätzlich Personen aus anderen Teams oder andere Stakeholder beinhalten.
   \item[Overall Retrospective] ist ein ganz neues Meeting mit Scrum Mastern, Product Ownern und rotierenden Personen der Teams, um den Gesamtprozess zu verbessern.
 \end{description}
 
@@ -186,7 +186,7 @@ Es besteht aus Scrum Teams, die durch \ac{SoS} und MetaScrums koordiniert werden
   \begin{figure}[H] 
     \centering
        \includegraphics[width=1.0\textwidth]{img/scrumatscale.png}
-    \caption[Scrum at Scale Framework - SMPO Zyklus]{Scrum at Scale Framework - SMPO Zyklus~\footcite{scrumatscale_framework}}\label{fig:sas}
+    \caption[Scrum at Scale Framework {-} SMPO Zyklus]{Scrum at Scale Framework {-} SMPO Zyklus~\footcite{scrumatscale_framework}}\label{fig:sas}
   \end{figure}
 \end{savenotes}
 
@@ -215,7 +215,7 @@ Einige wesentliche Merkmale, um die Qualität von Software bewerten zu können, 
   \item[Kundenorientierte Merkmale] \hfill \\ Nach außen hin sichtbare Merkmale, die sich auf den kurzfristigen Erfolg der Software auswirken, da sie die Kaufentscheidung möglicher Kunden beeinflussen.
   \begin{description}
     \item[Funktionalität (Functionality, Capability)] \hfill \\ Beschreibt die Umsetzung der funktionalen Anforderungen. Fehler sind hier häufig Implementierungsfehler (sogenannte Bugs), welche durch Qualitätssicherung bereits in der Entwicklung entdeckt oder vermieden werden können. 
-    \item[Laufzeit (Performance)] \hfill \\ Beschreibt die Umsetzung der Laufzeitanforderungen. Besonderes Augenmerk muss in Echtzeitsystemen auf dieses Merkmal gelegt werden.
+    \item[Laufzeit (Performance)] \hfill \\ Beschreibt die Umsetzung der Laufzeit-Anforderungen. Besonderes Augenmerk muss in Echtzeitsystemen auf dieses Merkmal gelegt werden.
     \item[Zuverlässigkeit (Reliability)] \hfill \\ Eine hohe Zuverlässigkeit ist in kritischen Bereichen, wie z.B. Medizintechnik oder Luftfahrt, unabdingbar. Erreicht werden kann diese aber nur durch die Optimierung einer Reihe anderer Kriterien.
     \item[Benutzbarkeit (Usability)] \hfill \\ Betrifft alle Eigenschaften eines Systems, die mit der Benutzer-Interaktion in Berührung kommen.
   \end{description}
@@ -247,12 +247,12 @@ Dabei sind die positiv korrelierenden Merkmale mit ``+'' und die negativ korreli
   \end{figure}
 \end{savenotes}
 
-Um die oben genannten Merkmale verbessern zu können, lassen sich die Techniken und Methoden zur Qualitätssicherung, wie in Abbildung~\ref{fig:software-quality} ersichtlich, in die Bereiche Produkt- und Prozess-Qualität einteilen, welche im Folgenden noch genauer beschrieben werden.
+Um die oben genannten Merkmale verbessern zu können, lassen sich die Techniken und Methoden zur Qualitätssicherung, wie in Abbildung~\ref{fig:software-quality} ersichtlich, in die Bereiche Produkt- und Prozessqualität einteilen, welche im Folgenden noch genauer beschrieben werden.
 
-\subsection[Produkt-Qualität]{Produkt-Qualität~\footcite[vgl.][Kapitel 1.4.1]{hoffmann_software_qualitat_2013}}
+\subsection[Produktqualität]{Produktqualität~\footcite[vgl.][Kapitel 1.4.1]{hoffmann_software_qualitat_2013}}
 
-Die Produkt-Qualität lässt sich in die zwei Bereiche konstruktive und analytische Qualitätssicherung unterteilen.
-Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt, die ein Software-Produkt im Vorhinein erfüllen muss, dient die analytische Qualitätssicherung dem Analysieren und Bewerten im Nachhinein.
+Die Produktqualität lässt sich in die zwei Bereiche konstruktive und analytische Qualitätssicherung unterteilen.
+Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt, die ein Softwareprodukt im Vorhinein erfüllen muss, dient die analytische Qualitätssicherung dem Analysieren und Bewerten im Nachhinein.
 
 \begin{description}
   \item[Konstruktive Qualitätssicherung] \hfill
@@ -280,9 +280,9 @@ Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt
 \end{description}
 
 \clearpage
-\subsection[Prozess-Qualität]{Prozess-Qualität~\footcite[vgl.][Kapitel 1.4.2]{hoffmann_software_qualitat_2013}}
+\subsection[Prozessqualität]{Prozessqualität~\footcite[vgl.][Kapitel 1.4.2]{hoffmann_software_qualitat_2013}}
 
-Die Prozess-Qualität beschäftigt sich im Gegensatz zur Produkt-Qualität mit der Entstehung des Software-Produktes, genauer genommen mit dem Prozess dahinter.
+Die Prozessqualität beschäftigt sich im Gegensatz zur Produktqualität mit der Entstehung des Software-Produktes, genauer genommen mit dem Prozess dahinter.
 Dieser Prozess kann in eine Entwicklersicht, mit der Software-Infrastruktur, und eine Managementsicht, mit den Managementprozessen, aufgeteilt werden.
 
 \begin{description}
@@ -290,7 +290,7 @@ Dieser Prozess kann in eine Entwicklersicht, mit der Software-Infrastruktur, und
   \begin{description}
     \item[Konfigurationsmanagement] \hfill \\ Hilft bei der Verwaltung der entstehenden Artefakte, zum Beispiel durch den Einsatz von \ac{VCS}.
     \item[Build-Automatisierung] \hfill \\ Erzeugt die Artefakte voll automatisch.
-    \item[Test-Automatisierung] \hfill \\ Genause wie das Erstellen der Artefakte, wird auch das Testen voll automatisch durchgeführt.
+    \item[Test-Automatisierung] \hfill \\ Genauso, wie das Erstellen der Artefakte, wird auch das Testen vollautomatisch durchgeführt.
     \item[Defektmanagement] \hfill \\ Um Defekte zentral erfassen und verwalten zu können.
   \end{description}
   \item[Managementprozesse] \hfill \\ Steuern den Projektablauf und werden in Vorgehensmodelle und Reifegradmodelle unterteilt.
@@ -338,9 +338,9 @@ Um bestmögliche Daten zu bekommen, sollten verteilte Versionskontrollsysteme wi
     \item[Kommentare pro Commit] \hfill \\ Anzahl der Kommentare pro Commit.
     \item[\ac{CLOC} pro Commit] \hfill \\ Anzahl der geänderten Zeilen im Quellcode pro Commit.
   \end{description}
-  \item[Pull Requests] \hfill \\ Gesamtzahl an Pull Requests in einembestimmten Zeitraum.
+  \item[Pull Requests] \hfill \\ Gesamtzahl an Pull Requests in einem bestimmten Zeitraum.
   \begin{description}
-    \item[Gemergte Pull Requests] \hfill \\ Anzahl erfolgreicher Pull Requests ineinem bestimmten Zeitraum.
+    \item[Gemergte Pull Requests] \hfill \\ Anzahl erfolgreicher Pull Requests in einem bestimmten Zeitraum.
     \item[Abgelehnte Pull Requests] \hfill \\ Anzahl abgelehnter Pull Requests in einem bestimmten Zeitraum.
     \item[Kommentare pro Pull Request] \hfill \\ Anzahl der Kommentare pro Pull Request.
   \end{description}
@@ -370,7 +370,7 @@ Dadurch ergeben sich folgende Kennzahlen aus einem \ac{PTS}:
 \begin{description}
   \item[Burn Down] \hfill \\ Die Anzahl erledigte Arbeit über die Zeit. Liefert einen Richtwert, wo man sich gerade im Sprint befindet, verglichen zum Commitment.
   \item[Velocity] \hfill \\ Eine relative Messung der Konsistenz erledigter Arbeit über die Sprints.
-  \item[Cummulative Flow] \hfill \\ Zeigt wie viel Aufgaben nach Status dem Team zugewiesen sind über die Zeit.
+  \item[Cumulative Flow] \hfill \\ Zeigt wie viel Aufgaben nach Status dem Team zugewiesen sind über die Zeit.
   \item[Lead Time] \hfill \\ Zeit zwischen Start und Abschluss einer Aufgabe, vor allem interessant bei Kanban.
   \item[Bug Counts] \hfill \\ Die Anzahl an Bugs über die Zeit.
   \begin{description}
@@ -391,7 +391,7 @@ Grundsätzlich können aber folgende Kennzahlen aus diesen Systemen ermittelt we
 
 \begin{description}
   \item[Build-Dauer] \hfill \\ Geschätzte und tatsächliche Dauer der Builds.
-  \item[Build-Status] \hfill \\ Es können die Anzahl der erfolgreichen und fehlerhaften Builds gegenüber gestellt werden.
+  \item[Build-Status] \hfill \\ Es können die Anzahl der erfolgreichen und fehlerhaften Builds gegenübergestellt werden.
   \item[Build-Frequenz] \hfill \\ Wie oft wird ein Build ausgelöst.
   \item[Test Reports] \hfill \\ Anzahl erfolgreicher und fehlerhafter Tests, Gesamtdauer der Tests.
   \item[Code Coverage] \hfill \\ Wie viel Prozent des Quellcodes ist mit Tests abgedeckt.
@@ -421,7 +421,7 @@ Im Produktionssystem können folgende Kennzahlen ermittelt werden:
 
 \subsection{Übersicht Kennzahlen im Entwicklungsprozess}
 
-Die Metriken finden sich nochmal als Tabelle dargestellt und mit den dazugehötigen Fragen, die sie jeweils beantworten, im Anhang~\ref{appendix:metrics}.
+Die Metriken finden sich nochmal als Tabelle dargestellt und mit den dazugehörigen Fragen, die sie jeweils beantworten, im Anhang~\ref{appendix:metrics}.
 
 \subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
 
@@ -459,11 +459,11 @@ Außerdem sollte auf folgende Punkte geachtet werden:
   \begin{itemize}[noitemsep]
     \item aus dem Dashboard optional machen (sonst landen sie schnell automatisch im Spam-Ordner)
     \item minimal erforderliche Daten, den Rest verlinken zum Dashboard
-    \item den Richtigen Rhytmus finden (zwischen oft genug informieren und nerven)
+    \item den Richtigen Rhythmus finden (zwischen oft genug informieren und nerven)
   \end{itemize}
 \end{description}
 
-Arbeitet ein Unternehmen beispielsweise viel mit Reports via Email, dann kann ein reines Dashboard weniger Anerkennung finden. Hier könnte beispielsweise eine Übersicht per Mail versendet und mit Links zum Dashboard versehen werden.
+Arbeitet ein Unternehmen beispielsweise viel mit Reports via E-Mail, dann kann ein reines Dashboard weniger Anerkennung finden. Hier könnte beispielsweise eine Übersicht per Mail versendet und mit Links zum Dashboard versehen werden.
 
 \subsection[Agile Prinzipien messen]{Agile Prinzipien messen~\footcite[vgl.][S.201ff]{davis_agile_2015}}
 
@@ -498,16 +498,16 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
     \item Status der Applikation
     \begin{itemize}[noitemsep]
       \item Fehlerraten
-      \item CPU/Speicher Auslastung
+      \item CPU- / Speicherauslastung
       \item Antwort- / Transaktionszeiten
-      \item Heapgröße / Garbage Collection / Anzahl Threads
+      \item Heap Größe / Garbage Collection / Anzahl Threads
     \end{itemize}
   \end{itemize}
   \item[Effektiver Prozess] \hfill
   \begin{itemize}[noitemsep]
     \item Velocity
     \item \ac{PTS} und \ac{VCS} Kommentare
-    \item erfolgeiche Releases
+    \item erfolgreiche Releases
   \end{itemize}
   \item[Effektives Team] \hfill
   \begin{itemize}[noitemsep]
@@ -529,11 +529,11 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
 \section{Qualitätsmodelle}
 
 Qualitätsmodelle sind das Fundament für Software-Produkt-Qualitätskontrolle und werden genutzt, um Qualität zu beschreiben, zu schätzen und/oder vorherzusagen.
-Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt, diese lassen sich in drei Kategorien einteilen: hierarchische, Meta-Modell basierte und implizite Modelle.
+Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt, diese lassen sich in drei Kategorien einteilen: hierarchische, Metamodell basierte und implizite Modelle.
 
 \begin{description}
-  \item[Hierarchische Qualitätsmodelle] \hfill \\ Entstanden bereits in den 1970er Jahren. Qualität wird hierarchisch in Qualitätsfaktoren zerlegt, wie Wartbarkeit oder Zuverlässigkeit. Die Idee dahinter ist, Qualität hierarchisch herunterzubrechen, dass sie messbar wird. Verschiedenste Kritiken heben hervor, dass die Prinzipien zur Dekomposition von Qualitätscharakteristiken oft mehrdeutig sind. Außerdem sind die resultierenden Qualitätscharakteristiken nicht spezifisch genug, um direkt gemessen werden zu können.
-  \item[Meta-Modell basierte Qualitätsmodelle] \hfill \\ Entstanden in den 1990er Jahren, als Forscher mehr ausgereiftere Wege aufzeigten, um Qualitätscharakteristiken zu zerlegen. Dadurch entstanden auch ausführlichere Meta-Modelle. Ein Meta-Modell beschreibt, wie gültig Qualitätsmodelle strukturiert sind. Die vielen Meta-Modelle zeigen, dass Qualität mehr Struktur in Qualitätsmodellen, als in abstrakten Qualitätscharakteristiken und Metriken braucht. Es wurde kein generelles Basis-Qualitätsmodell eingeführt, das man herunterladen und anwenden kann.
+  \item[Hierarchische Qualitätsmodelle] \hfill \\ Entstanden bereits in den 1970er Jahren. Qualität wird hierarchisch in Qualitätsfaktoren zerlegt, wie Wartbarkeit oder Zuverlässigkeit. Die Idee dahinter ist, Qualität hierarchisch herunterzubrechen, dass sie messbar wird. Verschiedenste Kritiken heben hervor, dass die Prinzipien zur Dekomposition von Qualitäts-Charakteristiken oft mehrdeutig sind. Außerdem sind die resultierenden Qualitäts-Charakteristiken nicht spezifisch genug, um direkt gemessen werden zu können.
+  \item[Metamodell basierte Qualitätsmodelle] \hfill \\ Entstanden in den 1990er Jahren, als Forscher mehr ausgereiftere Wege aufzeigten, um Qualitäts-Charakteristiken zu zerlegen. Dadurch entstanden auch ausführlichere Metamodelle. Ein Metamodell beschreibt, wie gültig Qualitätsmodelle strukturiert sind. Die vielen Metamodelle zeigen, dass Qualität mehr Struktur in Qualitätsmodellen, als in abstrakten Qualitäts-Charakteristiken und Metriken braucht. Es wurde kein generelles Basis-Qualitätsmodell eingeführt, das man herunterladen und anwenden kann.
   \item[Statistische und implizite Qualitätsmodelle] \hfill \\ Für unterschiedlichste Qualitätsfaktoren wurden statistische Modelle vorgestellt, die Eigenschaften erfassen und Qualitätsfaktoren schätzen oder voraussagen. Auch Qualitäts-Analysetools nutzen eine Art Qualitätsmodell und auch Checklisten in der Entwicklung oder in Reviews sind eine Art Qualitätsmodell.
 \end{description}
 
@@ -557,13 +557,13 @@ Abbildung~\ref{fig:fcm} zeigt einen solchen Aufbau eines \ac{FCM}-Modells.
 \clearpage
 \subsection[\ac{GQM}-Modell]{\acf{GQM}-Modell~\footcite[][]{basili_goal_nodate}}
 
-\ac{GQM} ist ein Qualitätsmodell, um geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmen Projekten zu erkennen.
+\ac{GQM} ist ein Qualitätsmodell, um geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmten Projekten zu erkennen.
 Der grundlegende Gedanke dahinter ist, dass Metriken ``top\mbox{-}down'' (von oben nach unten) definiert werden müssen.
 Dieser Ansatz wird dadurch begründet, dass Metriken sehr viele Charakteristiken abbilden können, aber erst durch Modelle beziehungsweise Ziele richtig genutzt und interpretiert werden können.
 
 Das Ergebnis dieses Modells hat drei Level:
 \begin{description}
-  \item[GOAL \mbox{-} konzeptuelles Level] \hfill \\ Es werden Ziele für besimmte Objekte definiert. Objekte können Produkte, Prozesse oder Ressourcen sein.
+  \item[GOAL \mbox{-} konzeptuelles Level] \hfill \\ Es werden Ziele für bestimmte Objekte definiert. Objekte können Produkte, Prozesse oder Ressourcen sein.
   \item[QUESTION \mbox{-} operatives Level] \hfill \\ Für jedes Ziel werden Fragen formuliert, die zur Beurteilung oder Erreichung beitragen. Sie versuchen den Grund für die Messung zu charakterisieren.
   \item[METRIC \mbox{-} quantitatives Level] \hfill \\ Jeder Frage werden Metriken zugeordnet, die dabei helfen sollen, sie quantitativ zu beantworten.
 \end{description}

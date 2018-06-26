@@ -3,8 +3,8 @@
 \section{Gegebenheiten}
 
 Die Umsetzung findet in einem Unternehmen mit weltweit rund 150 Standorten und 6700 Mitarbeitern (Stand Mai 2018) statt.
-Es gibt eine zentrale Informatik mit einer eigenen Softwareentwicklungs-Abteilung, in der 4 Scrum-Teams angesiedelt sind.
-Es wurde gezielt ein bestimmtes Scrum Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors den Scrum Prozess bereits am weitesten entwicklet hat und dadurch Werkzeuge zur Prozessüberwachung dort am meisten Sinn machen.
+Es gibt eine zentrale Informatik mit einer eigenen Softwareentwicklungsabteilung, in der 4 Scrum-Teams angesiedelt sind.
+Es wurde gezielt ein bestimmtes Scrum Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors den Scrum Prozess bereits am weitesten entwickelt hat und dadurch Werkzeuge zur Prozessüberwachung dort am meisten Sinn machen.
 Aus sicherheitstechnischen Gründen wird auf das Unternehmen in dieser Arbeit nicht weiter eingegangen.
 
 \newpage
@@ -44,7 +44,7 @@ Die Ergebnisse in Anhang~\ref{appendix:retros} sind für die einzelnen Punkte wi
     \end{itemize}
     \item[Was nervt uns noch immer?] \hfill
     \begin{itemize}[noitemsep]
-      \item Hier lassen die Schlagwörter ``updat'', ``erreichbar'', ``infrastruktur'', ``jenkin'', ``test'' und ``umgebung'' auf ein Infrastruktur Problem schließen, welches das Team womöglich ausbremst.
+      \item Hier lassen die Schlagwörter ``updat'', ``erreichbar'', ``infrastruktur'', ``jenkin'', ``test'' und ``umgebung'' auf ein Infrastrukturproblem schließen, welches das Team womöglich ausbremst.
       \item Die Schlagwörter ``lang'', ``groß'' und ``klar'' lassen auf Probleme mit Anforderungen beziehungsweise Stories schließen.
       \item ``apis'', ``dba'', ``laut'' und ``iso'' sind wahrscheinlich äußere Einflüsse, die bei der täglichen Arbeit stören.
     \end{itemize}
@@ -97,7 +97,7 @@ Aus diesen Ergebnissen Lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-
 Zusätzlich zu der Analyse der Retrospektiven wurden dem Team Metriken und die Fragen, die damit beantwortet werden können, in Form einer Umfrage vorgestellt.
 Die einzelnen Metriken wurden von den Teammitgliedern nach Wichtigkeit mit einer Skala von 1 bis 10 bewertet.
 Anhang~\ref{appendix:questions} zeigt die Umfrage, wie sie den Teammitgliedern vorgelegt wurde und Anhang~\ref{appendix:answers} die dazugehörigen Antworten.
-Die Ergebnisse wurden nach ihrem Druchschnittwert sortiert und die 10 als am wichtigsten bewerteten Metriken sind:
+Die Ergebnisse wurden nach ihrem Druchschnittswert sortiert und die 10 als am wichtigsten bewerteten Metriken sind:
 
 \begin{itemize}[noitemsep]
     \item \textbf{Burn Down (9,00)} \mbox{-} Erfüllt das Team seine Commitments? Plant das Team seine Arbeit realistisch?
@@ -173,7 +173,7 @@ Zusätzlich wird über GitHub Pages eine statische Seite~\footcite{agile_metrics
     \begin{figure}[H] 
         \centering
             \includegraphics[width=0.8\textwidth]{img/github-pages.png}
-        \caption{GitHub Pages - Agile Metrics}\label{fig:github_pages}
+        \caption{GitHub Pages {-} Agile Metrics}\label{fig:github_pages}
     \end{figure}
 \end{savenotes}
 
@@ -183,7 +183,7 @@ Travis CI~\footcite{travis_agile_metrics} bietet einen kostenlosen \ac{CI}-Servi
     \begin{figure}[H] 
         \centering
             \includegraphics[width=0.8\textwidth]{img/travisci.png}
-        \caption{Travis CI - Agile Metrics}\label{fig:travisci}
+        \caption{Travis CI {-} Agile Metrics}\label{fig:travisci}
     \end{figure}
 \end{savenotes}
 
@@ -194,7 +194,7 @@ Abbildung~\ref{fig:travisci} zeigt die Liste der zu diesem Zeitpunkt zuletzt dur
     \begin{figure}[H] 
         \centering
             \includegraphics[width=0.8\textwidth]{img/sonarcloud.png}
-        \caption{SonarCloud - Agile Metrics}\label{fig:sonarcloud}
+        \caption{SonarCloud {-} Agile Metrics}\label{fig:sonarcloud}
     \end{figure}
 \end{savenotes}
 
@@ -206,13 +206,13 @@ Abbildung~\ref{fig:sonarcloud} zeigt die Übersichtsseite von SonarCloud mit den
 
 Betrieben wird die Software auf einem eigens für Java Applikationen bereitgestellten Server. 
 Wichtig dabei ist, dass alle benötigten Systeme erreichbar sind. 
-Es wird auch ein Webproxy unterstützt, dieser kann in den Einstellungen konfiguriert werden.
+Es wird auch ein Web-Proxy unterstützt, dieser kann in den Einstellungen konfiguriert werden.
 Folgende Schritte sind notwendig, um Agile-Metrics in Betrieb zu nehmen:
 \begin{description}
     \item[Neuestes Release] aus dem Repository auf GitHub herunterladen (zu diesem Zeitpunkt aktuellster Stand ist v1.0) und im gewünschten Verzeichnis ablegen, in dem es später laufen soll.
     \item[Einstellungen] in der Konfigurationsdatei (application.properties) vornehmen, wie in der Beschreibung der Software (README.md) näher erklärt. Benötigt werden hier vor allem die Zugangsdaten zu den einzelnen Systemen und einige Einstellungen für die Systeme selbst.
-    \item[Service] einrichten, wenn benötigt. Das unterscheidet sich je nach Betriebssystem und muss dafür individuell recherchiert werden.
-    \item[Logdatei] auf etwaige Fehler oder Probleme überprüfen (/logs/rollingfile.log). Beim Start werden die Zugangsdaten der Systeme gestestet und das Ergebnis in die Logdatei geschrieben, wie in Abbildung~\ref{fig:successful-start} ersichtlich.
+    \item[Service] einrichten, wenn benötigt. Das unterscheidet sich je nach Betriebssystem und muss daher individuell recherchiert werden.
+    \item[Logdatei] auf etwaige Fehler oder Probleme überprüfen (/logs/rollingfile.log). Beim Start werden die Zugangsdaten der Systeme getestet und das Ergebnis in die Logdatei geschrieben, wie in Abbildung~\ref{fig:successful-start} ersichtlich.
 \end{description}
 
 \begin{savenotes}
@@ -250,7 +250,7 @@ Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, von d
     \item[Coverage] \hfill \\ Das Team hat die Verantwortung über mehrere Produkte, deshalb wurde die Testabdeckung von zwei Produkten in Form einer Messuhr dargestellt. In einem weiteren Liniendiagramm wird der Verlauf der Testabdeckung aller Produkte über die Zeit dargestellt.
     \item[Burndown] \hfill \\ Die Anzahl erledigte und noch offene Story Points im aktuellen Sprint bilden das Burndown-Chart. Es wird klassisch als Liniendiagramm dargestellt.
     \item[Cumulative Flow] \hfill \\ Beim Cumulative Flow werden nicht nur die einzelnen Statis dargestellt, sondern in einem separaten Diagramm auch noch die Status-Kategorien. Diese können bei sehr vielen unterschiedlichen Statis einen besseren Überblick bieten. Dargestellt werden beide als gestapelte Blockdiagramme, da sie einen Anteil an einem Gesamtvolumen darstellen sollen.
-    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl Bugs wird als Messuhr mit bestmmten Grenzwerten dargestellt, die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
+    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl Bugs wird als Messuhr mit bestimmten Grenzwerten dargestellt, die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
     \item[Issue Volume] \hfill \\ Das Aufgabenvolumen des aktiven Sprints wird als Flächendiagramm dargestellt.
 \end{description}
 
@@ -266,13 +266,13 @@ Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, von d
 \begin{description}
     \item[Lead Time] \hfill \\ Die Lead Time wird zum einen als Metrik dargestellt, zum anderen auch als Histogramm. Das hat den Grund, da hier einzelne Ausreißer nach oben oder unten die Metrik stark beeinflussen können. Das Histogramm stellt diese Ausreißer und die Verteilung noch besser dar.
     \item[Acceptance Criteria Volatility] \hfill \\ Auch bei der Flüchtigkeit der Akzeptanzkriterien wird die Metrik durch ein Histogramm ergänzt, da hier ebenfalls Ausreißer großen Einfluss haben können.
-    \item[Recisivism] \hfill \\ Die Rückfälligkeit wird auch als Metrik und Histogramm dargestellt.
-    \item[Velocity] \hfill \\ Wird als Blockdiagramm dargestellt. Sichtbar sind die geschätzen und die tatsächlich fertiggestellten Story Points pro Sprint.
+    \item[Recidivism] \hfill \\ Die Rückfälligkeit wird auch als Metrik und Histogramm dargestellt.
+    \item[Velocity] \hfill \\ Wird als Blockdiagramm dargestellt. Sichtbar sind die geschätzten und die tatsächlich fertiggestellten Story Points pro Sprint.
     \item[Issue Volume] \hfill \\ Ein Blockdiagramm der Aufgabenvolumen vergangener Sprints, um die Entwicklung darzustellen.
 \end{description}
 
 \newpage
-\subsection{Statusschnittstelle}
+\subsection{Status-Schnittstelle}
 
 Über die RESTful Schnittstelle der Software kann der aktuelle Status abgefragt werden.
 
@@ -280,7 +280,7 @@ Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, von d
     \begin{figure}[H] 
         \centering
             \includegraphics[width=1.0\textwidth]{img/status-api.png}
-        \caption{Ergebnis der Abfrage der Statusschnittstelle}\label{fig:status-api}
+        \caption{Ergebnis der Abfrage der Status-Schnittstelle}\label{fig:status-api}
     \end{figure}
 \end{savenotes}
 
