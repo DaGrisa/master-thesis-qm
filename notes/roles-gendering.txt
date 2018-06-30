@@ -1,5 +1,22 @@
 Scrum Rollen? Gendern? Oder besser abkürzen? Developer lässt sich nicht abkürzen.
+(2.2)
+In der Gender Präambel erwähnen, dass die originalen englischen begriffe verwendet werden und daher nicht gegendert sind.
+Chief Product Owner?
+MetaScrum?
 
-Entwickler (2.4.1, 2.5.2, 4.2.1, 5.2)
-Kunde (2.4.4)
-Benutzer (2.4.4)
+Botschafter (2.1.1.1)
+Teilnehmer (2.1.1.1)
+Manager (2.1.1.1)
+Stakeholder (2.1.1.2)
+kundenorientiert (2.3)
+Entwickler (2.3.3, 2.4.1, 2.5.2, 4.2.1, 5.2)
+Kunde (2.3, 2.4.4)
+Benutzer (2.3, 2.4.4)
+
+Entwicklerin
+Kunde
+Managerin
+Teilnehmer
+Botschafter
+Benutzerin
+Stakeholder

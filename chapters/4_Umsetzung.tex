@@ -1,9 +1,15 @@
 \chapter{Umsetzung}
 
+Dieses Kapitel zeigt die erarbeitete Lösung im Detail.
+Zu Beginn werden die relevanten Metriken, mithilfe des \ac{GQM}-Modells und durch eine Umfrage im Team, identifiziert.
+Dann wird genauer auf die Architektur der Software und deren Entwicklung eingegeangen.
+Abgeschlossen wird das Kapitel mit der Inbetriebnahme der fertigen Software.
+
 \section{Gegebenheiten}
 
 Die Umsetzung findet in einem Unternehmen mit weltweit rund 150 Standorten und 6700 Mitarbeitern (Stand Mai 2018) statt.
-Es gibt eine zentrale Informatik mit einer eigenen Softwareentwicklungsabteilung, in der 4 Scrum-Teams angesiedelt sind.
+Es gibt eine zentrale Informatik mit einer eigenen Softwareentwicklungsabteilung, in der vier Scrum-Teams angesiedelt sind.
+Diese vier Scrum Teams koordinieren sich über \ac{SoS}.
 Es wurde gezielt ein bestimmtes Scrum Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors den Scrum Prozess bereits am weitesten entwickelt hat und dadurch Werkzeuge zur Qualitätssicherung dort am meisten Sinn machen.
 Aus sicherheitstechnischen Gründen wird auf das Unternehmen in dieser Arbeit nicht weiter eingegangen.
 
@@ -55,7 +61,7 @@ Aus diesen Ergebnissen Lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-
 \begin{table}[H]
     \centering
     \begin{tabular}{llr}
-    GOAL     & \begin{tabular}[c]{@{}l@{}}Absicht\\ Problem\\ Ressource\\ Sichtweise\end{tabular} & \begin{tabular}[c]{@{}l@{}}Verringerung\\ der Ablenkung\\ von Entwicklern\\ aus Sicht des Scrum Masters.\end{tabular} \\ \midrule
+    GOAL     & \begin{tabular}[c]{@{}l@{}}Absicht\\ Problem\\ Ressource\\ Sichtweise\end{tabular} & \begin{tabular}[c]{@{}l@{}}Verringerung\\ der Ablenkung\\ von Entwicklerinnen\\ aus Sicht des Scrum Masters.\end{tabular} \\ \midrule
     QUESTION & \multicolumn{2}{l}{Wie viele Aufgaben erledigt das Team pro Sprint?} \\
     METRIC   & \multicolumn{2}{l}{Aufgaben-Volumen pro Sprint} \\ \midrule
     QUESTION & \multicolumn{2}{l}{Wie viele Aufgaben werden jeden Tag erledigt?} \\
@@ -63,7 +69,7 @@ Aus diesen Ergebnissen Lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-
     QUESTION & \multicolumn{2}{l}{Welche Tags haben als ``schlecht'' bewertete Aufgaben?} \\
     METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Tags der Aufgaben, \\ um ``schlecht'' bewertete besser analysieren zu können\end{tabular}}
     \end{tabular}
-    \caption{GQM\mbox{-}Modell \mbox{-} Ablenkung der Entwickler}\label{tab:gqm-distraction}
+    \caption{GQM\mbox{-}Modell \mbox{-} Ablenkung der Entwicklerinnen}\label{tab:gqm-distraction}
 \end{table}
 
 \begin{table}[H]
@@ -160,7 +166,7 @@ Kibana dient zur Darstellung der in der ElasticSearch-Datenbank gespeicherten Me
 \subsection{Lizenz}
 
 Bei der Recherche wurde keine Software gefunden, welche die oben genannten Funktionalitäten anbietet.
-Daher wird die im Zuge dieser Arbeit erstellte Software quelloffen (OpenSource) angeboten.
+Daher wird die im Zuge dieser Arbeit erstellte Software quelloffen angeboten.
 Als Lizenz wurde dabei die MIT-Lizenz~\footcite{mit_license} gewählt, da sie eine einfache und großzügige Lizenz ist, die lediglich die Erhaltung des Urheberrechts und eine Lizenzangabe erfordert.
 
 \subsection{\ac{VCS}, \ac{CI} und \ac{QS}}

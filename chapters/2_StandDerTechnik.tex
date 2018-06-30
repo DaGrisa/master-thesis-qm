@@ -1,5 +1,10 @@
 \chapter{Stand der Technik}
 
+Um eine Übersicht über die unterschiedlichen Themen zu bekommen, werden die theoretischen Hintergründe dieser Arbeit im Folgenden näher erläutert.
+Anfangs wird eine Übersicht über die agile Softwareentwicklung gegeben, dann etwas genauer auf Scrum und die möglichen Varianten bei mehreren Teams eingegangen.
+Als Übergang dient eine kurze Aufarbeitung des Themas Software-Qualität, bevor auf unterschiedliche Metriken im Detail eingegangen wird.
+Am Ende werden noch Qualitätsmodelle, im Speziellen das \ac{FCM}- und \ac{GQM}-Modell erklärt.
+
 \section{Agile Softwareentwicklung}
 
 Diese Arbeit dreht sich um agile Teams, deshalb ist es essentiell, zu verstehen, was der Gedanke hinter dem agilen Entwicklungsansatz ist.
@@ -51,7 +56,7 @@ Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorga
 In regelmäßigen Abständen reflektiert das Team, wie es effektiver werden kann und passt sein Verhalten entsprechend an.\end{quote}\cite{agile_principles}
 
 \newpage
-\section{Scrum~\footcite[vgl.][S.13ff]{scrum_kurz_gut_2013}}
+\section[Scrum]{Scrum~\footcite[vgl.][S.13ff]{scrum_kurz_gut_2013}}\label{section:scrum}
 
 Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie. 
 Scrum basiert auf Empirismus, also der Theorie, dass Wissen aus Erfahrung erlangt wird und Entscheidungen auf Basis dieses Wissens getroffen werden. 
@@ -78,7 +83,7 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
   \begin{itemize}
     \item \textbf{Development Team}: Selbstorganisiertes Team, das am Produkt arbeitet.
     \item \textbf{Scrum Master}: Verantwortlich dafür, sicherzustellen, dass Scrum verstanden und gelebt wird.
-    \item \textbf{Product Owner}: Verantwortlich den Wert des Produktes und die Arbeit des Development Teams zu maximieren.
+    \item \textbf{Product Owner}: Verantwortlich den Wert des Produkts und die Arbeit des Development Teams zu maximieren.
   \end{itemize}
   \item \textbf{Ereignisse}
   \begin{itemize}
@@ -95,12 +100,13 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
   \end{itemize}
   \item \textbf{Artefakte}
   \begin{itemize}
-    \item \textbf{Product Backlog}: Ist eine Sammlung von möglichen Aufgaben für das Team am Produkt. Sollte einen Ausblick auf die zukünftige Entwicklung des Produktes geben. Oben im Product Backlog befinden sich die bereits fein geplanten Aufgaben, weiter unten die groben.
+    \item \textbf{Product Backlog}: Ist eine Sammlung von möglichen Aufgaben für das Team am Produkt. Sollte einen Ausblick auf die zukünftige Entwicklung des Produkts geben. Oben im Product Backlog befinden sich die bereits fein geplanten Aufgaben, weiter unten die groben.
     \item \textbf{Sprint Backlog}: Entspricht den Aufgaben, die vom Team in den Sprint genommen und dem Product Owner zugesagt wurden.
     \item \textbf{Increment}: Entsteht am Ende eines jeden Sprints und ist eine lauffähige Version des Produkts, die releasefähig ist.
   \end{itemize}
 \end{itemize}
 
+\clearpage
 \subsection[Scrum in mehreren Teams]{Scrum in mehreren Teams~\footcite[vgl.][S.172ff]{scrum_kurz_gut_2013}}
 
 Scrum beschreibt eine agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
@@ -133,8 +139,8 @@ Drei davon sind \ac{SoS}, \ac{LeSS} und Scrum at Scale, die im Folgenden kurz vo
 
 \ac{SoS} ist eine Technik, um Scrum auf große Gruppen zu skalieren. 
 Dabei werden die Gruppen in agile Teams von fünf bis zehn Personen geteilt.
-Nach jedem Daily Scrum wird pro Team ein Botschafter bestimmt, um an einem täglichen Meeting mit anderen Botschaftern teilzunehmen, das sogenannte Scrum of Scrums.
-Je nach Kontext sind die Botschafter technische Teilnehmer, Scrum Master oder sogar Team Manager.
+Nach jedem Daily Scrum wird pro Team eine Botschafterin bestimmt, um an einem täglichen Meeting mit anderen Botschafterinnen teilzunehmen, das sogenannte Scrum of Scrums.
+Je nach Kontext sind die Botschafterinnen technische Teilnehmer, Scrum Master oder sogar Team Managerinnen.
 Das \ac{SoS} hat sein eigenes Backlog, bei dem es Fertigstellungen, nächste Schritte und Hindernisse im Auge behält.
 
 \begin{savenotes}
@@ -182,7 +188,7 @@ Darüber hinaus gibt es aber auch einige Unterschiede:
 \subsubsection[Scrum at Scale]{Scrum at Scale~\footcite[vgl.][]{scale}}
 
 Scrum at Scale versucht Scrum skalierbar zu machen, durch ein Minimum an Bürokratie und einer frei skalierbaren Architektur.
-Es besteht aus Scrum Teams, die durch \ac{SoS} und MetaScrums koordiniert werden. 
+Es besteht aus Scrum Teams, die durch \ac{SoS} und Meta Scrums koordiniert werden. 
 \begin{savenotes}
   \begin{figure}[H] 
     \centering
@@ -194,7 +200,7 @@ Es besteht aus Scrum Teams, die durch \ac{SoS} und MetaScrums koordiniert werden
 Das Was und das Wie werden bei Scrum at Scale durch zwei Zyklen getrennt, die sich nur an zwei Punkten schneiden (Abbildung~\ref{fig:sas}).
 \begin{description}
   \item[Scrum Master Zyklus] \hfill \\ Wird über \ac{SoS} gesteuert und hat an der Spitze ein \ac{EAT}, welches die einzelnen \ac{SoS} koordiniert.
-  \item[Product Owner Zyklus] \hfill \\ Ein Team von Product Ownern, die ein \ac{SoS} Backlog verantworten, nennt man MetaScrum. MetaScrums haben einen Chief Product Owner, der als Scrum Master agiert und verantwortlich für die Koordination der Product Backlogs ist. An der Spitze steht ein \ac{EMS}, der Visionen und strategische Ziele verfolgt.
+  \item[Product Owner Zyklus] \hfill \\ Ein Team von Product Ownern, die ein \ac{SoS} Backlog verantworten, nennt man Meta Scrum. Meta Scrums haben einen Chief Product Owner, der als Scrum Master agiert und verantwortlich für die Koordination der Product Backlogs ist. An der Spitze steht ein \ac{EMS}, der Visionen und strategische Ziele verfolgt.
 \end{description}
 
 Metriken und Transparenz im Allgemeinen werden bei Scrum at Scale groß geschrieben, da Scrum nur so optimal funktionieren kann.
@@ -217,7 +223,7 @@ Einige wesentliche Merkmale, um die Qualität von Software bewerten zu können, 
     \item[Funktionalität (Functionality, Capability)] \hfill \\ Beschreibt die Umsetzung der funktionalen Anforderungen. Fehler sind hier häufig Implementierungsfehler (sogenannte Bugs), welche durch Qualitätssicherung bereits in der Entwicklung entdeckt oder vermieden werden können. 
     \item[Laufzeit (Performance)] \hfill \\ Beschreibt die Umsetzung der Laufzeit-Anforderungen. Besonderes Augenmerk muss in Echtzeitsystemen auf dieses Merkmal gelegt werden.
     \item[Zuverlässigkeit (Reliability)] \hfill \\ Eine hohe Zuverlässigkeit ist in kritischen Bereichen, wie z.B. Medizintechnik oder Luftfahrt, unabdingbar. Erreicht werden kann diese aber nur durch die Optimierung einer Reihe anderer Kriterien.
-    \item[Benutzbarkeit (Usability)] \hfill \\ Betrifft alle Eigenschaften eines Systems, die mit der Benutzer-Interaktion in Berührung kommen.
+    \item[Benutzbarkeit (Usability)] \hfill \\ Betrifft alle Eigenschaften eines Systems, die mit der Benutzerinnen-Interaktion in Berührung kommen.
   \end{description}
   \item[Herstellerorientierte Merkmale] \hfill \\ Sind die inneren Merkmale, die sich auf den langfristigen Erfolg der Software auswirken und somit als Investition in die Zukunft gesehen werden sollten.
   \begin{description}
@@ -283,10 +289,10 @@ Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt
 \subsection[Prozessqualität]{Prozessqualität~\footcite[vgl.][Kapitel 1.4.2]{hoffmann_software_qualitat_2013}}
 
 Die Prozessqualität beschäftigt sich im Gegensatz zur Produktqualität mit der Entstehung des Software-Produkts, genauer genommen mit dem Prozess dahinter.
-Dieser Prozess kann in eine Entwicklersicht, mit der Software-Infrastruktur, und eine Managementsicht, mit den Managementprozessen, aufgeteilt werden.
+Dieser Prozess kann in eine Entwicklerinnensicht, mit der Software-Infrastruktur, und eine Managementsicht, mit den Managementprozessen, aufgeteilt werden.
 
 \begin{description}
-  \item[Software Infrastruktur] \hfill \\ Unterstützt den Entwickler bei der täglichen Arbeit.
+  \item[Software Infrastruktur] \hfill \\ Unterstützt die Entwicklerin bei der täglichen Arbeit.
   \begin{description}
     \item[Konfigurationsmanagement] \hfill \\ Hilft bei der Verwaltung der entstehenden Artefakte, zum Beispiel durch den Einsatz von \ac{VCS}.
     \item[Build-Automatisierung] \hfill \\ Erzeugt die Artefakte voll automatisch.
@@ -325,16 +331,16 @@ Abbildung~\ref{fig:sdlc} zeigt die einzelnen Schritte und Systeme im Entwicklung
 \clearpage
 \subsection[Versionsverwaltung]{Versionsverwaltung~\footcite[vgl.][S.62ff]{davis_agile_2015}}
 
-Das \ac{VCS} befindet sich nah an der Arbeit der Entwickler, da hier der Quellcode des Produkts verwaltet wird.
+Das \ac{VCS} befindet sich nah an der Arbeit der Entwicklerinnen, da hier der Quellcode des Produkts verwaltet wird.
 Daher können hier Daten darüber gesammelt werden, wie viel gearbeitet und auch wie viel zusammengearbeitet wird.
 Um bestmögliche Daten zu bekommen, sollten verteilte Versionskontrollsysteme wie Git verwendet und mit Pull Requests gearbeitet werden.
 
 \begin{description}
   \item[\ac{CLOC}] \hfill \\ Anzahl der geänderten Code Zeilen.
-  \item[\ac{CLOC} pro Entwickler] \hfill \\ Anzahl der geänderten Zeilen im Quellcode pro Entwickler.
+  \item[\ac{CLOC} pro Entwicklerin] \hfill \\ Anzahl der geänderten Zeilen im Quellcode pro Entwicklerin.
   \item[Commits] \hfill \\ Gesamtzahl an Commits in einem bestimmten Zeitraum.
   \begin{description}
-    \item[Commits pro Entwickler] \hfill \\ Gesamtzahl an Commits in einem bestimmten Zeitraum pro Entwickler.
+    \item[Commits pro Entwicklerin] \hfill \\ Gesamtzahl an Commits in einem bestimmten Zeitraum pro Entwicklerin.
     \item[Kommentare pro Commit] \hfill \\ Anzahl der Kommentare pro Commit.
     \item[\ac{CLOC} pro Commit] \hfill \\ Anzahl der geänderten Zeilen im Quellcode pro Commit.
   \end{description}
@@ -412,10 +418,10 @@ Im Produktionssystem können folgende Kennzahlen ermittelt werden:
   \item[Heap Size] \hfill \\ Auslastung des Heap über die Zeit.
   \item[Fehlerraten] \hfill \\ Anzahl Fehler über die Zeit (kann aus dem Logging kommen).
   \item[Antwortzeiten] \hfill \\ Dauer der Verarbeitung bestimmter Anfragen.
-  \item[Benutzeranzahl] \hfill \\ Anzahl gleichzeitiger Benutzer in der Applikation über die Zeit.
-  \item[Aufenthaltsdauer] \hfill \\ Verweildauer der Benutzer auf bestimmten Seiten.
-  \item[Conversion Rate] \hfill \\ Anzahl Benutzer die zu Kunden wurden.
-  \item[Semantisches Logging] \hfill \\ Ermöglicht es, beim Logging strukturierte Daten auszugeben, zum Beispiel: was suchen Benutzer auf bestimmten Seiten.
+  \item[Benutzerinnenanzahl] \hfill \\ Anzahl gleichzeitiger Benutzerinnen in der Applikation über die Zeit.
+  \item[Aufenthaltsdauer] \hfill \\ Verweildauer der Benutzerinnen auf bestimmten Seiten.
+  \item[Conversion Rate] \hfill \\ Anzahl Benutzerinnen, die zu Kunden wurden.
+  \item[Semantisches Logging] \hfill \\ Ermöglicht es, beim Logging strukturierte Daten auszugeben, zum Beispiel: was suchen Benutzerinnen auf bestimmten Seiten.
   \item[Verfügbarkeit] \hfill \\ Verfügbarkeit der Applikation über die Zeit.
 \end{description}
 
@@ -594,11 +600,11 @@ Im Falle der Pull Requests zum Beispiel der Durchschnitt und die Standardabweich
 \begin{table}[H]
   \centering
   \begin{tabular}{llr}
-  GOAL     & \begin{tabular}[c]{@{}l@{}}Absicht\\ Problem\\ Prozess\\ Sichtweise\end{tabular} & \begin{tabular}[c]{@{}l@{}}Verbessern\\ der Zusammenarbeit innerhalb des Teams\\ im Entwicklungsprozess\\ aus Sicht der Entwickler.\end{tabular} \\ \midrule
+  GOAL     & \begin{tabular}[c]{@{}l@{}}Absicht\\ Problem\\ Prozess\\ Sichtweise\end{tabular} & \begin{tabular}[c]{@{}l@{}}Verbessern\\ der Zusammenarbeit innerhalb des Teams\\ im Entwicklungsprozess\\ aus Sicht der Entwicklerinnen.\end{tabular} \\ \midrule
   QUESTION & \multicolumn{2}{l}{Wie arbeitet das Team mit Pull Requests?} \\
-  METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Anzahl Pull Requests\\ Anzahl Kommentare pro Pull Request *\\ Anzahl Entwickler pro Pull Request *\end{tabular}} \\ \midrule
-  QUESTION & \multicolumn{2}{l}{Wie viele Entwickler arbeiten an den einzelnen Modulen?} \\
-  METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Anzahl Commits pro Entwickler pro Modul\\ Anzahl Entwickler pro Pull Request pro Modul *\end{tabular}} \\
+  METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Anzahl Pull Requests\\ Anzahl Kommentare pro Pull Request *\\ Anzahl Entwicklerinnen pro Pull Request *\end{tabular}} \\ \midrule
+  QUESTION & \multicolumn{2}{l}{Wie viele Entwicklerinnen arbeiten an den einzelnen Modulen?} \\
+  METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Anzahl Commits pro Entwicklerin pro Modul\\ Anzahl Entwicklerinnen pro Pull Request pro Modul *\end{tabular}} \\
   \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}} \\ \small{* Durchschnitt und Standardabweichung pro Sprint}\end{tabular}} 
   \end{tabular}
   \caption{Beispiel GQM Modell}\label{tab:gqm-example}
