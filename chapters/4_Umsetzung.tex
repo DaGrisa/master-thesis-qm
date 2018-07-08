@@ -101,9 +101,9 @@ Aus diesen Ergebnissen Lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-
 \subsection{Umfrage im Team}
 
 Zusätzlich zu der Analyse der Retrospektiven wurden dem Team Metriken und die Fragen, die damit beantwortet werden können, in Form einer Umfrage vorgestellt.
-Die einzelnen Metriken wurden von den Teammitgliedern nach Wichtigkeit mit einer Skala von 1 bis 10 bewertet.
+Die einzelnen Metriken wurden von den Teammitgliedern nach Wichtigkeit mit einer Skala von eins bis zehn bewertet.
 Anhang~\ref{appendix:questions} zeigt die Umfrage, wie sie den Teammitgliedern vorgelegt wurde und Anhang~\ref{appendix:answers} die dazugehörigen Antworten.
-Die Ergebnisse wurden nach ihrem Druchschnittswert sortiert und die 10 als am wichtigsten bewerteten Metriken sind:
+Die Ergebnisse wurden nach ihrem Durchschnittswert sortiert und die zehn als am wichtigsten bewerteten Metriken sind:
 
 \begin{itemize}[noitemsep]
     \item \textbf{Burn Down (9,00)} \mbox{-} Erfüllt das Team seine Commitments? Plant das Team seine Arbeit realistisch?
@@ -118,7 +118,7 @@ Die Ergebnisse wurden nach ihrem Druchschnittswert sortiert und die 10 als am wi
     \item \textbf{Bug-Erzeugungsrate (7,43)} \mbox{-} Wie viele Fehler wurden zu einem bestimmten Zeitpunkt erzeugt?
 \end{itemize}
 
-Außerdem wurde in den offenen Fragen am Ende zweimal gefordert, dass die Flüchtigkeit von Anforderungen Sichtbar wird. 
+Außerdem wurde in den offenen Fragen am Ende zweimal gefordert, dass die Flüchtigkeit von Anforderungen Sichtbar werden soll. 
 Dies kann zum einen durch die oben genannte Aufgaben-Rückfälligkeit und andererseits durch folgende Metrik abgebildet werden:
 
 \begin{itemize}[noitemsep]
@@ -135,7 +135,7 @@ Abbildung~\ref{fig:position_software} zeigt die Position in einer möglichen Sys
 \begin{savenotes}
     \begin{figure}[H] 
         \centering
-            \includegraphics[width=0.8\textwidth]{img/position-overview.png}
+            \includegraphics[width=1.0\textwidth]{img/position-overview.png}
         \caption{Position der Software}\label{fig:position_software}
     \end{figure}
 \end{savenotes}
@@ -172,7 +172,7 @@ Als Lizenz wurde dabei die MIT-Lizenz~\footcite{mit_license} gewählt, da sie ei
 \subsection{\ac{VCS}, \ac{CI} und \ac{QS}}
 
 Da es sich um eine quelloffene Software handelt, wird als \ac{VCS} ein öffentliches Repository~\footcite{agile_metrics_repo} in GitHub verwendet.
-In diesem sind der Quellcode und die Veröffentlichungen der Software zugänglich.
+In diesem sind der Quellcode und die Veröffentlichungen der Software frei zugänglich.
 Zusätzlich wird über GitHub Pages eine statische Seite~\footcite{agile_metrics_page} für das Projekt bereitgestellt, wie in Abbildung~\ref{fig:github_pages} ersichtlich.
 
 \begin{savenotes}
@@ -188,18 +188,18 @@ Travis CI~\footcite{travis_agile_metrics} bietet einen kostenlosen \ac{CI}-Servi
 \begin{savenotes}
     \begin{figure}[H] 
         \centering
-            \includegraphics[width=0.8\textwidth]{img/travisci.png}
+            \includegraphics[width=1.0\textwidth]{img/travisci.png}
         \caption{Travis CI {-} Agile Metrics}\label{fig:travisci}
     \end{figure}
 \end{savenotes}
 
 Nach jedem Commit in das GitHub Repository wird ein Build gestartet, um kontinuierliche Integration zu gewährleisten.
-Abbildung~\ref{fig:travisci} zeigt die Liste der zu diesem Zeitpunkt zuletzt durchgeführten Builds mit einigen Informationen.
+Abbildung~\ref{fig:travisci} zeigt die Liste der zu diesem Zeitpunkt zuletzt durchgeführten Builds mit einigen zusätzlichen Informationen.
 
 \begin{savenotes}
     \begin{figure}[H] 
         \centering
-            \includegraphics[width=0.8\textwidth]{img/sonarcloud.png}
+            \includegraphics[width=1.0\textwidth]{img/sonarcloud.png}
         \caption{SonarCloud {-} Agile Metrics}\label{fig:sonarcloud}
     \end{figure}
 \end{savenotes}
@@ -242,6 +242,7 @@ Es ist dadurch für alle Teammitglieder leicht zugänglich und anpassbar.
 Wird eine Authentifizierung in Kibana gewünscht, muss der Elastic-Stack über das Produkt X-Pack ergänzt werden.
 Die Metriken werden im Dashboard in kurzfristige Metriken und langfristige Metriken unterteilt.
 Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, in dem die Metriken angezeigt werden sollen.
+Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die langfristigen Metriken eher für Scrum Master und Product Owner interessant.
 
 \begin{savenotes}
     \begin{figure}[H] 
@@ -256,7 +257,7 @@ Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, in de
     \item[Coverage] \hfill \\ Das Team hat die Verantwortung über mehrere Produkte, deshalb wurde die Testabdeckung von zwei Produkten in Form einer Messuhr dargestellt. In einem weiteren Liniendiagramm wird der Verlauf der Testabdeckung aller Produkte über die Zeit dargestellt.
     \item[Burndown] \hfill \\ Die Anzahl erledigte und noch offene Story Points im aktuellen Sprint bilden das Burndown-Chart. Es wird klassisch als Liniendiagramm dargestellt.
     \item[Cumulative Flow] \hfill \\ Beim Cumulative Flow werden nicht nur die einzelnen Statis dargestellt, sondern in einem separaten Diagramm auch noch die Status-Kategorien. Diese können bei sehr vielen unterschiedlichen Statis einen besseren Überblick bieten. Dargestellt werden beide als gestapelte Blockdiagramme, da sie einen Anteil an einem Gesamtvolumen darstellen sollen.
-    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl Bugs wird als Messuhr mit bestimmten Grenzwerten dargestellt, die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
+    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl Bugs wird als Messuhr mit bestimmten Grenzwerten dargestellt. Die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
     \item[Issue Volume] \hfill \\ Das Aufgabenvolumen des aktiven Sprints wird als Flächendiagramm dargestellt.
 \end{description}
 
