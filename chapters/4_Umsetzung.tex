@@ -1,8 +1,8 @@
 \chapter{Umsetzung}
 
 Dieses Kapitel zeigt die erarbeitete Lösung im Detail.
-Zu Beginn werden die relevanten Metriken, mithilfe des \ac{GQM}-Modells und durch eine Umfrage im Team, identifiziert.
-Dann wird genauer auf die Architektur der Software und deren Entwicklung eingegeangen.
+Zu Beginn werden die relevanten Metriken mithilfe des \ac{GQM}-Modells und durch eine Umfrage im Team, identifiziert.
+Dann wird genauer auf die Architektur der Software und deren Entwicklung einge\-gang\-en.
 Abgeschlossen wird das Kapitel mit der Inbetriebnahme der fertigen Software.
 
 \section{Gegebenheiten}
@@ -10,19 +10,19 @@ Abgeschlossen wird das Kapitel mit der Inbetriebnahme der fertigen Software.
 Die Umsetzung findet in einem Unternehmen mit weltweit rund 150 Standorten und 6700 Mitarbeitern (Stand Mai 2018) statt.
 Es gibt eine zentrale Informatik mit einer eigenen Softwareentwicklungsabteilung, in der vier Scrum-Teams angesiedelt sind.
 Diese vier Scrum Teams koordinieren sich über \ac{SoS}.
-Es wurde gezielt ein bestimmtes Scrum Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors den Scrum Prozess bereits am weitesten entwickelt hat und dadurch Werkzeuge zur Qualitätssicherung dort am meisten Sinn machen.
+Es wurde gezielt ein bestimmtes Scrum-Team zur Umsetzung gewählt, weil dieses aus Sicht des Autors den Scrum-Prozess bereits am weitesten entwickelt hat und dadurch Werkzeuge zur Qualitätssicherung dort am meisten Sinn machen.
 Aus sicherheitstechnischen Gründen wird auf das Unternehmen in dieser Arbeit nicht weiter eingegangen.
 
 \section{Metriken Identifizieren}
 
 \subsection{\ac{GQM}}
 
-Um eine Vorauswahl an Metriken treffen zu können, wurden alle bisherigen Retrospektiven analysiert und eine Topliste von Schlagwörtern der folgenden Fragestellungen aus den Retrospektiven erstellt:
+Um eine Vorauswahl an Metriken treffen zu können, wurden alle bisherigen Retrospektiven analysiert und eine Topliste von Schlagwörtern der folgenden Fragestellungen erstellt:
 \begin{enumerate}
     \item Welche guten Entscheidungen haben wir getroffen?
     \item Was haben wir gelernt?
     \item Was können wir besser machen?
-    \item Was nervt uns noch immer?
+    \item Was beschäftigt uns noch immer?
 \end{enumerate}
 
 Dazu wurden die Ergebnisse in einer ElasticSearch Datenbank gespeichert und über eine sogenannte Terms Aggregation die wichtigsten Schlagwörter analysiert.
@@ -38,16 +38,16 @@ Die Ergebnisse in Anhang~\ref{appendix:retros} sind für die einzelnen Punkte wi
     \item[Was haben wir gelernt?] \hfill
     \begin{itemize}[noitemsep]
       \item Auch hier spiegelt sich der Daten- und Kommunikationsfluss im Team wider.
-      \item Die vielen Scrum Schlagwörter zeigen, dass die Retrospektiven richtig genutzt wurden, um den Prozess zu verbessern.
+      \item Die vielen Scrum-Schlagwörter zeigen, dass die Retrospektiven richtig genutzt wurden, um den Prozess zu verbessern.
     \end{itemize}
     \item[Was können wir besser machen?] \hfill
     \begin{itemize}[noitemsep]
-      \item Auch hier zeugen die Scrum Schlagwörter wieder von einer Prozessverbesserung und einem selbstreflektiven Verhalten.
+      \item Auch hier zeugen die Scrum-Schlagwörter wieder von einer Prozessverbesserung und einem selbstreflektiven Verhalten.
       \item Die Dokumentation scheint teilweise noch ein Problem zu sein, diese kommt gleich zweimal vor.
       \item Issues scheinen teilweise nicht optimal zu sein. Da könnte das Schlagwort ``groß'' dazu passen.
       \item ``backlog'', ``blocked'' und ``àblauf'' lassen auf Probleme im Arbeitsablauf schließen.
     \end{itemize}
-    \item[Was nervt uns noch immer?] \hfill
+    \item[Was beschäftigt uns noch immer?] \hfill
     \begin{itemize}[noitemsep]
       \item Hier lassen die Schlagwörter ``updat'', ``erreichbar'', ``infrastruktur'', ``jenkin'', ``test'' und ``umgebung'' auf ein Infrastrukturproblem schließen, welches das Team womöglich ausbremst.
       \item Die Schlagwörter ``lang'', ``groß'' und ``klar'' lassen auf Probleme mit Anforderungen beziehungsweise Stories schließen.
@@ -55,12 +55,12 @@ Die Ergebnisse in Anhang~\ref{appendix:retros} sind für die einzelnen Punkte wi
     \end{itemize}
   \end{description}
 
-Aus diesen Ergebnissen Lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-distraction},~\ref{tab:gqm-process} und~\ref{tab:gqm-issues} ableiten.
+Aus diesen Ergebnissen lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-distraction},~\ref{tab:gqm-process} und~\ref{tab:gqm-issues} ableiten.
 
 \begin{table}[H]
     \centering
     \begin{tabular}{llr}
-    GOAL     & \begin{tabular}[c]{@{}l@{}}Absicht\\ Problem\\ Ressource\\ Sichtweise\end{tabular} & \begin{tabular}[c]{@{}l@{}}Verringerung\\ der Ablenkung\\ von Entwicklerinnen\\ aus Sicht des Scrum Masters.\end{tabular} \\ \midrule
+    GOAL     & \begin{tabular}[c]{@{}l@{}}Absicht\\ Problem\\ Ressource\\ Sichtweise\end{tabular} & \begin{tabular}[c]{@{}l@{}}Verringerung\\ der Ablenkung\\ von Entwicklerinnen\\ aus Sicht des Scrum-Masters.\end{tabular} \\ \midrule
     QUESTION & \multicolumn{2}{l}{Wie viele Aufgaben erledigt das Team pro Sprint?} \\
     METRIC   & \multicolumn{2}{l}{Aufgaben-Volumen pro Sprint} \\ \midrule
     QUESTION & \multicolumn{2}{l}{Wie viele Aufgaben werden jeden Tag erledigt?} \\
@@ -117,8 +117,8 @@ Die Ergebnisse wurden nach ihrem Durchschnittswert sortiert und die zehn als am 
     \item \textbf{Bug-Erzeugungsrate (7,43)} \mbox{-} Wie viele Fehler wurden zu einem bestimmten Zeitpunkt erzeugt?
 \end{itemize}
 
-Außerdem wurde in den offenen Fragen am Ende zweimal gefordert, dass die Flüchtigkeit von Anforderungen Sichtbar werden soll. 
-Dies kann zum einen durch die oben genannte Aufgaben-Rückfälligkeit und andererseits durch folgende Metrik abgebildet werden:
+Außerdem wurde in den offenen Fragen am Ende zweimal gefordert, dass die Flüchtigkeit von Anforderungen sichtbar werden soll. 
+Dies kann zum Einen durch die oben genannte Aufgaben-Rückfälligkeit und andererseits durch folgende Metrik abgebildet werden:
 
 \begin{itemize}[noitemsep]
     \item \textbf{Anforderungs-Flüchtigkeit} \mbox{-} Wie oft wurde die Anforderung der Aufgabe angepasst?
@@ -143,7 +143,7 @@ Abbildung~\ref{fig:position_software} zeigt die Position in einer möglichen Sys
 
 Abbildung~\ref{fig:overview_architecture} zeigt das Architekturkonzept der Software (Agile Metrics).
 Diese bildet eine Schnittstelle zwischen den einzelnen Systemen des Entwicklungsprozesses und dem System zur Darstellung der Metriken (in diesem Fall der sogenannte Elastic Stack~\footcite{elastic_stack} mit ElasticSearch und Kibana).
-ElasticSearch ist dabei die Datenbank für die Metriken, genau genommen eine volltext-indizierte \ac{NoSQL}-Datenbank.
+ElasticSearch ist dabei die Datenbank für die Metriken, genaugenommen eine volltext-indizierte \ac{NoSQL}-Datenbank.
 Kibana dient zur Darstellung der in der ElasticSearch-Datenbank gespeicherten Metriken.
 
 \begin{savenotes}
@@ -209,7 +209,7 @@ Abbildung~\ref{fig:sonarcloud} zeigt die Übersichtsseite von SonarCloud mit den
 \newpage
 \section{Inbetriebnahme}
 
-Betrieben wird die Software auf einem eigens für Java Applikationen bereitgestellten Server. 
+Betrieben wird die Software auf einem eigens für Java-Applikationen bereitgestellten Server. 
 Wichtig dabei ist, dass alle benötigten Systeme erreichbar sind. 
 Es wird auch ein Web-Proxy unterstützt, dieser kann in den Einstellungen konfiguriert werden.
 Folgende Schritte sind notwendig, um Agile-Metrics in Betrieb zu nehmen:
@@ -235,13 +235,13 @@ Diese Metriken können dann visualisiert werden, wie in diesem Fall in Kibana.
 \subsection{Visualisierung der Metriken}
 
 Die Ergebnisse wurden in einem Kibana Dashboard visualisiert.
-Kibana ermöglicht es, Daten, die in einer ElasticSearch Datenbank gespeichert sind, auf unterschiedlichste Weise zu visualisieren.
+Kibana ermöglicht es, Daten, die in einer ElasticSearch-Datenbank gespeichert sind, auf unterschiedlichste Weise zu visualisieren.
 Aufgrund der fehlenden Authentifizierung kann das Dashboard von jedem aufgerufen und angepasst werden.
 Es ist dadurch für alle Teammitglieder leicht zugänglich und anpassbar.
 Wird eine Authentifizierung in Kibana gewünscht, muss der Elastic Stack über das Produkt X-Pack ergänzt werden.
 Die Metriken werden im Dashboard in kurzfristige Metriken und langfristige Metriken unterteilt.
 Die Unterteilung wurde gemacht, da bei Kibana ein Zeitraum angegeben wird, in dem die Metriken angezeigt werden sollen.
-Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die langfristigen Metriken eher für Scrum Master und Product Owner interessant.
+Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die langfristigen Metriken eher für Scrum-Master und Product-Owner interessant.
 
 \begin{savenotes}
     \begin{figure}[H] 
@@ -254,9 +254,9 @@ Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die 
 \clearpage
 \begin{description}
     \item[Coverage] \hfill \\ Das Team hat die Verantwortung über mehrere Produkte, deshalb wurde die Testabdeckung von zwei Produkten in Form einer Messuhr dargestellt. In einem weiteren Liniendiagramm wird der Verlauf der Testabdeckung aller Produkte über die Zeit dargestellt.
-    \item[Burndown] \hfill \\ Die Anzahl erledigte und noch offene Story Points im aktuellen Sprint bilden das Burndown-Chart. Es wird klassisch als Liniendiagramm dargestellt.
-    \item[Cumulative Flow] \hfill \\ Beim Cumulative Flow werden nicht nur die einzelnen Statis dargestellt, sondern in einem separaten Diagramm auch noch die Status-Kategorien. Diese können bei sehr vielen unterschiedlichen Statis einen besseren Überblick bieten. Dargestellt werden beide als gestapelte Blockdiagramme, da sie einen Anteil an einem Gesamtvolumen darstellen sollen.
-    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl Bugs wird als Messuhr mit bestimmten Grenzwerten dargestellt. Die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
+    \item[Burndown] \hfill \\ Die Anzahl erledigter und noch offener Story-Points im aktuellen Sprint bilden das Burndown-Chart. Es wird klassisch als Liniendiagramm dargestellt.
+    \item[Cumulative Flow] \hfill \\ Beim Cumulative Flow werden nicht nur die einzelnen Stati dargestellt, sondern in einem separaten Diagramm auch noch die Status-Kategorien. Diese können bei sehr vielen unterschiedlichen Stati einen besseren Überblick bieten. Dargestellt werden beide als gestapelte Blockdiagramme, da sie einen Anteil an einem Gesamtvolumen darstellen sollen.
+    \item[Bug Count und Bug Rate] \hfill \\ Die Anzahl der Bugs wird als Messuhr mit bestimmten Grenzwerten dargestellt. Die Bug-Rate als Liniendiagramm, um zu erkennen, wann wie viele neue Bugs erstellt wurden.
     \item[Issue Volume] \hfill \\ Das Aufgabenvolumen des aktiven Sprints wird als Flächendiagramm dargestellt.
 \end{description}
 
@@ -270,11 +270,11 @@ Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die 
 
 \clearpage
 \begin{description}
-    \item[Lead Time] \hfill \\ Die Lead Time wird zum einen als Metrik dargestellt, zum anderen auch als Histogramm. Das hat den Grund, da hier einzelne Ausreißer nach oben oder unten die Metrik stark beeinflussen können. Das Histogramm stellt diese Ausreißer und die Verteilung noch besser dar.
+    \item[Lead Time] \hfill \\ Die Lead Time wird zum Einen als Metrik dargestellt, zum Anderen auch als Histogramm. Das hat den Hintergund, dass hier einzelne Ausreißer nach oben oder unten die Metrik stark beeinflussen können. Das Histogramm stellt diese Ausreißer und die Verteilung noch besser dar.
     \item[Acceptance Criteria Volatility] \hfill \\ Auch bei der Flüchtigkeit der Akzeptanzkriterien wird die Metrik durch ein Histogramm ergänzt, da hier ebenfalls Ausreißer großen Einfluss haben können.
     \item[Recidivism] \hfill \\ Die Rückfälligkeit wird auch als Metrik und Histogramm dargestellt.
-    \item[Velocity] \hfill \\ Wird als Blockdiagramm dargestellt. Sichtbar sind die geschätzten und die tatsächlich fertiggestellten Story Points pro Sprint.
-    \item[Issue Volume] \hfill \\ Ein Blockdiagramm der Aufgabenvolumen vergangener Sprints, um die Entwicklung darzustellen.
+    \item[Velocity] \hfill \\ Wird als Blockdiagramm dargestellt. Sichtbar sind die geschätzten und die tatsächlich fertiggestellten Story-Points pro Sprint.
+    \item[Issue Volume] \hfill \\ Ein Blockdiagramm der Aufgabenvolumina vergangener Sprints, um die Entwicklung darzustellen.
 \end{description}
 
 \newpage

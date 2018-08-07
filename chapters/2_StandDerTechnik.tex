@@ -13,7 +13,7 @@ Ziel war es, eine Alternative zu den bisherigen, schwergewichtigen und von Dokum
 
 \subsection{Agiles Manifest}
 
-Das agile Manifest ist er Grundbaustein aller agilen Vorgehensmodelle:
+Das agile Manifest ist der Grundbaustein aller agilen Vorgehensmodelle:
 
 \begin{quote}Wir erschließen bessere Wege, Software zu entwickeln,
 indem wir es selbst tun und anderen dabei helfen.
@@ -59,13 +59,13 @@ In regelmäßigen Abständen reflektiert das Team, wie es effektiver werden kann
 \section[Scrum]{Scrum~\footcite[vgl.][S.13ff]{scrum_kurz_gut_2013}}\label{section:scrum}
 
 Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie. 
-Scrum basiert auf Empirismus, also der Theorie, dass Wissen aus Erfahrung erlangt wird und Entscheidungen auf Basis dieses Wissens getroffen werden. 
+Scrum basiert auf Empirismus, also der Theorie, dass Wissen aus Erfahrung gewonnen wird und Entscheidungen auf Basis dieses Wissens getroffen werden. 
 Die drei Grundsäulen einer solchen empirischen Prozesskontrolle sind:
 
 \begin{description}
   \item[Transparenz] \hfill \\ Signifikante Aspekte des Prozesses müssen für alle sichtbar sein.
   \item[Inspektion] \hfill \\ Artefakte müssen regelmäßig inspiziert werden, aber dieser Vorgang darf der Arbeit selbst nicht im Weg stehen.
-  \item[Adaption] \hfill \\ Weicht ein oder mehrere Aspekte eines Prozesses von seinen akzeptablen Limits ab, muss dieser so früh wie möglich angepasst werden.
+  \item[Adaption] \hfill \\ Weichen ein oder mehrere Aspekte eines Prozesses von seinen akzeptablen Limits ab, muss dieser so früh wie möglich angepasst werden.
 \end{description}
 
 \begin{savenotes}
@@ -83,12 +83,12 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
   \begin{itemize}
     \item \textbf{Development Team}: Selbstorganisiertes Team, das am Produkt arbeitet.
     \item \textbf{Scrum Master}: Verantwortlich dafür, sicherzustellen, dass Scrum verstanden und gelebt wird.
-    \item \textbf{Product Owner}: Verantwortlich den Wert des Produktes und die Arbeit des Development Teams zu maximieren.
+    \item \textbf{Product Owner}: Verantwortlich, den Wert des Produktes und die Arbeit des Development Teams zu maximieren.
   \end{itemize}
   \item \textbf{Ereignisse}
   \begin{itemize}
     \item \textbf{Sprint}: Ist das Herz von Scrum: eine Timebox von zwei bis vier Wochen, in dem ein fertiges, verwendbares und potentiell auslieferbares Produkt-Inkrement entwickelt wird.
-    \item \textbf{Sprint Planning}: Planung eines Sprints. Hier verpflichtet sich das Scrum Team, eine gewisse Anzahl an Aufgaben im kommenden Sprint abzuarbeiten.
+    \item \textbf{Sprint Planning}: Planung eines Sprints. Hier verpflichtet sich das Scrum-Team, eine gewisse Anzahl an Aufgaben im kommenden Sprint abzuarbeiten.
     \item \textbf{Daily Scrum}: Tägliches, zeitlich begrenztes Meeting, bei dem von jedem Teammitglied folgende drei Fragen beantwortet werden:
     \begin{enumerate}
       \item Was habe ich gemacht?
@@ -111,7 +111,7 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
 
 Scrum beschreibt eine agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
 In der Realität existieren aber oft mehrere Teams und/oder mehrere Produkte. 
-Dahingehend muss die Organisation der unterschiedlichen Scrum Teams individuell angepasst werden.
+Dahingehend muss die Organisation der unterschiedlichen Scrum-Teams individuell angepasst werden.
 Für die Trennung der Teams gibt es unterschiedliche Ansätze:
 \begin{description}
   \item[Trennung nach Organisationseinheiten] \hfill \\ Die Teams werden entlang der Abteilungsstruktur einer Organisation getrennt. Aus Scrum-Sicht macht das nicht immer Sinn, da bei der Umsetzung eines Features Abhängigkeiten zu anderen Teams bestehen (keine cross-funktionalen Teams).
@@ -140,7 +140,7 @@ Drei davon sind \ac{SoS}, \ac{LeSS} und Scrum at Scale, die im Folgenden kurz vo
 \ac{SoS} ist eine Technik, um Scrum auf große Gruppen zu skalieren. 
 Dabei werden die Gruppen in agile Teams von fünf bis zehn Personen geteilt.
 Nach jedem Daily Scrum wird pro Team eine Botschafterin bestimmt, um an einem täglichen Meeting mit anderen Botschafterinnen teilzunehmen, das sogenannte Scrum of Scrums.
-Je nach Kontext sind die Botschafterinnen technische Teilnehmer, Scrum Master oder sogar Team Managerinnen.
+Je nach Kontext sind die Botschafterinnen technische Teilnehmer, Scrum Master oder sogar Team-Mana\-ger\-innen.
 Das \ac{SoS} hat sein eigenes Backlog, bei dem es Fertigstellungen, nächste Schritte und Hindernisse im Auge behält.
 
 \begin{savenotes}
@@ -220,14 +220,14 @@ Einige wesentliche Merkmale, um die Qualität von Software bewerten zu können, 
 \begin{description}
   \item[Kundenorientierte Merkmale] \hfill \\ Nach außen hin sichtbare Merkmale, die sich auf den kurzfristigen Erfolg der Software auswirken, da sie die Kaufentscheidung möglicher Kunden beeinflussen.
   \begin{description}
-    \item[Funktionalität (Functionality, Capability)] \hfill \\ Beschreibt die Umsetzung der funktionalen Anforderungen. Fehler sind hier häufig Implementierungsfehler (sogenannte Bugs), welche durch Qualitätssicherung bereits in der Entwicklung entdeckt oder vermieden werden können. 
+    \item[Funktionalität (Functionality, Capability)] \hfill \\ Beschreibt die Umsetzung der funktionalen Anforderungen. Fehler sind hier häufig Implementierungsfehler (sogenannte Bugs), welche durch Qualitäts\-sich\-erung bereits in der Entwicklung entdeckt oder vermieden werden können. 
     \item[Laufzeit (Performance)] \hfill \\ Beschreibt die Umsetzung der Laufzeit-Anforderungen. Besonderes Augenmerk muss in Echtzeitsystemen auf dieses Merkmal gelegt werden.
     \item[Zuverlässigkeit (Reliability)] \hfill \\ Eine hohe Zuverlässigkeit ist in kritischen Bereichen, wie z.B. Medizintechnik oder Luftfahrt, unabdingbar. Erreicht werden kann diese aber nur durch die Optimierung einer Reihe anderer Kriterien.
     \item[Benutzbarkeit (Usability)] \hfill \\ Betrifft alle Eigenschaften eines Systems, die mit der Benutzerinnen-Interaktion in Berührung kommen.
   \end{description}
   \item[Herstellerorientierte Merkmale] \hfill \\ Sind die inneren Merkmale, die sich auf den langfristigen Erfolg der Software auswirken und somit als Investition in die Zukunft gesehen werden sollten.
   \begin{description}
-    \item[Wartbarkeit (Maintainability)] \hfill \\ Die Fähigkeit auch nach der Inbetriebnahme noch Änderungen an der Software vornehmen zu können. Wird oft vernachlässigt, ist aber essentiell für langlebige Software und ein großer Vorteil gegenüber der Konkurrenz.
+    \item[Wartbarkeit (Maintainability)] \hfill \\ Die Fähigkeit, auch nach der Inbetriebnahme noch Änderungen an der Software vornehmen zu können. Wird oft vernachlässigt, ist aber essentiell für langlebige Software und ein großer Vorteil gegenüber der Konkurrenz.
     \item[Transparenz (Transparency)] \hfill \\ Beschreibt, wie die nach außen hin sichtbare Funktionalität intern umgesetzt wurde. Gerade bei alternder Software kann es zu einer Unordnung kommen, welche auch Software-Entropie (Grad der Unordnung) genannt wird.
     \item[Übertragbarkeit] \hfill \\ Wird auch Portierbarkeit genannt und beschreibt die Eigenschaft einer Software, in andere Umgebungen übertragen werden zu können (zum Beispiel 32-Bit zu 64-Bit oder Desktop zu Mobile).
     \item[Testbarkeit (Testability)] \hfill \\ Testen stellt eine große Herausforderung dar, da oft auf interne Zustände zugegriffen werden muss oder die Komplexität durch die möglichen Eingangskombinationen vervielfacht wird. Aber gerade durch Tests können Fehler frühzeitig entdeckt und behoben werden.
@@ -302,7 +302,7 @@ Dieser Prozess kann in eine Entwicklerinnensicht, mit der Software-Infrastruktur
   \item[Managementprozesse] \hfill \\ Steuern den Projektablauf und werden in Vorgehensmodelle und Reifegradmodelle unterteilt.
   \begin{description}
     \item[Vorgehensmodelle] \hfill \\ Regeln die grundlegenden Arbeitsabläufe in einem Projekt, zum Beispiel über das V-Modell oder Scrum.
-    \item[Reifegradmodelle] \hfill \\ Haben das Ziel Prozesse zu analysieren und zu optimieren.
+    \item[Reifegradmodelle] \hfill \\ Haben das Ziel, Prozesse zu analysieren und zu optimieren.
   \end{description}
 \end{description}
 
@@ -314,7 +314,7 @@ Eine Softwaremetrik wird vom \ac{IEEE} Standard 1061 von 1998 folgendermaßen de
   ``Eine Softwarequalitätsmetrik ist eine Funktion, die eine Software-Einheit in einen Zahlenwert abbildet, welcher als Erfüllungsgrad einer Qualitätseigenschaft der Software-Einheit interpretierbar ist.''\footcite[vgl.][S.3]{ieee-1061}
 \end{quote}
 
-Vereinfacht gesagt, ist eine Metrik eine oder mehrere Kennzahlen, die mithilfe einer Funktion ein Qualitätsmerkmal in einen Zahlenwert abbilden.
+Vereinfacht gesagt, ist eine Metrik eine oder mehrere Kennzahlen, die mithilfe einer Funktion ein Qualitätsmerkmal in einen Zahlenwert abbildet.
 Eine Kennzahl kann daher auch schon direkt eine Metrik sein, wenn sie in der Lage ist, ein gewünschtes Qualitätsmerkmal abzubilden.
 
 \begin{savenotes}
@@ -368,9 +368,9 @@ Um bestmögliche Daten erhalten zu können, gibt es folgende Empfehlungen:
   \item gemeinsam eine \ac{DoD} festlegen
 \end{itemize}
 Jede Arbeit, die am \ac{PTS} vorbei geht, fällt später bei der Auswertung der Daten durch das Raster.
-Durch das Kategorisieren der Aufgaben können später Korrelationen ausgewertet werden, vor allem auch durch das Zuweisen von Tags, wie gut die Aufgabe abgelaufen ist.
-Nur wenn die Aufgabe geschätzt ist, kann festgestellt werden, ob richtig geschätzt wurde oder wie viele Ausreißer es gibt. Dazu muss auch die Arbeitszeit auf der Aufgabe gespeichert werden.
-Die \ac{DoD} hilft allgemein den Prozess zu verbessern und Rückläufe im Arbeitsablauf zu minimieren.
+Durch das Kategorisieren der Aufgaben können später Korrelationen ausgewertet werden, vor allem auch durch das Zuweisen von Tags wird sichtbar, wie gut die Aufgabe abgelaufen ist.
+Zusätzlich kann durch die geschätzte und tatsächliche Arbeitszeit eine qualitative Aussage über die Schätzungen des Teams getroffen werden.
+Eine \ac{DoD} hilft allgemein den Prozess zu verbessern und Rückläufe im Arbeitsablauf zu minimieren.
 
 Dadurch ergeben sich folgende Kennzahlen aus einem \ac{PTS}:
 \begin{description}
@@ -432,7 +432,7 @@ Die Metriken finden sich nochmal als Tabelle dargestellt und mit den dazugehöri
 \clearpage
 \subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
 
-Um eigene Metriken erstellen zu können sind zwei Dinge notwendig:
+Um eigene Metriken erstellen zu können, sind zwei Dinge notwendig:
 \begin{itemize}
   \item Daten
   \item eine Funktion, um die Metrik zu berechnen
@@ -464,9 +464,9 @@ Außerdem sollte auf folgende Punkte geachtet werden:
   \end{itemize}
   \item[E-Mails] \hfill
   \begin{itemize}[noitemsep]
-    \item aus dem Dashboard optional machen (sonst landen sie schnell automatisch im Spam-Ordner)
+    \item aus dem Dashboard als Option wählbar machen (sonst landen sie schnell automatisch im Spam-Ordner)
     \item minimal erforderliche Daten, den Rest verlinken zum Dashboard
-    \item den Richtigen Rhythmus finden (zwischen oft genug informieren und nerven)
+    \item den richtigen Rhythmus finden (zwischen oft genug informieren und nerven)
   \end{itemize}
 \end{description}
 
@@ -475,7 +475,7 @@ Arbeitet ein Unternehmen beispielsweise viel mit Reports via E-Mail, dann kann e
 \subsection[Agile Prinzipien messen]{Agile Prinzipien messen~\footcite[vgl.][S.201ff]{davis_agile_2015}}
 
 Um die agilen Prinzipien messen zu können, muss zuerst herausgefunden werden, was die Kernaussagen dieser Prinzipien sind.
-Dies kann zum Beispiel grafisch, durch die Erstellung einer Wortwolke, wie in Abbildung~\ref{fig:wordcloud_principles} ersichtlich, erreicht werden.
+Dies kann zum Beispiel grafisch durch die Erstellung einer Wortwolke, wie in Abbildung~\ref{fig:wordcloud_principles} ersichtlich, erreicht werden.
 
 \begin{savenotes}
   \begin{figure}[H] 
@@ -537,11 +537,12 @@ Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen
 \section[Qualitätsmodelle]{Qualitätsmodelle~\footcite[vgl.][S.29ff]{wagner_software_2013}}
 
 Qualitätsmodelle sind das Fundament für Software-Produkt-Qualitätskontrolle und werden genutzt, um Qualität zu beschreiben, zu schätzen und/oder vorherzusagen.
-Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt, diese lassen sich in drei Kategorien einteilen: hierarchische, Metamodell basierte und implizite Modelle.
+Es wurden in den letzten Jahrzehnten unzählige Modelle vorgestellt.
+Diese lassen sich in drei Kategorien einteilen: hierarchische, metamodellbasierte und implizite Modelle.
 
 \begin{description}
-  \item[Hierarchische Qualitätsmodelle] \hfill \\ Entstanden bereits in den 1970er Jahren. Qualität wird hierarchisch in Qualitätsfaktoren zerlegt, wie Wartbarkeit oder Zuverlässigkeit. Die Idee dahinter ist, Qualität hierarchisch herunterzubrechen, dass sie messbar wird. Verschiedenste Kritiken heben hervor, dass die Prinzipien zur Dekomposition von Qualitäts-Charakteristiken oft mehrdeutig sind. Außerdem sind die resultierenden Qualitäts-Charakteristiken nicht spezifisch genug, um direkt gemessen werden zu können.
-  \item[Metamodell basierte Qualitätsmodelle] \hfill \\ Entstanden in den 1990er Jahren, als Forscher mehr ausgereiftere Wege aufzeigten, um Qualitäts-Charakteristiken zu zerlegen. Dadurch entstanden auch ausführlichere Metamodelle. Ein Metamodell beschreibt, wie gültig Qualitätsmodelle strukturiert sind. Die vielen Metamodelle zeigen, dass Qualität mehr Struktur in Qualitätsmodellen, als in abstrakten Qualitäts-Charakteristiken und Metriken braucht. Es wurde kein generelles Basis-Qualitätsmodell eingeführt, das man herunterladen und anwenden kann.
+  \item[Hierarchische Qualitätsmodelle] \hfill \\ Entstanden bereits in den 1970er Jahren. Qualität wird hierarchisch in Qualitätsfaktoren zerlegt, wie Wartbarkeit oder Zuverlässigkeit. Die Idee dahinter ist, Qualität hierarchisch herunterzubrechen, damit sie messbar wird. Verschiedenste Kritiken heben hervor, dass die Prinzipien zur Dekomposition von Qualitäts-Charakteristiken oft mehrdeutig sind. Außerdem sind die resultierenden Qualitäts-Charakteristiken nicht spezifisch genug, um direkt gemessen werden zu können.
+  \item[Metamodellbasierte Qualitätsmodelle] \hfill \\ Entstanden in den 1990er Jahren, als Forscher ausgereiftere Wege aufzeigten, um Qualitäts-Charakteristiken zu zerlegen. Dadurch entstanden auch ausführlichere Metamodelle. Ein Metamodell beschreibt, wie gültig Qualitätsmodelle strukturiert sind. Die vielen Metamodelle zeigen, dass Qualität mehr Struktur in Qualitätsmodellen, als in abstrakten Qualitäts-Charakteristiken und Metriken braucht. Es wurde kein generelles Basis-Qualitätsmodell eingeführt, das man herunterladen und anwenden kann.
   \item[Statistische und implizite Qualitätsmodelle] \hfill \\ Für unterschiedlichste Qualitätsfaktoren wurden statistische Modelle vorgestellt, die Eigenschaften erfassen und Qualitätsfaktoren schätzen oder voraussagen. Auch Qualitäts-Analysetools nutzen eine Art Qualitätsmodell und auch Checklisten in der Entwicklung oder in Reviews sind eine Art Qualitätsmodell.
 \end{description}
 
