@@ -1,7 +1,7 @@
 \chapter{Umsetzung}
 
 Dieses Kapitel zeigt die erarbeitete Lösung im Detail.
-Zu Beginn werden die relevanten Metriken mithilfe des \ac{GQM}-Modells und durch eine Umfrage im Team, identifiziert.
+Zu Beginn werden die relevanten Metriken mithilfe der \ac{GQM}-Methodik und durch eine Umfrage im Team, identifiziert.
 Dann wird genauer auf die Architektur der Software und deren Entwicklung einge\-gang\-en.
 Abgeschlossen wird das Kapitel mit der Inbetriebnahme der fertigen Software.
 
@@ -55,7 +55,7 @@ Die Ergebnisse in Anhang~\ref{appendix:retros} sind für die einzelnen Punkte wi
     \end{itemize}
   \end{description}
 
-Aus diesen Ergebnissen lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-distraction},~\ref{tab:gqm-process} und~\ref{tab:gqm-issues} ableiten.
+Aus diesen Ergebnissen lassen sich die \ac{GQM}-Ergebnisse in Tabelle~\ref{tab:gqm-distraction},~\ref{tab:gqm-process} und~\ref{tab:gqm-issues} ableiten.
 
 \begin{table}[H]
     \centering
@@ -68,7 +68,7 @@ Aus diesen Ergebnissen lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-
     QUESTION & \multicolumn{2}{l}{Welche Tags haben als ``schlecht'' bewertete Aufgaben?} \\
     METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Tags der Aufgaben, \\ um ``schlecht'' bewertete besser analysieren zu können\end{tabular}}
     \end{tabular}
-    \caption{GQM\mbox{-}Modell \mbox{-} Ablenkung der Entwicklerinnen}\label{tab:gqm-distraction}
+    \caption{GQM\mbox{-}Ergebnis \mbox{-} Ablenkung der Entwicklerinnen}\label{tab:gqm-distraction}
 \end{table}
 
 \begin{table}[H]
@@ -80,7 +80,7 @@ Aus diesen Ergebnissen lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-
     QUESTION & \multicolumn{2}{l}{Wie lange dauert der Durchlauf einer Aufgabe?} \\
     METRIC   & \multicolumn{2}{l}{Lead Time}
     \end{tabular}
-    \caption{GQM\mbox{-}Modell \mbox{-} Schwachstellen im Prozess}\label{tab:gqm-process}
+    \caption{GQM\mbox{-}Ergebnis \mbox{-} Schwachstellen im Prozess}\label{tab:gqm-process}
 \end{table}
 
 \begin{table}[H]
@@ -94,7 +94,7 @@ Aus diesen Ergebnissen lassen sich die \ac{GQM}-Modelle in Tabelle~\ref{tab:gqm-
     QUESTION & \multicolumn{2}{l}{Wie viele Aufgaben gehen im Entwicklungsprozess rückwärts?} \\
     METRIC   & \multicolumn{2}{l}{Aufgaben-Rückfälligkeit}
     \end{tabular}
-    \caption{GQM\mbox{-}Modell \mbox{-} Aufgabengröße}\label{tab:gqm-issues}
+    \caption{GQM\mbox{-}Ergebnis \mbox{-} Aufgabengröße}\label{tab:gqm-issues}
 \end{table}
 
 \subsection{Umfrage im Team}
@@ -124,7 +124,7 @@ Dies kann zum Einen durch die oben genannte Aufgaben-Rückfälligkeit und andere
     \item \textbf{Anforderungs-Flüchtigkeit} \mbox{-} Wie oft wurde die Anforderung der Aufgabe angepasst?
 \end{itemize}
 
-\newpage
+\clearpage
 \section{Software}
 
 Das für die Umsetzung gewählte Unternehmen setzt bereits auf Java als bevorzugte Programmiersprache und hat die in Kapitel~\ref{vorgehen:software} genannten Systeme im Einsatz.
@@ -206,7 +206,7 @@ Abbildung~\ref{fig:travisci} zeigt die Liste der zu diesem Zeitpunkt zuletzt dur
 Jeder Build in Travis CI sendet mit Hilfe eines Addons Informationen über die Qualität des Quellcodes an SonarCloud.
 Abbildung~\ref{fig:sonarcloud} zeigt die Übersichtsseite von SonarCloud mit den wichtigsten Qualitätsmetriken für das Projekt.
 
-\newpage
+\clearpage
 \section{Inbetriebnahme}
 
 Betrieben wird die Software auf einem eigens für Java-Applikationen bereitgestellten Server. 
@@ -251,7 +251,6 @@ Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die 
     \end{figure}
 \end{savenotes}
 
-\clearpage
 \begin{description}
     \item[Coverage] \hfill \\ Das Team hat die Verantwortung über mehrere Produkte, deshalb wurde die Testabdeckung von zwei Produkten in Form einer Messuhr dargestellt. In einem weiteren Liniendiagramm wird der Verlauf der Testabdeckung aller Produkte über die Zeit dargestellt.
     \item[Burndown] \hfill \\ Die Anzahl erledigter und noch offener Story-Points im aktuellen Sprint bilden das Burndown-Chart. Es wird klassisch als Liniendiagramm dargestellt.
@@ -268,7 +267,6 @@ Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die 
     \end{figure}
 \end{savenotes}
 
-\clearpage
 \begin{description}
     \item[Lead Time] \hfill \\ Die Lead Time wird zum Einen als Metrik dargestellt, zum Anderen auch als Histogramm. Das hat den Hintergund, dass hier einzelne Ausreißer nach oben oder unten die Metrik stark beeinflussen können. Das Histogramm stellt diese Ausreißer und die Verteilung noch besser dar.
     \item[Acceptance Criteria Volatility] \hfill \\ Auch bei der Flüchtigkeit der Akzeptanzkriterien wird die Metrik durch ein Histogramm ergänzt, da hier ebenfalls Ausreißer großen Einfluss haben können.
@@ -277,7 +275,6 @@ Außerdem sind die kurzfristigen Metriken eher für die Entwicklerinnen und die 
     \item[Issue Volume] \hfill \\ Ein Blockdiagramm der Aufgabenvolumina vergangener Sprints, um die Entwicklung darzustellen.
 \end{description}
 
-\newpage
 \subsection{Status-Schnittstelle}
 
 Über die RESTful Schnittstelle der Software kann der aktuelle Status abgefragt werden.

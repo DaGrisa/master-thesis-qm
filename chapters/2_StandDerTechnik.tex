@@ -4,7 +4,7 @@ Um eine Übersicht über die unterschiedlichen Themen zu bieten, werden im Folge
 Eine Übersicht am Anfang soll einen Einblick in die agile Softwareentwicklung gegeben.
 Darauf folgend wird etwas genauer Scrum und die möglichen Varianten bei mehreren Teams erläutert.
 Als Übergang dient eine kurze Aufarbeitung des Themas Software-Qualität, bevor die unterschiedliche Metriken im Detail erklärt werden.
-Am Ende folgt noch eine Beschreibung von Qualitätsmodellen, im Speziellen das \ac{FCM}- und \ac{GQM}-Modell.
+Am Ende folgt noch eine Beschreibung von Qualitätsmodellen, im Speziellen das \ac{FCM}-Modell und zuletzt als Ergänzung noch die \ac{GQM}-Methodik.
 
 \section{Agile Softwareentwicklung}
 
@@ -56,7 +56,7 @@ Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorga
 
 In regelmäßigen Abständen reflektiert das Team, wie es effektiver werden kann und passt sein Verhalten entsprechend an.\end{quote}\cite{agile_principles}
 
-\newpage
+\clearpage
 \section[Scrum]{Scrum~\footcite[vgl.][S.13ff]{scrum_kurz_gut_2013}}\label{section:scrum}
 
 Das Scrum Framework ist eine solche agile Softwareentwicklungs-Methodologie. 
@@ -107,7 +107,6 @@ Das Scrum Framework (Abbildung~\ref{fig:scrum_framework}) besteht aus drei Rolle
   \end{itemize}
 \end{itemize}
 
-\clearpage
 \subsection[Scrum in mehreren Teams]{Scrum in mehreren Teams~\footcite[vgl.][S.172ff]{scrum_kurz_gut_2013}}
 
 Scrum beschreibt eine agile Vorgehensweise für ein Team (ein Team entwickelt ein Produkt).
@@ -135,7 +134,7 @@ In allen Varianten existieren aber pro Team unterschiedliche Software-Module und
 Um Scrum auf mehrere Teams skalieren zu können, existieren bereits unterschiedlichste Frameworks.
 Drei davon sind \ac{SoS}, \ac{LeSS} und Scrum at Scale, die im Folgenden kurz vorgestellt werden.
 
-\newpage
+\clearpage
 \subsubsection[\ac{SoS}]{\acf{SoS}~\footcite[vgl.][]{sos}}
 
 \ac{SoS} ist eine Technik, um Scrum auf große Gruppen zu skalieren. 
@@ -286,7 +285,6 @@ Während die konstruktive Qualitätssicherung sich mit den Vorgaben beschäftigt
   \end{description}
 \end{description}
 
-\clearpage
 \subsection[Prozessqualität]{Prozessqualität~\footcite[vgl.][Kapitel 1.4.2]{hoffmann_software_qualitat_2013}}
 
 Die Prozessqualität beschäftigt sich im Gegensatz zur Produktqualität mit der Entstehung des Software-Produktes, genauer genommen mit dem Prozess dahinter.
@@ -329,7 +327,6 @@ Eine Kennzahl kann daher auch schon direkt eine Metrik sein, wenn sie in der Lag
 Im Entwicklungsprozess werden in den unterschiedlichen Systemen und Prozessschritten Daten erzeugt, die als Kennzahlen oder direkt als Metriken genutzt werden können.
 Abbildung~\ref{fig:sdlc} zeigt die einzelnen Schritte und Systeme im Entwicklungsprozess.~\footcite[vgl.][S.8]{davis_agile_2015}
 
-\clearpage
 \subsection[Versionsverwaltung]{Versionsverwaltung~\footcite[vgl.][S.62ff]{davis_agile_2015}}
 
 Das \acf{VCS} befindet sich nah an der Arbeit der Entwicklerinnen, da hier der Quellcode des Produktes verwaltet wird.
@@ -353,7 +350,6 @@ Um bestmögliche Daten zu bekommen, sollten verteilte Versionskontrollsysteme wi
   \end{description}
 \end{description}
 
-\clearpage
 \subsection[Projektmanagement]{Projektmanagement~\footcite[vgl.][S.37ff]{davis_agile_2015}}
 
 In einem \acf{PTS}, oft auch Issue Tracker oder Issue Tracking System genannt, werden Aufgaben definiert und zugewiesen, Bugs verwaltet und Arbeitszeit mit Aufgaben verknüpft.
@@ -405,7 +401,6 @@ Grundsätzlich können aber folgende Kennzahlen aus diesen Systemen ermittelt we
   \item[Stresstests oder Benchmarking] \hfill \\ Wird oft im Build-Prozess getestet mit Tools wie JMeter~\footcite[][]{jmeter} oder Gatling~\footcite[][]{gatling}.
 \end{description}
 
-\clearpage
 \subsection[Produktionssystem]{Produktionssystem~\footcite[vgl.][S.107ff]{davis_agile_2015}}
 
 Daten aus den Produktionssystemen können gesammelte \acf{APM}- oder auch \acf{BI}-Kennzahlen sein.
@@ -430,7 +425,6 @@ Im Produktionssystem können folgende Kennzahlen ermittelt werden:
 
 Die Metriken finden sich nochmal als Tabelle dargestellt und mit den dazugehörigen Fragen, die sie jeweils beantworten, im Anhang~\ref{appendix:metrics}.
 
-\clearpage
 \subsection[Eigene Metriken erstellen]{Eigene Metriken erstellen~\footcite[vgl.][S.127ff]{davis_agile_2015}}
 
 Um eigene Metriken erstellen zu können, sind zwei Dinge notwendig:
@@ -442,7 +436,7 @@ Um eigene Metriken erstellen zu können, sind zwei Dinge notwendig:
 Dabei sollte darauf geachtet werden,
 \begin{itemize}
   \item dass man auf die Metrik reagieren kann (Dinge, die einen stören und die man nicht ändern kann, frustrieren oder demotivieren)
-  \item dass sich die Metrik nach den Team-Grundsätzen und Kerngeschäften ausrichtet
+  \item dass sich die Metrik nach den Team-Grundsätzen und Kerngeschäften ausrichtet, also nur Metriken, die einen bestimmten Zweck erfüllen und einem Ziel folgen
   \item dass die Metrik für sich alleine stehen kann
 \end{itemize}
 
@@ -498,7 +492,6 @@ Mithilfe dieser Begriffe lassen sich folgende vier Punkte ableiten:
 
 Für jeden dieser vier Punkte sind Metriken aus den unterschiedlichsten Systemen anwendbar~\footcite[vgl.][S.219ff]{davis_agile_2015}:
 
-\clearpage
 \begin{description}
   \item[Effektive Software] \hfill
   \begin{itemize}[noitemsep]
@@ -547,7 +540,6 @@ Diese lassen sich in drei Kategorien einteilen: hierarchische, metamodellbasiert
   \item[Statistische und implizite Qualitätsmodelle] \hfill \\ Für unterschiedlichste Qualitätsfaktoren wurden statistische Modelle vorgestellt, die Eigenschaften erfassen und Qualitätsfaktoren schätzen oder voraussagen. Auch Qualitäts-Analysetools nutzen eine Art Qualitätsmodell und auch Checklisten in der Entwicklung oder in Reviews sind eine Art Qualitätsmodell.
 \end{description}
 
-\clearpage
 \subsection[\ac{FCM}-Modell]{\acf{FCM}-Modell~\footcite[vgl.][S.668ff]{abts_masterkurs_2009}}
 
 Beim \ac{FCM}-Qualitätsmodell, welches zu den hierarchischen Qualitätsmodellen gehört, werden zunächst die erforderlichen Qualitätsmerkmale über die Anforderungen an die Software ermittelt.
@@ -565,10 +557,9 @@ Dieser Schritt kann über mehrere Ebenen weitergeführt werden, bis es möglich 
 Abbildung~\ref{fig:fcm} zeigt einen solchen Aufbau eines \ac{FCM}-Modells.
 
 \clearpage
-\subsection[\ac{GQM}-Modell]{\acf{GQM}-Modell~\footcite[][]{basili_goal_nodate}}
+\section[\ac{GQM}]{\acf{GQM}~\footcite[][]{basili_goal_nodate}}
 
-\ac{GQM} ist ein Qualitätsmodell, welches ebenfalls zu den hierarchischen Qualitätsmodellen gehört.
-Es hilft dabei, geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmten Projekten zu erkennen.
+\ac{GQM} ist eine Methodik, die dabei hilft, geeignete Metriken für ein Softwareprojekt finden zu können und wurde ursprünglich von der \ac{NASA} entwickelt, um Fehler in bestimmten Projekten zu erkennen.
 Der grundlegende Gedanke dahinter ist, dass Metriken ``top\mbox{-}down'' (von oben nach unten) definiert werden müssen.
 Dieser Ansatz wird dadurch begründet, dass Metriken sehr viele Charakteristiken abbilden können, aber erst durch Modelle beziehungsweise Ziele richtig genutzt und interpretiert werden können.
 
@@ -583,16 +574,15 @@ Das Ergebnis dieses Modells hat drei Level:
   \begin{figure}[H] 
     \centering
     \includegraphics[width=0.9\textwidth]{img/gqm.png}
-    \caption{Struktur des \ac{GQM} Modells}\label{fig:gqm}
+    \caption{Struktur eines Ergebnisses der \ac{GQM}-Methodik}\label{fig:gqm}
   \end{figure}
 \end{savenotes}
 
-Abbildung~\ref{fig:gqm} zeigt die hierarchische Struktur des \ac{GQM}-Modells.
+Abbildung~\ref{fig:gqm} zeigt die hierarchische Struktur eines Ergebnisses der \ac{GQM}-Methodik.
 
-\clearpage
 \subsubsection*{Beispiel~\footcite[][]{basili_goal_nodate}}
 
-Anhand des Beispiels in Tabelle~\ref{tab:gqm-example} soll veranschaulicht werden, wie so ein GQM-Modell in der Praxis aussehen kann.
+Anhand des Beispiels in Tabelle~\ref{tab:gqm-example} soll veranschaulicht werden, wie so ein Ergebnis der \ac{GQM}-Methodik in der Praxis aussehen kann.
 Angenommen wird, das Team will seine Zusammenarbeit verbessern. 
 Dazu muss das Ziel folgende Punkte spezifizieren: Absicht, Prozess / Produkt / Ressource, Sichtweise und Problem.
 Dieses Ziel kann anschließend durch Fragen verfeinert werden.
@@ -610,5 +600,5 @@ Im Falle der Pull Requests zum Beispiel der Durchschnitt und die Standardabweich
   METRIC   & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Anzahl Commits pro Entwicklerin pro Modul\\ Anzahl Entwicklerinnen pro Pull Request pro Modul *\end{tabular}} \\
   \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}} \\ \small{* Durchschnitt und Standardabweichung pro Sprint}\end{tabular}} 
   \end{tabular}
-  \caption{Beispiel GQM Modell}\label{tab:gqm-example}
+  \caption{Beispiel \ac{GQM}-Methodik}\label{tab:gqm-example}
 \end{table}
